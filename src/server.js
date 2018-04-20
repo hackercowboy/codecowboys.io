@@ -14,8 +14,8 @@ server
   .get('/*', (req, res) => {
     const context = {};
     const markup = renderToString(<StaticRouter context={context} location={req.url}>
-        <Routes />
-      </StaticRouter>);
+      <Routes />
+    </StaticRouter>);
 
     if (context.url) {
       res.redirect(context.url);

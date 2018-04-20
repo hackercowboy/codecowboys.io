@@ -27,28 +27,28 @@ export default class Index extends Component {
 
   renderNavigation() {
     return (
-    <Navbar color="light" light expand="md">
-    <Container>
-      <NavbarBrand href="/"><img src={logo} style={{ width: '40px', height: '40px', marginRight: '10px' }}/>CodeCowboys</NavbarBrand>
-      <NavbarToggler onClick={this.toggle} />
-      <Collapse isOpen={this.state.navigationOpen} navbar>
-        <Nav className="ml-auto" navbar>
-          <NavItem>
-            <NavLink href="#apps">Apps</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="/en/hosting">Hosting</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#about">About</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#contact">Contact</NavLink>
-          </NavItem>
-        </Nav>
-      </Collapse>
-      </Container>
-    </Navbar>
+      <Navbar color="light" light expand="md">
+        <Container>
+          <NavbarBrand href="/"><img src={logo} style={{ width: '40px', height: '40px', marginRight: '10px' }}/>CodeCowboys</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.navigationOpen} navbar>
+            <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="#apps">Apps</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/en/hosting">Hosting</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#about">About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="#contact">Contact</NavLink>
+              </NavItem>
+            </Nav>
+          </Collapse>
+        </Container>
+      </Navbar>
     );
   }
 
