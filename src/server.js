@@ -25,7 +25,8 @@ server
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta charset="utf-8" />
-        <title>Welcome to Razzle</title>
+        <title>Code Cowboys</title>
+        <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         ${assets.client.css
     ? `<link rel="stylesheet" href="${assets.client.css}">`
@@ -36,6 +37,7 @@ server
     </head>
     <body>
         <div id="root">${markup}</div>
+        <div class="footer">© 2018 David Übelacker, all rights reserved.</div>
     </body>
 </html>`);
     }

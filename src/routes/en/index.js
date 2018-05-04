@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
-import {
-  Container,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap';
+import { Parallax } from 'react-parallax';
+import { Media } from 'reactstrap';
 
-import Carousel from '../../components/Carousel';
+import Content from '../../components/Content';
+import Navigation from '../../components/Navigation';
+import NavigationItem from '../../components/NavigationItem';
 
-const logo = require('../../assets/logo.svg');
+import ApplicationCarousel from '../../components/ApplicationCarousel';
+import ApplicationHero from '../../components/ApplicationHero';
+import Section from '../../components/Section';
+
+const letterCarouselImage = require('../..//assets/images/letter_carousel_en.png');
+const heroBackground = require('../../assets/images/bg-6.jpg');
+const aboutBackground = require('../../assets/images/bg-5.jpg');
+const letterIcon = require('../../assets/images/letter_icon.svg');
+const aboutIcon = require('../../assets/images/david.png');
+const videoPartyIcon = require('../../assets/images/channeleditor_icon.png');
 
 export default class Index extends Component {
   constructor() {
@@ -27,40 +30,87 @@ export default class Index extends Component {
 
   renderNavigation() {
     return (
-      <Navbar color="light" light expand="md">
-        <Container>
-          <NavbarBrand href="/"><img src={logo} style={{ width: '40px', height: '40px', marginRight: '10px' }}/>CodeCowboys</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.navigationOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="#apps">Apps</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/en/hosting">Hosting</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#contact">Contact</NavLink>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
+      <Navigation>
+        <NavigationItem to="apps" offset={-85}>Apps</NavigationItem>
+        <NavigationItem href="/en/letter">Letter</NavigationItem>
+        <NavigationItem to="about" offset={-10}>About</NavigationItem>
+        <NavigationItem to="contact" offset={-85}>Contact</NavigationItem>
+      </Navigation>
     );
   }
 
   render() {
     return (
-      <div>
+      <Content>
         {this.renderNavigation()}
+        <Parallax
+          bgImage={heroBackground}
+          strength={500}>
+          <ApplicationCarousel>
+            <ApplicationHero
+              image={letterCarouselImage}
+              title="Letter"
+              description="With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want."/>
+            <ApplicationHero
+              image={letterCarouselImage}
+              title="Letter"
+              description="With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want."/>
+          </ApplicationCarousel>
+        </Parallax>
+        <Section
+          id="apps"
+          title="Apps"
+          subtitle="A couple of great apps for you!"
+        >
+          <Media>
+            <Media body>
+              <h4>Letter</h4>
+              <p>With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want. More...</p>
+            </Media>
+            <Media right className="ml-3">
+              <img src={letterIcon} style={ { width: '100px', height: '100px' } }/>
+            </Media>
+          </Media>
+          <Media className="mt-3">
+            <Media body>
+              <h4>Video Party</h4>
+              <p>With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want. More...</p>
+            </Media>
+            <Media right className="ml-3">
+              <img src={videoPartyIcon} style={ { width: '100px', height: '100px' } }/>
+            </Media>
+          </Media>
 
-        <Container>
-          <Carousel/>
-        </Container>
-      </div>
+        </Section>
+        <Parallax
+          bgImage={aboutBackground}
+          strength={500}>
+          <Section
+            id="about"
+            title="About"
+            subtitle="I code great apps like a cowboy!"
+            dark
+          >
+            <Media>
+              <Media body>
+                <h4>David Übelacker</h4>
+                <p>I am a passionate software architect working for a Swiss company.</p>
+                <p>From time to time i work on some nice projects in my free time, which i publish on this site.</p>
+              </Media>
+              <Media right className="ml-3">
+                <img src={aboutIcon} style={ { width: '100px', height: '100px' } } className="rounded-circle"/>
+              </Media>
+            </Media>
+
+          </Section>
+        </Parallax>
+        <Section
+          id="contact"
+          title="Contact"
+        >
+          <p>Please contact me if you have any questions or problems</p>
+        </Section>
+      </Content>
     );
   }
 }

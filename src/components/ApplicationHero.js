@@ -7,6 +7,8 @@ import {
   Col,
 } from 'reactstrap';
 
+import './ApplicationHero.css';
+
 export default class ApplicationHero extends Component {
   static propTypes = {
     image: PropTypes.string,
@@ -17,12 +19,18 @@ export default class ApplicationHero extends Component {
   render() {
     const { image, title, description } = this.props;
     return (
-      <Container>
+      <Container className="application-hero-container">
         <Row>
-          <Col><img src={image}/></Col>
+          <Col sm="12" md="6">
+            <div className="application-hero-image">
+              <img src={image} className="img-fluid"/>
+            </div>
+          </Col>
           <Col>
-            <h2>{title}</h2>
-            <p>{description}</p>
+            <div className="application-hero-teaser">
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </div>
           </Col>
         </Row>
       </Container>

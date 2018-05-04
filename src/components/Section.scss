@@ -1,0 +1,48 @@
+.section {
+  max-width: 750px;
+  padding-bottom: 40px;
+
+  .section-title-wrapper {    
+    margin: 30px auto 10px auto;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  h2:before, h2:after {
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 0.65em;
+    border-bottom: 1px solid #222222;
+    margin: 2px 2% 0 -55%;
+  }
+
+  h2:after {
+    margin: 2px -55% 0 2%;
+  }
+
+  h2 {
+    font-size: 36px;
+    padding-bottom: 0;
+  }
+
+  h3 {
+    font-size: 26px;
+    padding-bottom: 15px;
+  }
+}
+
+.section-dark {  
+  padding-top: 50px;
+  margin-top: -50px; 
+  color: white;  
+  background: rgba(0, 0, 0, 0.6);
+  h2:before, h2:after {
+    border-bottom: 1px solid white;
+  }
+}

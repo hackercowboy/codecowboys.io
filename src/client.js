@@ -2,7 +2,8 @@ import BrowserRouter from 'react-router-dom/BrowserRouter';
 import React from 'react';
 import { hydrate } from 'react-dom';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './styles/bootstrap.css';
+import './styles/commons.css';
 
 import Routes from './routes/index';
 

@@ -5,6 +5,8 @@
   "scripts": {
     "start": "razzle start",
     "build": "razzle build",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "test": "razzle test --env=jsdom",
     "start:prod": "NODE_ENV=production node build/server.js",
     "lint": "eslint src",
@@ -17,11 +19,17 @@
     "eslint-plugin-import": "^2.1.0",
     "eslint-plugin-react": "^7.7.0",
     "express": "^4.16.3",
+    "formik": "^0.11.11",
+    "node-sass-chokidar": "^1.2.2",
+    "npm-run-all": "^4.1.2",
     "prop-types": "^15.6.1",
     "razzle": "^0.8.14",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-parallax": "^1.7.0",
     "react-router-dom": "^4.2.2",
+    "react-scroll": "^1.7.9",
+    "react-spring": "^4.2.1",
     "reactstrap": "^5.0.0-beta.3"
   }
 }

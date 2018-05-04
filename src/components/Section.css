@@ -1,0 +1,33 @@
+.section {
+  max-width: 750px;
+  padding-bottom: 40px; }
+  .section .section-title-wrapper {
+    margin: 30px auto 10px auto;
+    overflow: hidden;
+    text-align: center; }
+  .section h2, .section h3 {
+    text-align: center; }
+  .section h2:before, .section h2:after {
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 0.65em;
+    border-bottom: 1px solid #222222;
+    margin: 2px 2% 0 -55%; }
+  .section h2:after {
+    margin: 2px -55% 0 2%; }
+  .section h2 {
+    font-size: 36px;
+    padding-bottom: 0; }
+  .section h3 {
+    font-size: 26px;
+    padding-bottom: 15px; }
+
+.section-dark {
+  padding-top: 50px;
+  margin-top: -50px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6); }
+  .section-dark h2:before, .section-dark h2:after {
+    border-bottom: 1px solid white; }
