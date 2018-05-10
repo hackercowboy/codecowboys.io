@@ -12,15 +12,15 @@ import ApplicationCarousel from '../components/ApplicationCarousel';
 import ApplicationHero from '../components/ApplicationHero';
 import Section from '../components/Section';
 import ContactForm from '../components/ContactForm';
+import About from '../components/About';
 
-const letterCarouselImage = require('../assets/images/letter_carousel_en.png');
+const letterCarouselImage = require('../assets/images/letter_carousel.png');
+const videoPartyCarouselImage = require('../assets/images/video_party_carousel.png');
 const heroBackground = require('../assets/images/bg-6.jpg');
-const aboutBackground = require('../assets/images/bg-5.jpg');
 const letterIcon = require('../assets/images/letter_icon.svg');
-const aboutIcon = require('../assets/images/david.png');
-const videoPartyIcon = require('../assets/images/channeleditor_icon.png');
+const videoPartyIcon = require('../assets/images/video_party_icon.svg');
 
-@translate(['home'], { wait: true })
+@translate()
 export default class Home extends Component {
   static propTypes = {
     t: PropTypes.func,
@@ -37,11 +37,12 @@ export default class Home extends Component {
   }
 
   renderNavigation() {
+    const { t } = this.props;
     return (
       <Navigation>
-        <NavigationItem to="apps" offset={-85}>Apps</NavigationItem>
-        <NavigationItem to="about" offset={-5}>About</NavigationItem>
-        <NavigationItem to="contact" offset={-85}>Contact</NavigationItem>
+        <NavigationItem to="apps" offset={-85}>{t('navigation.apps')}</NavigationItem>
+        <NavigationItem to="about" offset={-5}>{t('navigation.about')}</NavigationItem>
+        <NavigationItem to="contact" offset={-85}>{t('navigation.contact')}</NavigationItem>
       </Navigation>
     );
   }
@@ -59,22 +60,24 @@ export default class Home extends Component {
             <ApplicationHero
               image={letterCarouselImage}
               title={t('home.letter')}
-              description="With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want."/>
+              appStoreLink="http://itunes.apple.com/app/letter/id498506154"
+              description={t('home.letter_teaser')}/>
             <ApplicationHero
-              image={letterCarouselImage}
-              title="Letter"
-              description="With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want."/>
+              image={videoPartyCarouselImage}
+              title={t('home.video_party')}
+              description={t('home.video_party_teaser')}
+              soon />
           </ApplicationCarousel>
         </Parallax>
         <Section
           id="apps"
-          title="Apps"
-          subtitle="A couple of great apps for you!"
+          title={t('home.apps_title')}
+          subtitle={t('home.apps_subtitle')}
         >
           <Media>
             <Media body>
-              <h4>Letter</h4>
-              <p>With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want. More...</p>
+              <h4>{t('home.letter')}</h4>
+              <p>{t('home.letter_teaser')} <a href={t('home.letter_link')}>{t('common.more')}...</a></p>
             </Media>
             <Media right className="ml-3">
               <img src={letterIcon} style={ { width: '100px', height: '100px' } }/>
@@ -82,43 +85,16 @@ export default class Home extends Component {
           </Media>
           <Media className="mt-3">
             <Media body>
-              <h4>Video Party</h4>
-              <p>With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want. More...</p>
+              <h4>{t('home.video_party')}</h4>
+              <p>{t('home.video_party_teaser')}</p>
             </Media>
             <Media right className="ml-3">
               <img src={videoPartyIcon} style={ { width: '100px', height: '100px' } }/>
             </Media>
           </Media>
-
         </Section>
-        <Parallax
-          bgImage={aboutBackground}
-          strength={500}>
-          <Section
-            id="about"
-            title="About"
-            subtitle="I code great apps like a cowboy!"
-            dark
-          >
-            <Media>
-              <Media body>
-                <h4>David Übelacker</h4>
-                <p>I am a passionate software architect working for a Swiss company.</p>
-                <p>From time to time i work on some nice projects in my free time, which i publish on this site.</p>
-              </Media>
-              <Media right className="ml-3">
-                <img src={aboutIcon} style={ { width: '100px', height: '100px' } } className="rounded-circle"/>
-              </Media>
-            </Media>
-
-          </Section>
-        </Parallax>
-        <Section
-          id="contact"
-          title="Contact"
-          teaser="Please contact me if you have any questions">
-          <ContactForm/>
-        </Section>
+        <About/>
+        <ContactForm/>
       </Content>
     );
   }

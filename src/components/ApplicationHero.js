@@ -9,15 +9,20 @@ import {
 
 import './ApplicationHero.css';
 
+const appStoreButton = require('../assets/images/app_store_button.svg');
+const appStoreButtonSoon = require('../assets/images/app_store_button_soon.svg');
+
 export default class ApplicationHero extends Component {
   static propTypes = {
     image: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
+    soon: PropTypes.bool,
+    appStoreLink: PropTypes.string,
   }
 
   render() {
-    const { image, title, description } = this.props;
+    const { image, title, description, soon, appStoreLink } = this.props;
     return (
       <Container className="application-hero-container">
         <Row>
@@ -30,6 +35,7 @@ export default class ApplicationHero extends Component {
             <div className="application-hero-teaser">
               <h2>{title}</h2>
               <p>{description}</p>
+              {soon ? (<img src={appStoreButtonSoon}/>) : (<a href={appStoreLink}><img src={appStoreButton}/></a>) }
             </div>
           </Col>
         </Row>

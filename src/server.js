@@ -3,6 +3,7 @@ import { StaticRouter } from 'react-router-dom';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
+import i18n from './i18n';
 
 import contact from './api/contact';
 import Routes from './routes';
@@ -20,6 +21,11 @@ server
     res.redirect('/en');
   })
   .get('/*', (req, res) => {
+    if (req.url.indexOf('/de') === 0) {
+      i18n.changeLanguage('de');
+    } else {
+      i18n.changeLanguage('en');
+    }
     const context = {};
     const markup = renderToString(
       <StaticRouter context={context} location={req.url}>

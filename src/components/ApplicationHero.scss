@@ -1,18 +1,27 @@
 .application-hero-container {
     
-  padding: 100px 50px 50px 50px;
+  padding: 100px 50px 0 50px;
+  min-height: 830px;
+
+  @media (min-width: 768px) {
+    min-height: 600px;
+  }
 
  .application-hero-image {
     margin: 10px;
     text-align: center;
+    img {
+      max-height: 400px;
+    }
   }
 
   .application-hero-teaser {
     margin: 0 20px 50px 20px;
 
+    text-align: center;
+
     h2, p {
       color: white;
-      text-align: center;
     }
 
     h2 {
@@ -31,6 +40,10 @@
   
       p {
         font-size: 24px;
+      }
+
+      img {
+        padding-top: 20px;
       }
     }
   }

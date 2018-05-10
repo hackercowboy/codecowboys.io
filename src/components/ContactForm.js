@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Formik } from 'formik';
 import { Button, Form, FormGroup, Input, Label, Alert } from 'reactstrap';
 import validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
 import utils from 'lodash';
 import Frisbee from 'frisbee';
+import { translate } from 'react-i18next';
 
 import InputError from './InputError';
+import Section from './Section';
 
 import './ContactForm.css';
 
@@ -18,7 +21,12 @@ const api = new Frisbee({
   },
 });
 
+@translate()
 export default class ContactForm extends Component {
+  static propTypes = {
+    t: PropTypes.func,
+  }
+
   constructor() {
     super();
     this.onSubmit = this.onSubmit.bind(this);
@@ -63,9 +71,7 @@ export default class ContactForm extends Component {
     const { captcha } = this.state;
     const errors = {};
 
-    if (utils.isEmpty(values.email)) {
-      errors.email = 'Please enter your email address';
-    } else if (!validator.isEmail(values.email)) {
+    if (utils.isEmpty(values.email) || !validator.isEmail(values.email)) {
       errors.email = 'Please enter a valid email address';
     }
 
@@ -91,6 +97,7 @@ export default class ContactForm extends Component {
   renderForm(form) {
     const { handleChange, handleBlur, errors, touched, handleSubmit, isSubmitting } = form;
     const { captchaLoaded } = this.state;
+    const { t } = this.props;
 
     this.form = form;
     const { submissionFailed, error } = this.state;
@@ -110,7 +117,7 @@ export default class ContactForm extends Component {
       <Form className="contact-form" onSubmit={beforeHandleSubmit}>
         { error ? (
           <Alert color="danger">
-            Sorry, something went wrong, please retry later...
+            {t('contact.error')}
           </Alert>
         ) : null }
         <FormGroup>
@@ -118,7 +125,7 @@ export default class ContactForm extends Component {
             type="text"
             disabled={isSubmitting}
             name="email"
-            placeholder="Your E-Mail Address"
+            placeholder={t('contact.email_placeholder')}
             bsSize="lg"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -130,7 +137,7 @@ export default class ContactForm extends Component {
             type="text"
             disabled={isSubmitting}
             name="subject"
-            placeholder="Subject"
+            placeholder={t('contact.subject_placeholder')}
             bsSize="lg"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -142,7 +149,7 @@ export default class ContactForm extends Component {
             type="textarea"
             disabled={isSubmitting}
             name="message"
-            placeholder="Your Message"
+            placeholder={t('contact.message_placeholder')}
             bsSize="lg"
             maxLength={4000}
             style={{ height: '200px' }}
@@ -163,14 +170,14 @@ export default class ContactForm extends Component {
         <FormGroup id="terms" check>
           <Label check>
             <Input disabled={isSubmitting} name="terms" type="checkbox" onChange={handleChange}/>{' '}
-            I agree to the the <a href="/en/privacy">privacy policy</a>.
+            {t('contact.privacy_1')} <a href="/en/privacy">{t('contact.privacy_2')}</a>.
           </Label>
           <InputError error={termsError}/>
         </FormGroup>
-        <p className="mt-3">Your e-mail address and message will be stored so that I can reply to it.<br/>Your data will not be used for any other purposes.</p>
+        <p className="mt-3">{t('contact.privacy_info_1')}<br/>{t('contact.privacy_info_2')}</p>
         <div className="btn-form">
           <Button disabled={isSubmitting} color="primary" size="lg">
-            Submit
+            {t('contact.submit')}
             { isSubmitting && (<i className="fa fa-circle-o-notch fa-spin"></i>) }
           </Button>
         </div>
@@ -179,16 +186,25 @@ export default class ContactForm extends Component {
   }
 
   render() {
-    return this.state.submitted ? (
-      <div className="contact-form">
-        <Alert color="success">
-          Thank you for your message! i will come back to you, as soon as possible!
-        </Alert>
-      </div>
-    ) : (
-      <Formik
-        onSubmit={this.onSubmit}
-        validate={this.validateForm}
-        render={this.renderForm}/>);
+    const { t } = this.props;
+
+    return (
+      <Section
+        id="contact"
+        title={t('contact.title')}
+        teaser={t('contact.subtitle')}>
+        {this.state.submitted ? (
+          <div className="contact-form">
+            <Alert color="success">
+              {t('contact.success')}
+            </Alert>
+          </div>
+        ) : (
+          <Formik
+            onSubmit={this.onSubmit}
+            validate={this.validateForm}
+            render={this.renderForm}/>)}
+      </Section>
+    );
   }
 }
