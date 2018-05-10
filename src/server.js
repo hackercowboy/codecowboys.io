@@ -1,9 +1,12 @@
 import React from 'react';
 import { StaticRouter } from 'react-router-dom';
 import express from 'express';
+import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
 
-import Routes from './routes/index';
+import contact from './api/contact';
+import Routes from './routes';
+import layout from './layout';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
@@ -11,35 +14,22 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
+  .use(bodyParser.json())
+  .post('/api/contact', contact.post)
+  .get('/', (req, res) => {
+    res.redirect('/en');
+  })
   .get('/*', (req, res) => {
     const context = {};
-    const markup = renderToString(<StaticRouter context={context} location={req.url}>
-      <Routes />
-    </StaticRouter>);
+    const markup = renderToString(
+      <StaticRouter context={context} location={req.url}>
+        <Routes />
+      </StaticRouter>);
 
     if (context.url) {
       res.redirect(context.url);
     } else {
-      res.status(200).send(`<!doctype html>
-    <html lang="">
-    <head>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta charset="utf-8" />
-        <title>Code Cowboys</title>
-        <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        ${assets.client.css
-    ? `<link rel="stylesheet" href="${assets.client.css}">`
-    : ''}
-        ${process.env.NODE_ENV === 'production'
-    ? `<script src="${assets.client.js}" defer></script>`
-    : `<script src="${assets.client.js}" defer crossorigin></script>`}
-    </head>
-    <body>
-        <div id="root">${markup}</div>
-        <div class="footer">© 2018 David Übelacker, all rights reserved.</div>
-    </body>
-</html>`);
+      res.status(200).send(layout(assets, markup));
     }
   });
 

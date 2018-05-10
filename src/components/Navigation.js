@@ -42,14 +42,14 @@ export default class Navigation extends Component {
   }
 
   renderNavigationItems(children, activeItem) {
-    return children.map((item, index) => {
+    return children ? children.map((item, index) => {
       const active = activeItem === item.props.to;
       return (
         <NavItem key={index}>
           {React.cloneElement(item, { onSetActive: this.handleSetActive, active })}
         </NavItem>
       );
-    });
+    }) : null;
   }
 
   render() {

@@ -1,0 +1,39 @@
+.contact-form {
+  text-align: center;
+
+  input[type=text], textarea, p, .input-error {
+    max-width: 600px;
+    margin-left: auto; margin-right: auto;
+  }
+
+
+  .captcha {
+    margin-top: 10px;
+
+    .input-error {
+      max-width: 100%;
+      text-align: center;
+      margin: 0;
+      padding-top: 5px;
+    }
+
+    margin-bottom: 20px;
+  }
+  .captcha > div > div > div {
+    margin-left: auto;margin-right: auto;
+  }
+
+  #terms .input-error {
+    max-width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+  }
+
+  button {
+    .fa {
+     margin-left: 10px;
+     margin-right: -10px;
+    }
+  }
+}

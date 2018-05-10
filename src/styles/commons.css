@@ -4,4 +4,31 @@
 .footer {
   width: 100%;
   text-align: center;
-  padding: 50px 20px; }
+  padding: 50px 20px;
+  margin-bottom: 1000px; }
+
+.btn-form {
+  text-align: center;
+  display: block; }
+  .btn-form button {
+    margin: 10px;
+    min-width: 150px; }
+
+.cc-message, .cc-compliance {
+  font-family: "Noto Serif", "Times New Roman", Times, serif;
+  font-size: 16px; }
+
+.cc-compliance {
+  font-size: 20px; }
+
+.cc-btn:hover {
+  background: #eee !important; }
+
+.article h2 {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 400; }
+
+.article h3 {
+  font-size: 20px;
+  font-weight: 400; }

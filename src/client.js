@@ -5,7 +5,7 @@ import { hydrate } from 'react-dom';
 import './styles/bootstrap.css';
 import './styles/commons.css';
 
-import Routes from './routes/index';
+import Routes from './routes';
 
 hydrate(
   <BrowserRouter>
