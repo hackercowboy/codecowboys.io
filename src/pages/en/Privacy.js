@@ -88,7 +88,7 @@ export default class Privacy extends Component {
             David Übelacker<br/>
             Haltingerstrasse 24<br/>
             4057 Basel<br/>
-            Schweiz</p>
+            Switzerland</p>
           <p>E-Mail: support@codecowboys.io<br/>
             Website: codecowboys.io</p>
 

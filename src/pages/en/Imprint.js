@@ -16,7 +16,7 @@ export default class Imprint extends Component {
             David Übelacker<br/>
             Haltingerstrasse 24<br/>
             4057 Basel<br/>
-            Schweiz</p>
+            Switzerland</p>
           <p>E-Mail: support@codecowboys.io<br/>
             Webseite: codecowboys.io</p>
           <h2>Disclaimer</h2>

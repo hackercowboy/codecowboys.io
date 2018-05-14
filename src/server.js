@@ -18,7 +18,11 @@ server
   .use(bodyParser.json())
   .post('/api/contact', contact.post)
   .get('/', (req, res) => {
-    res.redirect('/en');
+    if (req.acceptsLanguages('de')) {
+      res.redirect('/de');
+    } else {
+      res.redirect('/en');
+    }
   })
   .get('/*', (req, res) => {
     if (req.url.indexOf('/de') === 0) {
