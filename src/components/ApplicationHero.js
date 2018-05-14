@@ -18,11 +18,12 @@ export default class ApplicationHero extends Component {
     title: PropTypes.string,
     description: PropTypes.string,
     soon: PropTypes.bool,
+    link: PropTypes.string,
     appStoreLink: PropTypes.string,
   }
 
   render() {
-    const { image, title, description, soon, appStoreLink } = this.props;
+    const { image, title, description, soon, link, appStoreLink } = this.props;
     return (
       <Container className="application-hero-container">
         <Row>
@@ -33,8 +34,8 @@ export default class ApplicationHero extends Component {
           </Col>
           <Col>
             <div className="application-hero-teaser">
-              <h2>{title}</h2>
-              <p>{description}</p>
+              { link ? (<h2><a href={link}>{title}</a></h2>) : (<h2>{title}</h2>)}
+              { link ? (<p><a href={link}>{description}</a></p>) : (<p>{description}</p>)}
               {soon ? (<img src={appStoreButtonSoon}/>) : (<a href={appStoreLink}><img src={appStoreButton}/></a>) }
             </div>
           </Col>

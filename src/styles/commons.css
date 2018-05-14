@@ -1,11 +1,8 @@
 .react-parallax {
   background: rgba(0, 0, 0, 0.4) !important; }
 
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 50px 20px;
-  margin-bottom: 1000px; }
+textarea, input, button {
+  outline: none !important; }
 
 .btn-form {
   text-align: center;
@@ -32,3 +29,69 @@
 .article h3 {
   font-size: 20px;
   font-weight: 400; }
+
+.video {
+  width: 640px;
+  height: 360px;
+  padding-top: 20px; }
+
+.center {
+  text-align: center; }
+
+.justify {
+  text-align: justify; }
+
+.gallery {
+  display: none; }
+  .gallery .image-gallery-image img {
+    max-height: 60vh;
+    max-width: 80vw;
+    width: auto;
+    height: auto; }
+  .gallery .image-gallery-thumbnails-container {
+    margin-top: 20px; }
+
+@media (min-width: 768px) {
+  .gallery-ipad {
+    display: block; } }
+
+@media (max-width: 767px) {
+  .gallery-iphone {
+    display: block; }
+    .gallery-iphone .image-gallery-image img {
+      max-height: 60vh;
+      max-width: 80vw;
+      width: auto;
+      height: auto; } }
+
+.image-gallery-right-nav:before,
+.image-gallery-left-nav:before,
+.image-gallery-fullscreen-button:before,
+.image-gallery-play-button:before {
+  font-family: "Font Awesome 5 Pro";
+  color: #666;
+  text-shadow: none;
+  font-size: 30px; }
+
+.image-gallery-right-nav:before {
+  content: "\f054";
+  font-size: 50px; }
+
+.image-gallery-left-nav:before {
+  content: "\f053";
+  font-size: 50px; }
+
+.image-gallery-fullscreen-button:before {
+  content: "\f065"; }
+
+.image-gallery-fullscreen-button.active:before {
+  content: "\f066"; }
+
+.image-gallery-play-button:before {
+  content: "\f04b"; }
+
+.image-gallery-play-button.active:before {
+  content: "\f04c"; }
+
+.image-gallery button:hover:before {
+  color: #ccc !important; }

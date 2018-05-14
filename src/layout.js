@@ -6,7 +6,7 @@ export default (assets, markup) => `
       <meta charset="utf-8" />
       <title>Code Cowboys</title>
       <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css'>
-      <link href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous">
       <script src='https://www.google.com/recaptcha/api.js'></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
@@ -40,7 +40,6 @@ export default (assets, markup) => `
   </head>
   <body>
       <div id="root">${markup}</div>
-      <div class="footer">© 2018 David Übelacker, all rights reserved.</div>
   </body>
 </html>
 `.trim();

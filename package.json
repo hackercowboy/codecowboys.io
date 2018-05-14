@@ -13,6 +13,7 @@
     "lint:fix": "eslint src --fix"
   },
   "dependencies": {
+    "babel-eslint": "^8.2.3",
     "babel-plugin-transform-async-functions": "^6.22.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-regenerator": "^6.26.0",
@@ -28,6 +29,7 @@
     "frisbee": "^1.6.4",
     "i18next": "^11.3.1",
     "lodash": "^4.17.10",
+    "moment": "^2.22.1",
     "node-sass-chokidar": "^1.2.2",
     "nodemailer": "^4.6.4",
     "npm-run-all": "^4.1.3",
@@ -38,6 +40,8 @@
     "react-dom": "^16.3.2",
     "react-google-recaptcha": "^0.11.0",
     "react-i18next": "^7.6.1",
+    "react-image-gallery": "^0.8.7",
+    "react-images": "^0.5.17",
     "react-parallax": "^1.7.0",
     "react-router-dom": "^4.2.2",
     "react-scroll": "^1.7.9",

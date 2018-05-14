@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
+import utils from 'lodash';
 
 import {
   Carousel,
@@ -24,6 +25,12 @@ export default class ApplicatinCarousel extends Component {
     this.goToIndex = this.goToIndex.bind(this);
     this.onExiting = this.onExiting.bind(this);
     this.onExited = this.onExited.bind(this);
+    this.children = this.children.bind(this);
+  }
+
+  children() {
+    const { children } = this.props;
+    return utils.isArray(children) ? children : [children];
   }
 
   onExiting() {
@@ -53,7 +60,7 @@ export default class ApplicatinCarousel extends Component {
 
   render() {
     const { activeIndex } = this.state;
-    const { children } = this.props;
+    const children = this.children();
 
     const slides = children.map((child, index) => (
       <CarouselItem
@@ -65,7 +72,7 @@ export default class ApplicatinCarousel extends Component {
       </CarouselItem>
     ));
 
-    return (
+    return children.length > 1 ? (
       <Element name="application-carousel">
         <Carousel
           activeIndex={activeIndex}
@@ -77,6 +84,17 @@ export default class ApplicatinCarousel extends Component {
           {slides}
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
+      </Element>
+    ) : (
+      <Element name="application-carousel">
+        <Carousel
+          activeIndex={activeIndex}
+          next={() => true}
+          previous={() => true}
+          className="application-carousel"
+        >
+          {slides}
         </Carousel>
       </Element>
     );

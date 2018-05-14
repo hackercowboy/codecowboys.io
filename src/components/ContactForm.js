@@ -69,26 +69,27 @@ export default class ContactForm extends Component {
 
   validateForm(values) {
     const { captcha } = this.state;
+    const { t } = this.props;
     const errors = {};
 
     if (utils.isEmpty(values.email) || !validator.isEmail(values.email)) {
-      errors.email = 'Please enter a valid email address';
+      errors.email = t('contact.email_error');
     }
 
     if (utils.isEmpty(values.subject)) {
-      errors.subject = 'Please enter a subject';
+      errors.subject = t('contact.subject_error');
     }
 
     if (utils.isEmpty(values.message)) {
-      errors.message = 'Please enter a message';
+      errors.message = t('contact.message_error');
     }
 
     if (utils.isEmpty(captcha)) {
-      errors.captcha = 'Please solve this captcha';
+      errors.captcha = t('contact.captcha_error');
     }
 
-    if (!values.terms) {
-      errors.terms = 'Please accept the privacy policy';
+    if (!values.privacy) {
+      errors.privacy = t('contact.privacy_error');
     }
 
     return errors;
@@ -111,7 +112,7 @@ export default class ContactForm extends Component {
     const subjectError = (submissionFailed || touched.subject) && errors.subject;
     const messageError = (submissionFailed || touched.message) && errors.message;
     const captchaError = submissionFailed && errors.captcha;
-    const termsError = submissionFailed && errors.terms;
+    const privacyError = submissionFailed && errors.privacy;
 
     return (
       <Form className="contact-form" onSubmit={beforeHandleSubmit}>
@@ -167,18 +168,18 @@ export default class ContactForm extends Component {
           )}
           <InputError error={captchaError}/>
         </div>
-        <FormGroup id="terms" check>
+        <FormGroup id="privacy" check>
           <Label check>
-            <Input disabled={isSubmitting} name="terms" type="checkbox" onChange={handleChange}/>{' '}
+            <Input disabled={isSubmitting} name="privacy" type="checkbox" onChange={handleChange}/>{' '}
             {t('contact.privacy_1')} <a href="/en/privacy">{t('contact.privacy_2')}</a>.
           </Label>
-          <InputError error={termsError}/>
+          <InputError error={privacyError}/>
         </FormGroup>
         <p className="mt-3">{t('contact.privacy_info_1')}<br/>{t('contact.privacy_info_2')}</p>
         <div className="btn-form">
           <Button disabled={isSubmitting} color="primary" size="lg">
             {t('contact.submit')}
-            { isSubmitting && (<i className="fa fa-circle-o-notch fa-spin"></i>) }
+            { isSubmitting && (<i className="far fa-spinner fa-spin"></i>) }
           </Button>
         </div>
       </Form>

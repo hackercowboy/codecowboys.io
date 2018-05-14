@@ -1,5 +1,4 @@
 .section {
-  max-width: 750px;
   padding-bottom: 40px;
 
   .section-title-wrapper {    
@@ -28,11 +27,11 @@
 
   h2 {
     font-size: 36px;
-    padding-bottom: 0;
   }
 
   h3 {
     font-size: 26px;
+    padding-top: 10px;
     padding-bottom: 5px;
   }
 
@@ -41,6 +40,15 @@
     padding-top: 10px;
     padding-bottom: 15px;
   }
+}
+
+.section {
+  max-width: 750px;
+}
+
+.section-zebra {
+  background: #eee;
+  padding-top: 5px;
 }
 
 .section-dark {  

@@ -12,13 +12,15 @@
   .application-hero-container .application-hero-teaser {
     margin: 0 20px 50px 20px;
     text-align: center; }
-    .application-hero-container .application-hero-teaser h2, .application-hero-container .application-hero-teaser p {
+    .application-hero-container .application-hero-teaser h2, .application-hero-container .application-hero-teaser p, .application-hero-container .application-hero-teaser a {
       color: white; }
     .application-hero-container .application-hero-teaser h2 {
       margin-top: 30px;
       font-size: 30px; }
     .application-hero-container .application-hero-teaser p {
       font-size: 18px; }
+    .application-hero-container .application-hero-teaser a:hover {
+      text-decoration: none; }
     @media (min-width: 768px) {
       .application-hero-container .application-hero-teaser h2 {
         font-size: 36px; }

@@ -3,6 +3,7 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 
 import './styles/bootstrap.css';
+import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 import './styles/commons.css';
 
 import Routes from './routes';

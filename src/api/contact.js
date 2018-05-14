@@ -14,7 +14,7 @@ export default {
     && validator.isEmail(message.email)
     && !utils.isEmpty(message.subject)
     && !utils.isEmpty(message.message)
-    && message.terms) {
+    && message.privacy) {
       recaptcha.checkResponse(message.captcha, (recaptchaError, recaptchaResponse) => {
         if (recaptchaError || !recaptchaResponse.success) {
           console.error(recaptchaError);

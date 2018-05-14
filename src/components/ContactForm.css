@@ -15,11 +15,11 @@
   .contact-form .captcha > div > div > div {
     margin-left: auto;
     margin-right: auto; }
-  .contact-form #terms .input-error {
+  .contact-form #privacy .input-error {
     max-width: 100%;
     text-align: center;
     margin: 0;
     padding-top: 5px; }
-  .contact-form button .fa {
+  .contact-form button .far {
     margin-left: 10px;
     margin-right: -10px; }
