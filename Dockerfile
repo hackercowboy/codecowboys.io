@@ -1,4 +1,5 @@
 FROM node:8-alpine
+MAINTAINER David Uebelacker <david@uebelacker.ch>
 
 WORKDIR /usr/src/app
 
