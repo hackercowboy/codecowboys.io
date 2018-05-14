@@ -1,6 +1,6 @@
 build:
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN docker.codecowboys.io
-    - docker build -t docker.codecowboys.io/ranch/codecowboys:latest .
-    - docker push docker.codecowboys.io/ranch/codecowboys:latest
-    - ssh root@ranch.codecowboys.io "/usr/src/ranch/update.sh codecowboys"
+    - docker build -t docker.codecowboys.io/ranch/codecowboys.io:latest .
+    - docker push docker.codecowboys.io/ranch/codecowboys.io:latest
+    - ssh root@ranch.codecowboys.io "/usr/src/ranch/update.sh codecowboys.io"
