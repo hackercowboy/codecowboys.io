@@ -73,4 +73,9 @@ export default {
     privacy: 'Datenschutzerklärung',
     privacy_link: '/de/datenschutz',
   },
+  cookie_consent: {
+    message: 'Diese Webseite verwendet Cookies, um Ihnen einen besseren Service bieten zu können.',
+    dismiss: 'Alles klar',
+    link: 'Weitere Informationen',
+  },
 };

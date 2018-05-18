@@ -3,5 +3,5 @@
     "razzle/babel",
     "stage-0"
    ],
-   "plugins": ["transform-decorators-legacy", "syntax-async-functions", "transform-regenerator"]
+   "plugins": ["transform-decorators-legacy", "syntax-async-functions", "transform-regenerator", "static-fs"]
 }

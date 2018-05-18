@@ -11,15 +11,29 @@ textarea, input, button {
     margin: 10px;
     min-width: 150px; }
 
+.cc-window {
+  background-color: #007bff;
+  color: white; }
+
 .cc-message, .cc-compliance {
   font-family: "Noto Serif", "Times New Roman", Times, serif;
   font-size: 16px; }
 
 .cc-compliance {
-  font-size: 20px; }
+  font-size: 20px;
+  background-color: #eee;
+  color: white; }
+
+.cc-link {
+  color: white !important; }
+
+.cc-btn {
+  border: none !important; }
 
 .cc-btn:hover {
-  background: #eee !important; }
+  background: #eee !important;
+  color: #007bff;
+  text-decoration: none; }
 
 .article h2 {
   padding-top: 20px;

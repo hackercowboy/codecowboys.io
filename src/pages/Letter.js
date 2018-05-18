@@ -146,8 +146,8 @@ export default class Home extends Component {
           id="video"
           title={t('letter.video')}
           subtitle={t('letter.video_subtitle')} zebra>
-          <div className="center">
-            <iframe className="video" src="//www.youtube.com/embed/b0j3EmhudzQ?list=UUHPQwvjmHnlm3vcnnfAoliw" frameBorder="0" allowFullScreen=""/>
+          <div className="embed-responsive embed-responsive-16by9">
+            <iframe className="embed-responsive-item" src="//www.youtube.com/embed/b0j3EmhudzQ?list=UUHPQwvjmHnlm3vcnnfAoliw"></iframe>
           </div>
         </Section>
         <ContactForm/>

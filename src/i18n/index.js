@@ -8,7 +8,7 @@ i18next
   .use(reactI18nextModule)
   .init({
     fallbackLng: 'en',
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },
