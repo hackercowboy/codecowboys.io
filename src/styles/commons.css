@@ -25,7 +25,11 @@ textarea, input, button {
 
 .cc-message, .cc-compliance {
   font-family: "Noto Serif", "Times New Roman", Times, serif;
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 100; }
+
+.cc-message {
+  margin: 10px; }
 
 .cc-compliance {
   font-size: 20px;
@@ -33,10 +37,12 @@ textarea, input, button {
   color: white; }
 
 .cc-link {
-  color: white !important; }
+  color: white !important;
+  font-weight: 100; }
 
 .cc-btn {
-  border: none !important; }
+  border: none !important;
+  font-weight: 100; }
 
 .cc-btn:hover {
   background: #eee !important;
