@@ -78,4 +78,9 @@ export default {
     dismiss: 'Got it!',
     link: 'Learn more',
   },
+  lost: {
+    title: "You're Lost! 404 - Not Found",
+    description: "The page your are looking for doesn't exist",
+    button: 'Go Home',
+  },
 };

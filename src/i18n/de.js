@@ -78,4 +78,9 @@ export default {
     dismiss: 'Alles klar',
     link: 'Weitere Informationen',
   },
+  lost: {
+    title: 'Verloren!? 404 - Nicht gefunden',
+    description: 'Die Seite, die Sie suchen, existiert nicht.',
+    button: 'Startseite',
+  },
 };

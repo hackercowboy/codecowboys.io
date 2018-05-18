@@ -1,2 +1,4 @@
 .content-space {
-  padding-top: 80px; }
+  padding-top: 80px;
+  flex: 1 1 auto;
+}
