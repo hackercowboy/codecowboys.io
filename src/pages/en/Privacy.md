@@ -271,7 +271,9 @@ Further information about Cookie Constent can be found at ([https://cookieconsen
 
 Privacy Policy for Use and Usage of Fabric
 --------------------------------------------------------
-David Übelacker's mobile applications use the "Fabric" service provided by Google. When using David Übelacker's Mobile Applications, non-personal data such as device type, operating system, version of the respective David Übelacker Mobile Application and duration of use are transferred to Fabric. In addition, so-called error logs containing information about the error in the case of absürtzes are sent to Fabric.
+David Übelacker's mobile applications use the "Fabric" service provided by Google. When using David Übelacker's Mobile Applications, data such as device type, operating system, version of the respective David Übelacker Mobile Application and duration of use are transferred to Fabric. In addition, so-called error logs containing information about the error in the case of application crashes are sent to Fabric.
+
+When starting an mobile application from David Übelacker, the user is asked if he or she agrees to the collection of this data.
 
 The use of Fabric serves to improve, error analysis and improve the mobile applications of David Übelacker.
 

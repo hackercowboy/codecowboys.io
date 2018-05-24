@@ -270,6 +270,8 @@ Datenschutzbestimmungen zu Einsatz und Verwendung von Fabric
 --------------------------------------------------------
 Die mobilen Anwendungen von David Übelacker verwenden den Dienst "Fabric" der von Google zur Verfügung gestellt wird. Bei der Verwendung der Mobilen Anwendungen von David Übelacker werden nicht personenbezogene Daten wie Geräte Typ, Betriebssystem, Version der jeweiligen Mobilen Anwendung von David Übelacker und Dauer der Nutzung an Fabric übertragen. Zusätzlich werden sogenannte Fehlerprotokolle die im Fall von Absürtzen Informationen über den Fehler enthalten an Fabric gesendet.
 
+Beim Starten einer Mobile Applikationen von David Übelacker, wird der Benutzer gefragt ob er mit der Sammlung dieser Daten einverstanden ist.
+
 Der Einsatz von Fabric dient zur Verbesserung, Fehleranalyse und Verbesserung der Mobilen Anwendungen von David Übelacker.
 
 Weitere Informationen zu Fabric finden Sie unter ([https://get.fabric.io/](https://get.fabric.io/)) und in der Datenschutzerklärung von Google: [https://www.google.de/intl/de/policies/privacy/](https://www.google.de/intl/de/policies/privacy/).
