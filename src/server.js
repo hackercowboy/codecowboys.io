@@ -3,8 +3,9 @@ import { StaticRouter } from 'react-router-dom';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
-import i18n from './i18n';
+import forceDomain from 'forcedomain';
 
+import i18n from './i18n';
 import contact from './api/contact';
 import Routes from './routes';
 import layout from './layout';
@@ -14,6 +15,10 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 const server = express();
 server
   .disable('x-powered-by')
+  .use(forceDomain({
+    hostname: 'codecowboys.io',
+    protocol: 'https',
+  }))
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .use(bodyParser.json())
   .post('/api/contact', contact.post)

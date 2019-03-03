@@ -11,7 +11,7 @@ export default {
   contact: {
     title: 'Kontakt',
     subtitle: 'Bitte kontaktieren Sie mich, wenn Sie Fragen haben',
-    email_placeholder: 'Ihre E-Mmail Adresse',
+    email_placeholder: 'Ihre E-Mail Adresse',
     subject_placeholder: 'Ihr Anliegen',
     message_placeholder: 'Ihre Nachricht',
     privacy_1: 'Ich akzeptiere die',

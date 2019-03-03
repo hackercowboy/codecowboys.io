@@ -1,10 +1,12 @@
 import Recaptcha from 'recaptcha-verify';
-import mailer from 'nodemailer';
 import utils from 'lodash';
 import validator from 'validator';
+import mailgun from 'mailgun.js';
+
+import config from '../config';
 
 const recaptcha = new Recaptcha({
-  secret: '6LfLbVcUAAAAAE9AVk9qxstcnYYxWDCJJ2aKabzE',
+  secret: config('RECAPTCHA_SECRET'),
 });
 
 export default {
@@ -20,19 +22,17 @@ export default {
           console.error(recaptchaError);
           response.status(400).send();
         } else {
-          mailer.createTransport({ host: 'mail.codecowboys.io', port: 25 })
-            .sendMail({
-              from: message.email,
-              to: 'support@codecowboys.io',
-              subject: message.subject,
-              text: message.message,
-            }, (error) => {
-              if (error) {
-                console.error(error);
-                response.status(400).send();
-              } else {
-                response.status(204).send();
-              }
+          console.log(config('MAILGUN_API_KEY'));
+          console.log(config('MAILGUN_ACCOUNT'));
+          mailgun.client({ username: 'api', key: config('MAILGUN_API_KEY') }).messages.create('mg.codecowboys.io', {
+            from: message.email,
+            to: ['support@codecowboys.freshdesk.com'],
+            subject: message.subject,
+            text: message.message,
+          }).then(() => response.status(204).send())
+            .catch((error) => {
+              console.error(error);
+              response.status(400).send();
             });
         }
       });

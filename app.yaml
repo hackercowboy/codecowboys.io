@@ -1,0 +1,16 @@
+runtime: nodejs8
+handlers:
+- url: /images
+  static_dir: build/public/images
+
+- url: /screenshots
+  static_dir: build/public/screenshots
+
+- url: /static
+  static_dir: build/public/static
+
+- url: /favicon.ico
+  static_dir: build/public/favicon.ico
+
+- url: /robots.txt
+  static_dir: build/public/robots.txt
