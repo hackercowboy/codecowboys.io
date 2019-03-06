@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 import ImageGallery from 'react-image-gallery';
 import { Container, Row, Col } from 'reactstrap';
 
@@ -19,8 +19,7 @@ const letterCarouselImage = require('../assets/images/letter_carousel.png');
 const heroBackground = require('../assets/images/bg-7.jpg');
 const letterFeatures = require('../assets/images/letter_features.png');
 
-@translate()
-export default class Home extends Component {
+class Letter extends Component {
   static propTypes = {
     t: PropTypes.func,
   };
@@ -156,3 +155,4 @@ export default class Home extends Component {
   }
 }
 
+export default withTranslation()(Letter);

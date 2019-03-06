@@ -23,7 +23,9 @@ export default class ApplicationHero extends Component {
   }
 
   render() {
-    const { image, title, description, soon, link, appStoreLink } = this.props;
+    const {
+      image, title, description, soon, link, appStoreLink,
+    } = this.props;
     return (
       <Container className="application-hero-container">
         <Row>

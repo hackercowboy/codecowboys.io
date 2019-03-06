@@ -24,7 +24,9 @@ export default class NavigationItem extends Component {
   }
 
   render() {
-    const { to, offset, children, active, href } = this.props;
+    const {
+      to, offset, children, active, href,
+    } = this.props;
     return to ? (
       <Link
         activeClass="god"

@@ -4,6 +4,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
 import forceDomain from 'forcedomain';
+import compression from 'compression';
 
 import i18n from './i18n';
 import contact from './api/contact';
@@ -19,6 +20,7 @@ server
     hostname: 'codecowboys.io',
     protocol: 'https',
   }))
+  .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
   .use(bodyParser.json())
   .post('/api/contact', contact.post)
@@ -39,7 +41,8 @@ server
     const markup = renderToString(
       <StaticRouter context={context} location={req.url}>
         <Routes />
-      </StaticRouter>);
+      </StaticRouter>,
+    );
 
     if (context.url) {
       res.redirect(context.url);

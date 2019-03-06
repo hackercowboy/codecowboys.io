@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { Media } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Section from './Section';
 
@@ -11,8 +11,7 @@ import './About.css';
 const aboutIcon = require('../assets/images/david.png');
 const aboutBackground = require('../assets/images/bg-5.jpg');
 
-@translate()
-export default class About extends Component {
+class About extends Component {
   static propTypes = {
     t: PropTypes.func,
   }
@@ -46,3 +45,5 @@ export default class About extends Component {
     );
   }
 }
+
+export default withTranslation()(About);

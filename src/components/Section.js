@@ -18,7 +18,9 @@ export default class Section extends Component {
   }
 
   render() {
-    const { id, dark, zebra, title, subtitle, teaser, children, big } = this.props;
+    const {
+      id, dark, zebra, title, subtitle, teaser, children, big,
+    } = this.props;
     return (
       <Element name={id}>
         <section className={(dark && 'section-dark') || (zebra && 'section-zebra') }>

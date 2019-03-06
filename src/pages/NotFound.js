@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Container } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Content from '../components/Content';
 import Navigation from '../components/Navigation';
 
-@translate()
-export default class NotFound extends Component {
+class NotFound extends Component {
   static propTypes = {
     t: PropTypes.func,
   };
@@ -27,3 +26,4 @@ export default class NotFound extends Component {
   }
 }
 
+export default withTranslation()(NotFound);

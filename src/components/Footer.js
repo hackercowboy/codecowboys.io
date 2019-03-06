@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import moment from 'moment';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Section from './Section';
 
@@ -10,8 +10,7 @@ import './Footer.css';
 
 const background = require('../assets/images/bg-7.jpg');
 
-@translate()
-export default class Footer extends Component {
+class Footer extends Component {
   static propTypes = {
     t: PropTypes.func,
   }
@@ -40,3 +39,5 @@ export default class Footer extends Component {
     );
   }
 }
+
+export default withTranslation()(Footer);

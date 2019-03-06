@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { Media } from 'reactstrap';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import Content from '../components/Content';
 import Navigation from '../components/Navigation';
@@ -20,8 +20,7 @@ const heroBackground = require('../assets/images/bg-6.jpg');
 const letterIcon = require('../assets/images/letter_icon.svg');
 const videoPartyIcon = require('../assets/images/video_party_icon.svg');
 
-@translate()
-export default class Home extends Component {
+class Home extends Component {
   static propTypes = {
     t: PropTypes.func,
   };
@@ -101,3 +100,4 @@ export default class Home extends Component {
   }
 }
 
+export default withTranslation()(Home);

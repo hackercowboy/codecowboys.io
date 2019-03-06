@@ -13,7 +13,9 @@ export default class Feature extends Component {
   }
 
   render() {
-    const { title, description, icon, right } = this.props;
+    const {
+      title, description, icon, right,
+    } = this.props;
 
     return (
       <Media className={ right ? 'feature right' : 'feature'}>

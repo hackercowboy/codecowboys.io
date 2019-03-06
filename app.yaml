@@ -1,4 +1,7 @@
 runtime: nodejs8
+
+default_expiration: "365d"
+
 handlers:
 - url: /images
   static_dir: build/public/images

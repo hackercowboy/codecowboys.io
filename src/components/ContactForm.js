@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Formik } from 'formik';
-import { Button, Form, FormGroup, Input, Label, Alert } from 'reactstrap';
+import {
+  Button, Form, FormGroup, Input, Label, Alert,
+} from 'reactstrap';
 import validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
 import utils from 'lodash';
 import Frisbee from 'frisbee';
-import { translate } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 import InputError from './InputError';
 import Section from './Section';
@@ -21,8 +23,7 @@ const api = new Frisbee({
   },
 });
 
-@translate()
-export default class ContactForm extends Component {
+class ContactForm extends Component {
   static propTypes = {
     t: PropTypes.func,
   }
@@ -34,7 +35,9 @@ export default class ContactForm extends Component {
     this.renderForm = this.renderForm.bind(this);
     this.handleRecaptchaChange = this.handleRecaptchaChange.bind(this);
     this.checkCaptchaState = this.checkCaptchaState.bind(this);
-    this.state = { submitted: false, submissionFailed: false, captcha: undefined, error: false, captchaLoaded: false };
+    this.state = {
+      submitted: false, submissionFailed: false, captcha: undefined, error: false, captchaLoaded: false,
+    };
   }
 
   componentDidMount() {
@@ -96,7 +99,9 @@ export default class ContactForm extends Component {
   }
 
   renderForm(form) {
-    const { handleChange, handleBlur, errors, touched, handleSubmit, isSubmitting } = form;
+    const {
+      handleChange, handleBlur, errors, touched, handleSubmit, isSubmitting,
+    } = form;
     const { captchaLoaded } = this.state;
     const { t } = this.props;
 
@@ -209,3 +214,5 @@ export default class ContactForm extends Component {
     );
   }
 }
+
+export default withTranslation()(ContactForm);

@@ -1,13 +1,21 @@
 import i18next from 'i18next';
-import { reactI18nextModule } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 
 import en from './en';
 import de from './de';
 
+let language = 'en';
+
+if (typeof window !== 'undefined' && window && window.location && window.location.pathname) {
+  if (window.location.pathname.indexOf('/de') === 0) {
+    language = 'de';
+  }
+}
+
 i18next
-  .use(reactI18nextModule)
+  .use(initReactI18next)
   .init({
-    fallbackLng: 'en',
+    lng: language,
     debug: false,
     interpolation: {
       escapeValue: false,
