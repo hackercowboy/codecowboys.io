@@ -3,10 +3,8 @@ import utils from 'lodash';
 import validator from 'validator';
 import mailgun from 'mailgun.js';
 
-import config from '../config';
-
 const recaptcha = new Recaptcha({
-  secret: config('RECAPTCHA_SECRET'),
+  secret: process.env.RECAPTCHA_SECRET,
 });
 
 export default {
@@ -22,11 +20,11 @@ export default {
           console.error(recaptchaError);
           response.status(400).send();
         } else {
-          console.log(config('MAILGUN_API_KEY'));
-          console.log(config('MAILGUN_ACCOUNT'));
-          mailgun.client({ username: 'api', key: config('MAILGUN_API_KEY') }).messages.create('mg.codecowboys.io', {
+          console.log(process.env.MAILGUN_API_KEY);
+          console.log(process.env.MAILGUN_ACCOUNT);
+          mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY }).messages.create('mg.codecowboys.io', {
             from: message.email,
-            to: ['support@codecowboys.freshdesk.com'],
+            to: ['support@codecowboys.io'],
             subject: message.subject,
             text: message.message,
           }).then(() => response.status(204).send())

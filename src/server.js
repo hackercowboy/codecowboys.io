@@ -3,7 +3,7 @@ import { StaticRouter } from 'react-router-dom';
 import express from 'express';
 import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
-import forceDomain from 'forcedomain';
+import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 
 import i18n from './i18n';

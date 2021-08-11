@@ -5,7 +5,8 @@ const server = http.createServer(app);
 
 let currentApp = app;
 
-const port = process.env.PORT || 8080;
+// eslint-disable-next-line no-eval
+const port = eval('process.env.PORT') || 8080;
 
 server.listen(port, (error) => {
   if (error) {
