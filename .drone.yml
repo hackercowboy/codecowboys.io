@@ -11,7 +11,7 @@ steps:
   - name: appl
     path: /appl
   commands:
-  - docker build -t loftli .
+  - docker build -t codecowboys .
   - cd /appl;docker-compose up -d
   when:
     branch:
