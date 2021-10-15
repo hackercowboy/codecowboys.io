@@ -15,13 +15,14 @@ export default {
     && !utils.isEmpty(message.subject)
     && !utils.isEmpty(message.message)
     && message.privacy) {
+      console.log('fdsa');
       recaptcha.checkResponse(message.captcha, (recaptchaError, recaptchaResponse) => {
         if (recaptchaError || !recaptchaResponse.success) {
+          console.log('Captcha invalid :-(');
           console.error(recaptchaError);
           response.status(400).send();
         } else {
-          console.log(process.env.MAILGUN_API_KEY);
-          console.log(process.env.MAILGUN_ACCOUNT);
+          console.log('Captcha valid ... will send');
           mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY }).messages.create('mg.codecowboys.io', {
             from: message.email,
             to: ['support@codecowboys.io'],
@@ -29,6 +30,7 @@ export default {
             text: message.message,
           }).then(() => response.status(204).send())
             .catch((error) => {
+              console.log('Mailgun error :-(');
               console.error(error);
               response.status(400).send();
             });
