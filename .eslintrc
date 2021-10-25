@@ -1,5 +1,18 @@
 {
-    "parser": "babel-eslint",
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": [
+                "@babel/preset-env",
+                "@babel/preset-react"
+            ],
+            "plugins": [
+                "@babel/plugin-syntax-export-default-from",
+                "@babel/plugin-proposal-class-properties"
+            ]
+        }
+    },
     "plugins": [
         "react",
         "import"
@@ -11,7 +24,10 @@
     ],
     "rules": {
         "class-methods-use-this": 0,
-        "max-len": [2, 1180],
+        "max-len": [
+            2,
+            1180
+        ],
         "import/prefer-default-export": 0,
         "import/no-dynamic-require": 0,
         "no-console": 0,
@@ -19,5 +35,10 @@
     },
     "env": {
         "browser": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }

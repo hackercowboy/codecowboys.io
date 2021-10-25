@@ -24,8 +24,8 @@ class LocationListener extends Component {
   }
 
   componentDidMount() {
-    this.handleLocationChange(this.context.router.history.location);
-    this.unlisten = this.context.router.history.listen(this.handleLocationChange);
+    // this.handleLocationChange(this.context.router.history.location);
+    // this.unlisten = this.context.router.history.listen(this.handleLocationChange);
     if (window) {
       window.cookieconsent.initialise({
         position: 'bottom',
@@ -40,7 +40,7 @@ class LocationListener extends Component {
   }
 
   componentWillUnmount() {
-    this.unlisten();
+    // this.unlisten();
   }
 
   handleLocationChange(location) {

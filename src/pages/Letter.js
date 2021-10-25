@@ -28,12 +28,12 @@ class Letter extends Component {
     super();
     this.state = { navigationOpen: false };
     this.toggleNavigation.bind(this);
-    this.ipadImages = [1, 2, 3, 4, 5].map(index => ({
+    this.ipadImages = [1, 2, 3, 4, 5].map((index) => ({
       original: `/screenshots/letter/letter_ipad_${index}_de.png`,
       thumbnail: `/screenshots/letter/letter_ipad_${index}_de.png`,
     }));
 
-    this.iphoneImages = [1, 2, 3, 4, 5].map(index => ({
+    this.iphoneImages = [1, 2, 3, 4, 5].map((index) => ({
       original: `/screenshots/letter/letter_iphone_${index}_de.png`,
       thumbnail: `/screenshots/letter/letter_iphone_${index}_de.png`,
     }));
