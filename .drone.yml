@@ -3,6 +3,19 @@ kind: pipeline
 name: default
 
 steps:
+- name: staging
+  image: hackercowboy/dind
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  - name: appl
+    path: /appl
+  commands:
+  - docker build -t codecowboys:staging .
+  - cd /appl;docker-compose up -d
+  when:
+    branch:
+    - development
 - name: production
   image: hackercowboy/dind
   volumes:
@@ -11,7 +24,7 @@ steps:
   - name: appl
     path: /appl
   commands:
-  - docker build -t codecowboys .
+  - docker build -t codecowboys:production .
   - cd /appl;docker-compose up -d
   when:
     branch:

@@ -1,3 +1,3 @@
 module.exports = {
-  plugins: ['scss', 'markdown'],
+  plugins: ['scss', 'mdx'],
 };

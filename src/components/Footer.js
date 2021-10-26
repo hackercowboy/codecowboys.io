@@ -22,7 +22,10 @@ class Footer extends Component {
         <div className="footer">© {moment().year()} David Übelacker, {t('footer.rights')}&nbsp;
           | <a href={t('footer.imprint_link')}>{t('footer.imprint')}</a>&nbsp;
           | <a href={t('footer.privacy_link')}>{t('footer.privacy')}</a>
+          <br/>
+          <a href="/en">English</a> | <a href="/de">Deutsch</a>
         </div>
+
         <Parallax
           bgImage={background}
           strength={500}>

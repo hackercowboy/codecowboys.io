@@ -3,12 +3,12 @@ import utils from 'lodash';
 import validator from 'validator';
 import mailgun from 'mailgun.js';
 
-const recaptcha = new Recaptcha({
-  secret: process.env.RECAPTCHA_SECRET,
-});
-
 export default {
   post: (request, response) => {
+    const recaptcha = new Recaptcha({
+      secret: process.env.RECAPTCHA_SECRET,
+    });
+
     const message = request.body;
     if (!utils.isEmpty(message.email)
     && validator.isEmail(message.email)
