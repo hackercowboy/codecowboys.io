@@ -17,7 +17,7 @@ const server = express();
 server
   .disable('x-powered-by')
   .use(forceDomain({
-    hostname: 'codecowboys.io',
+    hostname: process.env.CODECOWBOYS_HOSTNAME,
     protocol: 'https',
   }))
   .use(compression())
