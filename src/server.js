@@ -14,6 +14,10 @@ import layout from './layout';
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
+
+console.log('------------------------------------------------');
+console.log(process.env.CODECOWBOYS_HOSTNAME);
+console.log('------------------------------------------------');
 server
   .disable('x-powered-by')
   .use(forceDomain({
