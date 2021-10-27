@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import utils from 'lodash';
 
-import './InputError.css';
+import './InputError.scss';
 
 export default class InputError extends Component {
   static propTypes = {

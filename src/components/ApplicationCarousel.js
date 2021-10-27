@@ -10,7 +10,7 @@ import {
   CarouselIndicators,
 } from 'reactstrap';
 
-import './ApplicationCarousel.css';
+import './ApplicationCarousel.scss';
 
 export default class ApplicatinCarousel extends Component {
   static propTypes = {

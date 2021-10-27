@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Media } from 'reactstrap';
 
-import './Feature.css';
+import './Feature.scss';
 
 export default class Feature extends Component {
   static propTypes = {

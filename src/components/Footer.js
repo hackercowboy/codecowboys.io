@@ -6,7 +6,7 @@ import { withTranslation } from 'react-i18next';
 
 import Section from './Section';
 
-import './Footer.css';
+import './Footer.scss';
 
 const background = require('../assets/images/bg-7.jpg');
 

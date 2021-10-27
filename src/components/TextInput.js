@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactForm = ({ id, className, style }) => (
-  <div id={id} className={[className, 'contact-form'].filter((c) => c).join(' ')} style={style}>
-    ContactForm
+const TextInput = ({ id, className, style }) => (
+  <div id={id} className={[className, 'text-input'].filter((c) => c).join(' ')} style={style}>
+    TextInput
   </div>
 );
 
-ContactForm.propTypes = {
+TextInput.propTypes = {
   /**
   * Unique id of the component
   */
@@ -22,10 +22,10 @@ ContactForm.propTypes = {
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-ContactForm.defaultProps = {
+TextInput.defaultProps = {
   id: undefined,
   className: undefined,
   style: undefined,
 };
 
-export default ContactForm;
+export default TextInput;

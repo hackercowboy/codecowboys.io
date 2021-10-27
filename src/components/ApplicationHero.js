@@ -7,7 +7,7 @@ import {
   Col,
 } from 'reactstrap';
 
-import './ApplicationHero.css';
+import './ApplicationHero.scss';
 
 const appStoreButton = require('../assets/images/app_store_button.svg');
 const appStoreButtonSoon = require('../assets/images/app_store_button_soon.svg');

@@ -6,7 +6,7 @@ import { withTranslation } from 'react-i18next';
 
 import Section from './Section';
 
-import './About.css';
+import './About.scss';
 
 const aboutIcon = require('../assets/images/david.png');
 const aboutBackground = require('../assets/images/bg-5.jpg');

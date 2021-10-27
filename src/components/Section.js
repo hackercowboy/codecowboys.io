@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import { Container } from 'reactstrap';
 
-import './Section.css';
+import './Section.scss';
 
 export default class Section extends Component {
   static propTypes = {

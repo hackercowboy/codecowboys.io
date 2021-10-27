@@ -14,7 +14,7 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import i18n from './i18n';
 
-class LocationListener extends Component {
+class CookieConsent extends Component {
   static contextTypes = {
     router: PropTypes.object,
   };
@@ -24,8 +24,6 @@ class LocationListener extends Component {
   }
 
   componentDidMount() {
-    // this.handleLocationChange(this.context.router.history.location);
-    // this.unlisten = this.context.router.history.listen(this.handleLocationChange);
     if (window) {
       window.cookieconsent.initialise({
         position: 'bottom',
@@ -39,18 +37,6 @@ class LocationListener extends Component {
     }
   }
 
-  componentWillUnmount() {
-    // this.unlisten();
-  }
-
-  handleLocationChange(location) {
-    if (location.pathname.indexOf('/de') === 0) {
-      i18n.changeLanguage('de');
-    } else {
-      i18n.changeLanguage('en');
-    }
-  }
-
   render() {
     return this.props.children;
   }
@@ -59,7 +45,7 @@ class LocationListener extends Component {
 const Routes = () => (
   <I18nextProvider i18n={i18n}>
     <div>
-      <LocationListener>
+      <CookieConsent>
         <Switch>
           <Route path="/de/impressum" component={Impressum} exact/>
           <Route path="/de/datenschutz" component={Datenschutz} exact/>
@@ -71,7 +57,7 @@ const Routes = () => (
           <Route path="/en" component={Home} exact/>
           <Route component={NotFound}/>
         </Switch>
-      </LocationListener>
+      </CookieConsent>
       <Footer/>
     </div>
   </I18nextProvider>

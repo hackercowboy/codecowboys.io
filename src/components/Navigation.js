@@ -10,7 +10,7 @@ import {
   NavItem,
 } from 'reactstrap';
 
-import './Navigation.css';
+import './Navigation.scss';
 
 const logo = require('../assets/logo.svg');
 

@@ -26,11 +26,8 @@ server
   .use(bodyParser.json())
   .post('/api/contact', contact.post)
   .get('/', (req, res) => {
-    if (req.acceptsLanguages('de')) {
-      res.redirect('/de');
-    } else {
-      res.redirect('/en');
-    }
+    const language = req.acceptsLanguages('de', 'en') || 'en';
+    res.redirect(`/${language}`);
   })
   .get('/*', (req, res) => {
     if (req.url.indexOf('/de') === 0) {

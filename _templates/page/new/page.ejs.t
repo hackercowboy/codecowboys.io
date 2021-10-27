@@ -1,13 +1,16 @@
+---
+to: src/pages/<%=name%>.js
+---
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactForm = ({ id, className, style }) => (
-  <div id={id} className={[className, 'contact-form'].filter((c) => c).join(' ')} style={style}>
-    ContactForm
+const <%=h.demodulize(name)%> = ({ id, className, style }) => (
+  <div id={id} className={[className, '<%= h.changeCase.paramCase(h.demodulize(name)) %>'].filter((c) => c).join(' ')} style={style}>
+    <%=h.demodulize(name)%>
   </div>
 );
 
-ContactForm.propTypes = {
+<%=h.demodulize(name)%>.propTypes = {
   /**
   * Unique id of the component
   */
@@ -22,10 +25,10 @@ ContactForm.propTypes = {
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 
-ContactForm.defaultProps = {
+<%=h.demodulize(name)%>.defaultProps = {
   id: undefined,
   className: undefined,
   style: undefined,
 };
 
-export default ContactForm;
+export default <%=h.demodulize(name)%>;
