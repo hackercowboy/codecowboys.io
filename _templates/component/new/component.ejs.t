@@ -11,17 +11,8 @@ const <%=h.demodulize(name)%> = ({ id, className, style }) => (
 );
 
 <%=h.demodulize(name)%>.propTypes = {
-  /**
-  * Unique id of the component
-  */
   id: PropTypes.string,
-  /**
-  * Additional class name to be added
-  */
   className: PropTypes.string,
-  /**
-   * Custom styles
-   */
   style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
 };
 

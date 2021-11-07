@@ -6,7 +6,7 @@ import { renderToString } from 'react-dom/server';
 import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 
-import i18n from './i18n';
+import { i18next } from './i18n';
 import contact from './api/contact';
 import Routes from './routes';
 import layout from './layout';
@@ -31,9 +31,9 @@ server
   })
   .get('/*', (req, res) => {
     if (req.url.indexOf('/de') === 0) {
-      i18n.changeLanguage('de');
+      i18next.changeLanguage('de');
     } else {
-      i18n.changeLanguage('en');
+      i18next.changeLanguage('en');
     }
     const context = {};
     const markup = renderToString(

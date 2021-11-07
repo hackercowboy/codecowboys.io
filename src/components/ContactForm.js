@@ -1,31 +1,62 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { injectIntl } from 'react-intl';
 
-const ContactForm = ({ id, className, style }) => (
-  <div id={id} className={[className, 'contact-form'].filter((c) => c).join(' ')} style={style}>
-    ContactForm
-  </div>
+import {
+  Formik, Form, Field, ErrorMessage,
+} from 'formik';
+
+import Section from './Section';
+
+const ContactForm = ({ intl }) => (
+  <Section
+    id="contact"
+    title={intl.formatMessage({ id: 'contact.title' })}
+    teaser={intl.formatMessage({ id: 'contact.subtitle' })}>
+    <Formik
+      initialValues={{}}
+       validate={(values) => {
+         const errors = {};
+         if (!values.email) {
+           errors.email = 'Required';
+         } else if (
+           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
+         ) {
+           errors.email = 'Invalid email address';
+         }
+         return errors;
+       }}
+       onSubmit={(values, { setSubmitting }) => {
+         setTimeout(() => {
+           alert(JSON.stringify(values, null, 2));
+           setSubmitting(false);
+         }, 400);
+       }}
+     >
+       {({ isSubmitting }) => (
+         <Form>
+           <Field type="text" name="email" />
+           <ErrorMessage name="email" />
+           <Field type="text" name="subject" />
+           <ErrorMessage name="subject" />
+           <Field
+            component="textarea"
+            name="message"
+           />
+           <ErrorMessage name="message" />
+           <button type="submit" disabled={isSubmitting}>
+             Submit
+           </button>
+         </Form>
+       )}
+     </Formik>
+  </Section>
 );
 
 ContactForm.propTypes = {
-  /**
-  * Unique id of the component
-  */
-  id: PropTypes.string,
-  /**
-  * Additional class name to be added
-  */
-  className: PropTypes.string,
-  /**
-   * Custom styles
-   */
-  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  intl: PropTypes.shape({
+    formatMessage: PropTypes.func,
+  }).isRequired,
 };
 
-ContactForm.defaultProps = {
-  id: undefined,
-  className: undefined,
-  style: undefined,
-};
-
-export default ContactForm;
+export default injectIntl(ContactForm);

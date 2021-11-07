@@ -166,3 +166,8 @@ textarea, input, button { outline: none !important; }
     color: #ccc !important;
   }
 }
+
+input, textarea {
+  display: block;
+  width: 100%;
+}

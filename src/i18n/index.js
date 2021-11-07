@@ -1,16 +1,22 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import flat from 'flat';
 
 import en from './en';
 import de from './de';
 
-let language = 'en';
+let lang = 'en';
 
 if (typeof window !== 'undefined' && window && window.location && window.location.pathname) {
   if (window.location.pathname.indexOf('/de') === 0) {
-    language = 'de';
+    lang = 'de';
   }
+} else {
+
 }
+
+const language = lang;
+const messages = lang === 'de' ? flat(de) : flat(en);
 
 i18next
   .use(initReactI18next)
@@ -30,4 +36,8 @@ i18next
     },
   });
 
-export default i18next;
+export {
+  i18next,
+  language,
+  messages,
+};
