@@ -2,56 +2,67 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 
-import {
-  Formik, Form, Field, ErrorMessage,
-} from 'formik';
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
 
 import Section from './Section';
+import InputText from './InputText';
+import Textarea from './Textarea';
 
-const ContactForm = ({ intl }) => (
-  <Section
-    id="contact"
-    title={intl.formatMessage({ id: 'contact.title' })}
-    teaser={intl.formatMessage({ id: 'contact.subtitle' })}>
-    <Formik
-      initialValues={{}}
-       validate={(values) => {
-         const errors = {};
-         if (!values.email) {
-           errors.email = 'Required';
-         } else if (
-           !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
-         ) {
-           errors.email = 'Invalid email address';
-         }
-         return errors;
-       }}
-       onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
-       }}
-     >
-       {({ isSubmitting }) => (
-         <Form>
-           <Field type="text" name="email" />
-           <ErrorMessage name="email" />
-           <Field type="text" name="subject" />
-           <ErrorMessage name="subject" />
-           <Field
-            component="textarea"
-            name="message"
-           />
-           <ErrorMessage name="message" />
-           <button type="submit" disabled={isSubmitting}>
-             Submit
-           </button>
-         </Form>
-       )}
-     </Formik>
-  </Section>
-);
+const ContactForm = ({ intl }) => {
+  const ContactSchema = Yup.object().shape({
+    email: Yup.string()
+      .email(intl.formatMessage({ id: 'contact.email_error' }))
+      .required(intl.formatMessage({ id: 'contact.email_error' })),
+    subject: Yup.string()
+      .required(intl.formatMessage({ id: 'contact.subject_error' })),
+    message: Yup.string()
+      .required(intl.formatMessage({ id: 'contact.message_error' })),
+    captcha: Yup.string()
+      .required(intl.formatMessage({ id: 'contact.captcha_error' })),
+    privacy: Yup.boolean()
+      .required(intl.formatMessage({ id: 'contact.privacy_error' })),
+  });
+
+  return (
+    <Section
+      id="contact"
+      title={intl.formatMessage({ id: 'contact.title' })}
+      teaser={intl.formatMessage({ id: 'contact.subtitle' })}
+    >
+      <Formik
+        initialValues={{}}
+        validationSchema={ContactSchema}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <InputText
+              name="email"
+              placeholder={intl.formatMessage({ id: 'contact.email_placeholder' })}
+            />
+            <InputText
+              name="subject"
+              placeholder={intl.formatMessage({ id: 'contact.subject_placeholder' })}
+            />
+            <Textarea
+              name="message"
+              placeholder={intl.formatMessage({ id: 'contact.message_placeholder' })}
+            />
+            <button type="submit" disabled={isSubmitting}>
+              Submit
+            </button>
+          </Form>
+        )}
+      </Formik>
+    </Section>
+  );
+};
 
 ContactForm.propTypes = {
   intl: PropTypes.shape({

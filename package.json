@@ -3,12 +3,13 @@
   "version": "4.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "razzle start",
     "build": "razzle build --noninteractive",
-    "test": "razzle test --env=jsdom",
-    "start:prod": "NODE_ENV=production node build/server.js",
+    "cypress": "cypress open",
+    "lint:fix": "eslint src --fix",
     "lint": "eslint src",
-    "lint:fix": "eslint src --fix"
+    "start:prod": "NODE_ENV=production node build/server.js",
+    "start": "razzle start",
+    "test": "razzle test --env=jsdom"
   },
   "dependencies": {
     "@react-spring/web": "^9.2.4",
@@ -42,11 +43,13 @@
     "react-scroll": "^1.8.4",
     "reactstrap": "^8.10.0",
     "recaptcha-verify": "^0.1.1",
-    "validator": "^13.6.0"
+    "validator": "^13.6.0",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.15.8",
     "babel-preset-razzle": "^4.2.4",
+    "cypress": "^9.1.0",
     "eslint": "7.32.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-babel": "^5.3.0",
