@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Routes as ReactRoutes } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 
 import Home from './pages/Home';
@@ -16,22 +16,21 @@ import { language, messages } from './i18n';
 
 const Routes = () => (
   <IntlProvider locale={language} defaultLocale="en" messages={messages}>
-    <div>
-      <CookieConsent>
-        <Switch>
-          <Route path="/de/impressum" component={Impressum} exact />
-          <Route path="/de/datenschutz" component={Datenschutz} exact />
-          <Route path="/de/briefe" component={Letter} exact />
-          <Route path="/de" component={Home} exact />
-          <Route path="/en/imprint" component={Imprint} exact />
-          <Route path="/en/privacy" component={Privacy} exact />
-          <Route path="/en/letter" component={Letter} exact />
-          <Route path="/en" component={Home} exact />
-          <Route component={NotFound} />
-        </Switch>
-      </CookieConsent>
+    <>
+      <CookieConsent/>
+      <ReactRoutes>
+        <Route path="/de/impressum" element={<Impressum/>}/>
+        <Route path="/de/datenschutz" element={<Datenschutz/>}/>
+        <Route path="/de/briefe" element={<Letter/>}/>
+        <Route path="/de" element={<Home/>}/>
+        <Route path="/en/imprint" element={<Imprint/>}/>
+        <Route path="/en/privacy" element={<Privacy/>}/>
+        <Route path="/en/letter" element={<Letter/>}/>
+        <Route path="/en" element={<Home/>} />
+        <Route element={<NotFound/>} />
+      </ReactRoutes>
       <Footer />
-    </div>
+    </>
   </IntlProvider>
 );
 

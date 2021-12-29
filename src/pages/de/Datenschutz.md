@@ -68,7 +68,7 @@ Name und Anschrift des für die Verarbeitung Verantwortlichen
 Verantwortlicher im Sinne der Datenschutz-Grundverordnung, sonstiger in den Mitgliedstaaten der Europäischen Union geltenden Datenschutzgesetze und anderer Bestimmungen mit datenschutzrechtlichem Charakter ist:
 
 David Übelacker  
-Haltingerstrasse 24  
+Bläsiring 28  
 4057 Basel  
 Schweiz
 

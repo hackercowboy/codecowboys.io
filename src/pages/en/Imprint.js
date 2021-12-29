@@ -13,7 +13,7 @@ const Imprint = () => (
       <p>
         David Übelacker
         <br />
-        Haltingerstrasse 24
+        Bläsiring 28
         <br />
         4057 Basel
         <br />
