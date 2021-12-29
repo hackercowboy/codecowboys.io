@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> should render 1`] = `
+"<Content space={false}>
+  <Navigation>
+    <NavigationItem to=\\"apps\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+      Apps
+    </NavigationItem>
+    <NavigationItem to=\\"about\\" offset={-5} href={[undefined]} active={false} onSetActive={[undefined]}>
+      About
+    </NavigationItem>
+    <NavigationItem to=\\"contact\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+      Contact
+    </NavigationItem>
+  </Navigation>
+  <Parallax bgImage=\\"bg-6.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+    <ApplicatinCarousel>
+      <ApplicationHero image=\\"letter_carousel.png\\" title=\\"Letter\\" link=\\"/en/letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} />
+    </ApplicatinCarousel>
+  </Parallax>
+  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false} zebra={false} teaser={[undefined]} big={false}>
+    <Media>
+      <Media body={true}>
+        <h4>
+          Letter
+        </h4>
+        <p>
+          With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.
+           
+          <a href=\\"/en/letter\\">
+            More
+            ...
+          </a>
+        </p>
+      </Media>
+      <Media right={true} className=\\"ml-3\\">
+        <a href=\\"/en/letter\\">
+          <img src=\\"letter_icon.svg\\" style={{...}} alt=\\"Letter\\" />
+        </a>
+      </Media>
+    </Media>
+  </Section>
+  <About />
+  <ContactForm />
+</Content>"
+`;

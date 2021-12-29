@@ -9,7 +9,8 @@
     "lint": "eslint src",
     "start:prod": "NODE_ENV=production node build/server.js",
     "start": "razzle start",
-    "test": "razzle test --env=jsdom"
+    "test": "razzle test --env=jsdom",
+    "test:coverage": "razzle test --env=jsdom --coverage"
   },
   "dependencies": {
     "@react-spring/web": "^9.2.4",
@@ -32,6 +33,7 @@
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-async-script": "^1.2.0",
+    "react-cookie-consent": "^7.2.1",
     "react-dom": "^17.0.2",
     "react-google-recaptcha": "^2.1.0",
     "react-image-gallery": "^1.2.7",
@@ -68,5 +70,16 @@
     "razzle-plugin-scss": "^4.2.13",
     "webpack": "5.24.0",
     "webpack-dev-server": "3.11.0"
+  },
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "testEnvironment": "jsdom"
   }
 }

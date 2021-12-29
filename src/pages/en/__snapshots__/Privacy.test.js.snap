@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Privacy/> should render 1`] = `
+"<Content space={true}>
+  <Navigation />
+  <Container className=\\"article\\" tag=\\"div\\">
+    <Privacy.md />
+  </Container>
+</Content>"
+`;

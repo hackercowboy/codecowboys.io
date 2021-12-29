@@ -29,7 +29,7 @@ NavigationItem.propTypes = {
   offset: PropTypes.number,
   active: PropTypes.bool,
   children: PropTypes.node,
-  onSetActive: PropTypes.func.isRequired,
+  onSetActive: PropTypes.func,
 };
 
 NavigationItem.defaultProps = {
@@ -38,6 +38,7 @@ NavigationItem.defaultProps = {
   offset: 0,
   active: false,
   children: undefined,
+  onSetActive: undefined,
 };
 
 export default NavigationItem;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -12,37 +12,40 @@ import './ApplicationHero.scss';
 const appStoreButton = require('../assets/images/app_store_button.svg');
 const appStoreButtonSoon = require('../assets/images/app_store_button_soon.svg');
 
-export default class ApplicationHero extends Component {
-  static propTypes = {
-    image: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    soon: PropTypes.bool,
-    link: PropTypes.string,
-    appStoreLink: PropTypes.string,
-  }
+const ApplicationHero = ({
+  image, title, description, soon, link, appStoreLink,
+}) => (
+  <Container className="application-hero-container">
+    <Row>
+      <Col sm="12" md="6">
+        <div className="application-hero-image">
+          <img src={image} className="img-fluid" alt={title} />
+        </div>
+      </Col>
+      <Col>
+        <div className="application-hero-teaser">
+          { link ? (<h2><a href={link}>{title}</a></h2>) : (<h2>{title}</h2>)}
+          { link ? (<p><a href={link}>{description}</a></p>) : (<p>{description}</p>)}
+          {soon ? (<img src={appStoreButtonSoon} alt="App Store" />) : (<a href={appStoreLink}><img src={appStoreButton} alt="App Store" /></a>) }
+        </div>
+      </Col>
+    </Row>
+  </Container>
+);
 
-  render() {
-    const {
-      image, title, description, soon, link, appStoreLink,
-    } = this.props;
-    return (
-      <Container className="application-hero-container">
-        <Row>
-          <Col sm="12" md="6">
-            <div className="application-hero-image">
-              <img src={image} className="img-fluid" />
-            </div>
-          </Col>
-          <Col>
-            <div className="application-hero-teaser">
-              { link ? (<h2><a href={link}>{title}</a></h2>) : (<h2>{title}</h2>)}
-              { link ? (<p><a href={link}>{description}</a></p>) : (<p>{description}</p>)}
-              {soon ? (<img src={appStoreButtonSoon} />) : (<a href={appStoreLink}><img src={appStoreButton} /></a>) }
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    );
-  }
-}
+ApplicationHero.propTypes = {
+  image: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  soon: PropTypes.bool,
+  link: PropTypes.string,
+  appStoreLink: PropTypes.string,
+};
+
+ApplicationHero.defaultProps = {
+  soon: false,
+  link: undefined,
+  appStoreLink: undefined,
+};
+
+export default ApplicationHero;

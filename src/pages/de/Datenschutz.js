@@ -1,5 +1,4 @@
-/* eslint-disable max-len */
-import React, { Component } from 'react';
+import React from 'react';
 import { Container } from 'reactstrap';
 
 import Content from '../../components/Content';
@@ -7,15 +6,13 @@ import Navigation from '../../components/Navigation';
 
 import Document from './Datenschutz.md';
 
-export default class Datenschutz extends Component {
-  render() {
-    return (
-      <Content space>
-        <Navigation />
-        <Container className="article">
-          <Document />
-        </Container>
-      </Content>
-    );
-  }
-}
+const Datenschutz = () => (
+  <Content space>
+    <Navigation />
+    <Container className="article">
+      <Document />
+    </Container>
+  </Content>
+);
+
+export default Datenschutz;

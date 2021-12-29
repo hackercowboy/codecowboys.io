@@ -5,15 +5,23 @@ exports[`<ApplicationHero/> should render 1`] = `
   <Row tag=\\"div\\" widths={{...}}>
     <Col sm=\\"12\\" md=\\"6\\" tag=\\"div\\" widths={{...}}>
       <div className=\\"application-hero-image\\">
-        <img src={[undefined]} className=\\"img-fluid\\" />
+        <img src=\\"image.png\\" className=\\"img-fluid\\" alt=\\"title\\" />
       </div>
     </Col>
     <Col tag=\\"div\\" widths={{...}}>
       <div className=\\"application-hero-teaser\\">
-        <h2 />
-        <p />
-        <a href={[undefined]}>
-          <img src=\\"app_store_button.svg\\" />
+        <h2>
+          <a href=\\"/test\\">
+            title
+          </a>
+        </h2>
+        <p>
+          <a href=\\"/test\\">
+            description
+          </a>
+        </p>
+        <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
+          <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
         </a>
       </div>
     </Col>
