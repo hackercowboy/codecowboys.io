@@ -1,5 +1,5 @@
 ---
-to: src/pages/<%=h.testFile(name)%>
+to: src/pages/<%=name%>.test.js
 ---
 import React from 'react';
 import { shallow } from 'enzyme';

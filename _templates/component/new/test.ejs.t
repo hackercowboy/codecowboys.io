@@ -1,10 +1,10 @@
 ---
-to: src/components/<%=h.testFile(name)%>
+to: src/components/<%=name%>.test.js
 ---
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import <%=h.demodulize(name)%> from '../<%=h.demodulize(name)%>';
+import <%=h.demodulize(name)%> from './<%=h.demodulize(name)%>';
 
 describe('<<%=h.demodulize(name)%>/>', () => {
   it('should render', () => {

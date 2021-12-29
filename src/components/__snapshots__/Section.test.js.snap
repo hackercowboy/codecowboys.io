@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section/> should render 1`] = `
+"<Element name={[undefined]}>
+  <section className={false}>
+    <Container className=\\"section notbig\\" tag=\\"div\\">
+      <div className=\\"section-title-wrapper\\" />
+    </Container>
+  </section>
+</Element>"
+`;

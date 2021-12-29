@@ -1,48 +1,43 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
 import { NavLink } from 'reactstrap';
 
-export default class NavigationItem extends Component {
-  static propTypes = {
-    to: PropTypes.string,
-    href: PropTypes.string,
-    offset: PropTypes.number,
-    active: PropTypes.bool,
-    children: PropTypes.node,
-    onSetActive: PropTypes.func,
-  }
+const NavigationItem = ({
+  to, offset, children, active, href, onSetActive,
+}) => (to ? (
+  <Link
+    activeClass="god"
+    className={active ? 'nav-link active' : 'nav-link'}
+    onClick={(target) => onSetActive(to, target !== to)}
+    to={to}
+    spy
+    offset={offset}
+    smooth
+    duration={500}
+    onSetActive={(target) => onSetActive(to, target !== to)}
+  >
+    {children}
+  </Link>
+) : (
+  <NavLink href={href}>{children}</NavLink>
+));
 
-  constructor() {
-    super();
-    this.handleSetActive = this.handleSetActive.bind(this);
-  }
+NavigationItem.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  offset: PropTypes.number,
+  active: PropTypes.bool,
+  children: PropTypes.node,
+  onSetActive: PropTypes.func.isRequired,
+};
 
-  handleSetActive(target) {
-    const { to, onSetActive } = this.props;
-    onSetActive(to, target !== to);
-  }
+NavigationItem.defaultProps = {
+  to: undefined,
+  href: undefined,
+  offset: 0,
+  active: false,
+  children: undefined,
+};
 
-  render() {
-    const {
-      to, offset, children, active, href,
-    } = this.props;
-    return to ? (
-      <Link
-        activeClass="god"
-        className={active ? 'nav-link active' : 'nav-link'}
-        onClick={this.handleSetActive}
-        to={to}
-        spy
-        offset={offset}
-        smooth
-        duration={500}
-        onSetActive={this.handleSetActive}
-      >
-        {children}
-      </Link>
-    ) : (
-      <NavLink href={href}>{children}</NavLink>
-    );
-  }
-}
+export default NavigationItem;

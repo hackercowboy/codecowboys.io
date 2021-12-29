@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Navigation/> should render 1`] = `
+"<Navbar id=\\"navigation\\" color=\\"faded\\" light={true} fixed=\\"top\\" expand=\\"md\\" tag=\\"nav\\">
+  <Container tag=\\"div\\">
+    <NavbarBrand href=\\"/\\" tag=\\"a\\">
+      <img src=\\"logo.svg\\" alt=\\"Codecowboys.io logo\\" />
+      Code Cowboys
+    </NavbarBrand>
+    <NavbarToggler onClick={[Function: toggleNavigation]} tag=\\"button\\" type=\\"button\\" />
+    <Collapse isOpen={false} navbar={true} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} onExiting={[Function: noop]} onExited={[Function: noop]} tag=\\"div\\" timeout={350}>
+      <Nav className=\\"ml-auto nav-pills\\" navbar={true} tag=\\"ul\\" vertical={false} />
+    </Collapse>
+  </Container>
+</Navbar>"
+`;

@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import InputText from '../InputText';
+import Content from './Content';
 
-describe('<InputText/>', () => {
+describe('<Content/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<InputText />);
+    const wrapper = shallow(<Content />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

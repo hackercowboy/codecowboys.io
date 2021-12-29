@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ContactForm from '../ContactForm';
+import InputText from './InputText';
 
-describe('<ContactForm/>', () => {
+describe('<InputText/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<ContactForm />);
+    const wrapper = shallow(<InputText name="test" placeholder="Test" />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Content.scss';
 
-export default class Content extends Component {
-  static propTypes = {
-    space: PropTypes.bool,
-    children: PropTypes.node,
-  }
+const Content = ({ children, space }) => (
+  <div className={space ? 'content-space' : 'content'}>
+    {children}
+  </div>
+);
 
-  render() {
-    const { children, space } = this.props;
-    const className = space ? 'content-space' : 'content';
+Content.propTypes = {
+  space: PropTypes.bool,
+  children: PropTypes.node,
+};
 
-    return (
-      <div className={className}>
-        {children}
-      </div>
-    );
-  }
-}
+Content.defaultProps = {
+  space: false,
+  children: undefined,
+};
+
+export default Content;

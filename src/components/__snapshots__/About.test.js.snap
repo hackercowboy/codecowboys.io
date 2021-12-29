@@ -2,7 +2,7 @@
 
 exports[`<About/> should render 1`] = `
 "<Parallax bgImage=\\"bg-5.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
-  <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true}>
+  <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true} zebra={false} teaser={[undefined]} big={false}>
     <Media>
       <Media body={true}>
         <h4>

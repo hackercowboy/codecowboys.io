@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+/* eslint-disable react/no-array-index-key */
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
-import utils from 'lodash';
+import { isArray } from 'lodash';
 
 import {
   Carousel,
@@ -12,91 +13,77 @@ import {
 
 import './ApplicationCarousel.scss';
 
-export default class ApplicatinCarousel extends Component {
-  static propTypes = {
-    children: PropTypes.node,
+const ApplicatinCarousel = ({ children }) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const animating = useRef(false);
+
+  const onExiting = () => {
+    animating.current = true;
   };
 
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-    this.children = this.children.bind(this);
-  }
+  const onExited = () => {
+    animating.current = false;
+  };
 
-  children() {
-    const { children } = this.props;
-    return utils.isArray(children) ? children : [children];
-  }
+  const next = () => {
+    if (animating.current) return;
+    const nextIndex = activeIndex === children.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
 
-  onExiting() {
-    this.animating = true;
-  }
+  const previous = () => {
+    if (animating.current) return;
+    const nextIndex = activeIndex === 0 ? children.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
 
-  onExited() {
-    this.animating = false;
-  }
+  const goToIndex = (newIndex) => {
+    if (animating.current) return;
+    setActiveIndex(newIndex);
+  };
 
-  next() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === this.props.children.length - 1 ? 0 : this.state.activeIndex + 1;
-    this.setState({ activeIndex: nextIndex });
-  }
+  const childs = isArray(children) ? children : [children];
 
-  previous() {
-    if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? this.props.children.length - 1 : this.state.activeIndex - 1;
-    this.setState({ activeIndex: nextIndex });
-  }
+  const slides = childs.map((child, index) => (
+    <CarouselItem
+      onExiting={onExiting}
+      onExited={onExited}
+      key={index}
+    >
+      {child}
+    </CarouselItem>
+  ));
 
-  goToIndex(newIndex) {
-    if (this.animating) return;
-    this.setState({ activeIndex: newIndex });
-  }
-
-  render() {
-    const { activeIndex } = this.state;
-    const children = this.children();
-
-    const slides = children.map((child, index) => (
-      <CarouselItem
-        onExiting={this.onExiting}
-        onExited={this.onExited}
-        key={index}
+  return childs.length > 1 ? (
+    <Element name="application-carousel">
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        className="application-carousel"
       >
-        {child}
-      </CarouselItem>
-    ));
+        <CarouselIndicators items={childs.map((child, index) => ({ key: index }))} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      </Carousel>
+    </Element>
+  ) : (
+    <Element name="application-carousel">
+      <Carousel
+        activeIndex={activeIndex}
+        next={() => true}
+        previous={() => true}
+        className="application-carousel"
+      >
+        {slides}
+      </Carousel>
+    </Element>
+  );
+};
 
-    return children.length > 1 ? (
-      <Element name="application-carousel">
-        <Carousel
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
-          className="application-carousel"
-        >
-          <CarouselIndicators items={children.map((child, index) => ({ key: index }))} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-          {slides}
-          <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-          <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-        </Carousel>
-      </Element>
-    ) : (
-      <Element name="application-carousel">
-        <Carousel
-          activeIndex={activeIndex}
-          next={() => true}
-          previous={() => true}
-          className="application-carousel"
-        >
-          {slides}
-        </Carousel>
-      </Element>
-    );
-  }
-}
+ApplicatinCarousel.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default ApplicatinCarousel;

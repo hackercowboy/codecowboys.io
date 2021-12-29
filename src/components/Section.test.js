@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Button from '../Button';
+import Section from './Section';
 
-describe('<Button/>', () => {
+describe('<Section/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Button />);
+    const wrapper = shallow(<Section />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });
