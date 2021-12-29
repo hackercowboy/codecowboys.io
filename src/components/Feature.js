@@ -18,13 +18,13 @@ export default class Feature extends Component {
     } = this.props;
 
     return (
-      <Media className={ right ? 'feature right' : 'feature'}>
+      <Media className={right ? 'feature right' : 'feature'}>
         <Media body>
           <h4>{title}</h4>
           <p>{description}</p>
         </Media>
         <Media className="pull-right">
-          <i className={`fal ${icon}`} aria-hidden="true"></i>
+          <i className={`fal ${icon}`} aria-hidden="true" />
         </Media>
       </Media>
     );

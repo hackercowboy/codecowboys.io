@@ -23,8 +23,8 @@ export default class Section extends Component {
     } = this.props;
     return (
       <Element name={id}>
-        <section className={(dark && 'section-dark') || (zebra && 'section-zebra') }>
-          <Container className={ big ? 'section' : 'section notbig' }>
+        <section className={(dark && 'section-dark') || (zebra && 'section-zebra')}>
+          <Container className={big ? 'section' : 'section notbig'}>
             <div className="section-title-wrapper">
               {title && (<h2>{title}</h2>)}
               {subtitle ? (<h3>{subtitle}</h3>) : null}

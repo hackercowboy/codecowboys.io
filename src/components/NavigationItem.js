@@ -37,7 +37,8 @@ export default class NavigationItem extends Component {
         offset={offset}
         smooth
         duration={500}
-        onSetActive={this.handleSetActive}>
+        onSetActive={this.handleSetActive}
+      >
         {children}
       </Link>
     ) : (

@@ -11,7 +11,7 @@ export default class Datenschutz extends Component {
   render() {
     return (
       <Content space>
-        <Navigation/>
+        <Navigation />
         <Container className="article">
           <Document />
         </Container>

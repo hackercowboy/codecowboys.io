@@ -7,6 +7,7 @@ export default {
     subtitle: 'I programmiere coole Apps wie ein Cowboy!',
     content_1: 'Ich bin ein leidenschaftlicher Softwareentwickler und arbeite für ein Schweizer Unternehmen.',
     content_2: 'Von Zeit zu Zeit arbeite ich in meiner Freizeit an einigen eigenen Projekten, die ich auf dieser Seite veröffentliche.',
+    photo_alt: 'Foto von David Übelacker',
   },
   contact: {
     title: 'Kontakt',

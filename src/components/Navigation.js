@@ -59,7 +59,10 @@ export default class Navigation extends Component {
     return (
       <Navbar id="navigation" color="faded" light fixed="top" expand="md">
         <Container>
-          <NavbarBrand href="/"><img src={logo}/>Code Cowboys</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src={logo} />
+            Code Cowboys
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggleNavigation} />
           <Collapse isOpen={this.state.navigationOpen} navbar>
             <Nav className="ml-auto nav-pills" navbar>
@@ -67,6 +70,7 @@ export default class Navigation extends Component {
             </Nav>
           </Collapse>
         </Container>
-      </Navbar>);
+      </Navbar>
+    );
   }
 }

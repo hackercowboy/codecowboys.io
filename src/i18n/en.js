@@ -7,6 +7,7 @@ export default {
     subtitle: 'I code great apps like a cowboy!',
     content_1: 'I am a passionate software engineer working for a Swiss company.',
     content_2: 'From time to time i work on some nice projects in my free time, which i publish on this site.',
+    photo_alt: 'Photo of David Übelacker',
   },
   contact: {
     title: 'Contact',

@@ -8,7 +8,6 @@ import validator from 'validator';
 import ReCAPTCHA from 'react-google-recaptcha';
 import utils from 'lodash';
 import Frisbee from 'frisbee';
-import { withTranslation } from 'react-i18next';
 
 import InputError from './InputError';
 import Section from './Section';
@@ -108,7 +107,7 @@ const ContactForm = () => {
       <Form className="contact-form" onSubmit={beforeHandleSubmit}>
         { error ? (
           <Alert color="danger">
-            {t('contact.error')}
+            {intl.formatMessage({ id: 'contact.error')}
           </Alert>
         ) : null }
         <FormGroup>
@@ -116,7 +115,7 @@ const ContactForm = () => {
             type="text"
             disabled={isSubmitting}
             name="email"
-            placeholder={t('contact.email_placeholder')}
+            placeholder={intl.formatMessage({ id: 'contact.email_placeholder')}
             bsSize="lg"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -128,7 +127,7 @@ const ContactForm = () => {
             type="text"
             disabled={isSubmitting}
             name="subject"
-            placeholder={t('contact.subject_placeholder')}
+            placeholder={intl.formatMessage({ id: 'contact.subject_placeholder')}
             bsSize="lg"
             onChange={handleChange}
             onBlur={handleBlur}
@@ -140,7 +139,7 @@ const ContactForm = () => {
             type="textarea"
             disabled={isSubmitting}
             name="message"
-            placeholder={t('contact.message_placeholder')}
+            placeholder={intl.formatMessage({ id: 'contact.message_placeholder')}
             bsSize="lg"
             maxLength={4000}
             style={{ height: '200px' }}
@@ -161,14 +160,14 @@ const ContactForm = () => {
         <FormGroup id="privacy" check>
           <Label check>
             <Input disabled={isSubmitting} name="privacy" type="checkbox" onChange={handleChange}/>{' '}
-            {t('contact.privacy_1')} <a href="/en/privacy">{t('contact.privacy_2')}</a>.
+            {intl.formatMessage({ id: 'contact.privacy_1')} <a href="/en/privacy">{intl.formatMessage({ id: 'contact.privacy_2')}</a>.
           </Label>
           <InputError error={privacyError}/>
         </FormGroup>
-        <p className="mt-3">{t('contact.privacy_info_1')}<br/>{t('contact.privacy_info_2')}</p>
+        <p className="mt-3">{intl.formatMessage({ id: 'contact.privacy_info_1')}<br/>{intl.formatMessage({ id: 'contact.privacy_info_2')}</p>
         <div className="btn-form">
           <Button disabled={isSubmitting} color="primary" size="lg">
-            {t('contact.submit')}
+            {intl.formatMessage({ id: 'contact.submit')}
             { isSubmitting && (<i className="far fa-spinner fa-spin"></i>) }
           </Button>
         </div>
@@ -182,12 +181,12 @@ const ContactForm = () => {
     return (
       <Section
         id="contact"
-        title={t('contact.title')}
-        teaser={t('contact.subtitle')}>
+        title={intl.formatMessage({ id: 'contact.title')}
+        teaser={intl.formatMessage({ id: 'contact.subtitle')}>
         {this.state.submitted ? (
           <div className="contact-form">
             <Alert color="success">
-              {t('contact.success')}
+              {intl.formatMessage({ id: 'contact.success')}
             </Alert>
           </div>
         ) : (
@@ -204,4 +203,4 @@ ContactForm.propTypes = {
   t: PropTypes.func,
 };
 
-export default withTranslation()(ContactForm);
+export default injectIntl(ContactForm);

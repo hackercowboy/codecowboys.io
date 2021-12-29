@@ -6,7 +6,6 @@ import { renderToString } from 'react-dom/server';
 import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 
-import { i18next } from './i18n';
 import contact from './api/contact';
 import Routes from './routes';
 import layout from './layout';
@@ -30,11 +29,6 @@ server
     res.redirect(`/${language}`);
   })
   .get('/*', (req, res) => {
-    if (req.url.indexOf('/de') === 0) {
-      i18next.changeLanguage('de');
-    } else {
-      i18next.changeLanguage('en');
-    }
     const context = {};
     const markup = renderToString(
       <StaticRouter context={context} location={req.url}>

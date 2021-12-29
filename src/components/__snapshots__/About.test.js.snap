@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<About/> should render 1`] = `
+"<Parallax bgImage=\\"bg-5.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+  <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true}>
+    <Media>
+      <Media body={true}>
+        <h4>
+          David Übelacker
+        </h4>
+        <p>
+          I am a passionate software engineer working for a Swiss company.
+        </p>
+        <p>
+          From time to time i work on some nice projects in my free time, which i publish on this site.
+        </p>
+      </Media>
+      <Media right={true} className=\\"ml-3\\">
+        <img alt=\\"Photo of David Übelacker\\" className=\\"rounded-circle\\" src=\\"david.png\\" style={{...}} />
+      </Media>
+    </Media>
+  </Section>
+</Parallax>"
+`;

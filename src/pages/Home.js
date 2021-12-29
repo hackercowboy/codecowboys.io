@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { Media } from 'reactstrap';
-import { withTranslation } from 'react-i18next';
+import { injectIntl } from 'react-intl';
 
 import Content from '../components/Content';
 import Navigation from '../components/Navigation';
@@ -39,9 +39,9 @@ class Home extends Component {
     const { t } = this.props;
     return (
       <Navigation>
-        <NavigationItem to="apps" offset={-85}>{t('home.apps_title')}</NavigationItem>
-        <NavigationItem to="about" offset={-5}>{t('about.title')}</NavigationItem>
-        <NavigationItem to="contact" offset={-85}>{t('contact.title')}</NavigationItem>
+        <NavigationItem to="apps" offset={-85}>{intl.formatMessage({ id: 'home.apps_title')}</NavigationItem>
+        <NavigationItem to="about" offset={-5}>{intl.formatMessage({ id: 'about.title')}</NavigationItem>
+        <NavigationItem to="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title')}</NavigationItem>
       </Navigation>
     );
   }
@@ -53,51 +53,61 @@ class Home extends Component {
       <Content>
         {this.renderNavigation()}
         <Parallax
-          bgImage={heroBackground }
-          strength={500}>
+          bgImage={heroBackground}
+          strength={500}
+        >
           <ApplicationCarousel>
             <ApplicationHero
               image={letterCarouselImage}
-              title={t('letter.title')}
-              link={t('letter.link')}
+              title={intl.formatMessage({ id: 'letter.title')}
+              link={intl.formatMessage({ id: 'letter.link')}
               appStoreLink="http://itunes.apple.com/app/letter/id498506154"
-              description={t('letter.teaser')}/>
+              description={intl.formatMessage({ id: 'letter.teaser')}
+            />
             <ApplicationHero
               image={videoPartyCarouselImage}
-              title={t('video_party.title')}
-              description={t('video_party.teaser')}
-              soon />
+              title={intl.formatMessage({ id: 'video_party.title')}
+              description={intl.formatMessage({ id: 'video_party.teaser')}
+              soon
+            />
           </ApplicationCarousel>
         </Parallax>
         <Section
           id="apps"
-          title={t('home.apps_title')}
-          subtitle={t('home.apps_subtitle')}
+          title={intl.formatMessage({ id: 'home.apps_title')}
+          subtitle={intl.formatMessage({ id: 'home.apps_subtitle')}
         >
           <Media>
             <Media body>
-              <h4>{t('letter.title')}</h4>
-              <p>{t('letter.teaser')} <a href={t('letter.link')}>{t('common.more')}...</a></p>
+              <h4>{intl.formatMessage({ id: 'letter.title')}</h4>
+              <p>
+                {intl.formatMessage({ id: 'letter.teaser')}
+                {' '}
+                <a href={intl.formatMessage({ id: 'letter.link')}>
+                  {intl.formatMessage({ id: 'common.more')}
+                  ...
+                </a>
+              </p>
             </Media>
             <Media right className="ml-3">
-              <a href={t('letter.link')}><img src={letterIcon} style={ { width: '100px', height: '100px' } }/></a>
+              <a href={intl.formatMessage({ id: 'letter.link')}><img src={letterIcon} style={{ width: '100px', height: '100px' }} /></a>
             </Media>
           </Media>
           <Media className="mt-3">
             <Media body>
-              <h4>{t('video_party.title')}</h4>
-              <p>{t('video_party.teaser')}</p>
+              <h4>{intl.formatMessage({ id: 'video_party.title')}</h4>
+              <p>{intl.formatMessage({ id: 'video_party.teaser')}</p>
             </Media>
             <Media right className="ml-3">
-              <img src={videoPartyIcon} style={ { width: '100px', height: '100px' } }/>
+              <img src={videoPartyIcon} style={{ width: '100px', height: '100px' }} />
             </Media>
           </Media>
         </Section>
-        <About/>
-        <ContactForm/>
+        <About />
+        <ContactForm />
       </Content>
     );
   }
 }
 
-export default withTranslation()(Home);
+export default injectIntl(Home);

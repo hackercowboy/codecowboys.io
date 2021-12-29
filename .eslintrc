@@ -14,7 +14,8 @@
     },
     "plugins": [
         "react",
-        "import"
+        "import",
+        "cypress"
     ],
     "extends": [
         "eslint:recommended",

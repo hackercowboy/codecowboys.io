@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Form from '../Form';
+import Textarea from '../Textarea';
 
-describe('<Form/>', () => {
+describe('<Textarea/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Form />);
+    const wrapper = shallow(<Textarea />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

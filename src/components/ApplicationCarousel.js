@@ -80,7 +80,7 @@ export default class ApplicatinCarousel extends Component {
           previous={this.previous}
           className="application-carousel"
         >
-          <CarouselIndicators items={children.map((child, index) => ({ key: index })) } activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+          <CarouselIndicators items={children.map((child, index) => ({ key: index }))} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
           <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
           <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />

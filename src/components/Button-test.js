@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Textarea from '../Textarea';
+import Button from '../Button';
 
-describe('<Textarea/>', () => {
+describe('<Button/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Textarea />);
+    const wrapper = shallow(<Button />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

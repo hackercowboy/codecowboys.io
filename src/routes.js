@@ -49,18 +49,18 @@ const Routes = () => (
       <div>
         <CookieConsent>
           <Switch>
-            <Route path="/de/impressum" component={Impressum} exact/>
-            <Route path="/de/datenschutz" component={Datenschutz} exact/>
-            <Route path="/de/briefe" component={Letter} exact/>
-            <Route path="/de" component={Home} exact/>
-            <Route path="/en/imprint" component={Imprint} exact/>
-            <Route path="/en/privacy" component={Privacy} exact/>
-            <Route path="/en/letter" component={Letter} exact/>
-            <Route path="/en" component={Home} exact/>
-            <Route component={NotFound}/>
+            <Route path="/de/impressum" component={Impressum} exact />
+            <Route path="/de/datenschutz" component={Datenschutz} exact />
+            <Route path="/de/briefe" component={Letter} exact />
+            <Route path="/de" component={Home} exact />
+            <Route path="/en/imprint" component={Imprint} exact />
+            <Route path="/en/privacy" component={Privacy} exact />
+            <Route path="/en/letter" component={Letter} exact />
+            <Route path="/en" component={Home} exact />
+            <Route component={NotFound} />
           </Switch>
         </CookieConsent>
-        <Footer/>
+        <Footer />
       </div>
     </IntlProvider>
   </I18nextProvider>
