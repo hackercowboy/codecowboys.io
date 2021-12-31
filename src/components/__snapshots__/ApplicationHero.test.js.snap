@@ -2,13 +2,13 @@
 
 exports[`<ApplicationHero/> should render 1`] = `
 "<Container className=\\"application-hero-container\\" tag=\\"div\\">
-  <Row tag=\\"div\\" widths={{...}}>
-    <Col sm=\\"12\\" md=\\"6\\" tag=\\"div\\" widths={{...}}>
+  <div tag=\\"div\\" widths={{...}}>
+    <div sm=\\"12\\" md=\\"6\\" tag=\\"div\\" widths={{...}}>
       <div className=\\"application-hero-image\\">
         <img src=\\"image.png\\" className=\\"img-fluid\\" alt=\\"title\\" />
       </div>
-    </Col>
-    <Col tag=\\"div\\" widths={{...}}>
+    </div>
+    <div tag=\\"div\\" widths={{...}}>
       <div className=\\"application-hero-teaser\\">
         <h2>
           <a href=\\"/test\\">
@@ -24,7 +24,7 @@ exports[`<ApplicationHero/> should render 1`] = `
           <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
         </a>
       </div>
-    </Col>
-  </Row>
+    </div>
+  </div>
 </Container>"
 `;

@@ -6,22 +6,18 @@ import PropTypes from 'prop-types';
 
 import './<%=h.demodulize(name)%>.scss';
 
-const <%=h.demodulize(name)%> = ({ id, className, style }) => (
-  <div id={id} className={[className, '<%= h.changeCase.paramCase(h.demodulize(name)) %>'].filter((c) => c).join(' ')} style={style}>
+const <%=h.demodulize(name)%> = () => (
+  <div className="<%= h.changeCase.paramCase(h.demodulize(name)) %>">
     <%=h.demodulize(name)%>
   </div>
 );
 
 <%=h.demodulize(name)%>.propTypes = {
-  id: PropTypes.string,
-  className: PropTypes.string,
-  style: PropTypes.object, // eslint-disable-line react/forbid-prop-types
+  
 };
 
 <%=h.demodulize(name)%>.defaultProps = {
-  id: undefined,
-  className: undefined,
-  style: undefined,
+  
 };
 
 export default <%=h.demodulize(name)%>;

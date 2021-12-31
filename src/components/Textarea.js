@@ -5,19 +5,21 @@ import { Field, ErrorMessage } from 'formik';
 
 import './Textarea.scss';
 
-const Textarea = ({
+function Textarea({
   name, placeholder,
-}) => (
-  <div className="textarea">
-    <Field
-      component="textarea"
-      name={name}
-      maxLength={4000}
-      placeholder={placeholder}
-    />
-    <ErrorMessage name={name} />
-  </div>
-);
+}) {
+  return (
+    <div className="textarea">
+      <Field
+        component="textarea"
+        name={name}
+        maxLength={4000}
+        placeholder={placeholder}
+      />
+      <ErrorMessage name={name} />
+    </div>
+  );
+}
 
 Textarea.propTypes = {
   name: PropTypes.string.isRequired,

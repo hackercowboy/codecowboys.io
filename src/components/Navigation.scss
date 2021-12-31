@@ -1,14 +1,37 @@
-#navigation {
-  background: rgba(255, 255, 255, 0.9);
-  border-bottom: solid 1px #eee;
-}
+@import '../styles/colors';
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 
-.navbar-brand {  
-  font-size: 30px;
-  img {
-    width: 40px;
-    height: 40px;
-    margin: -5px 10px 0 0;
+  .navigation-items {
+    display: flex;
   }
 }
+
+@media (max-width : 576px) {
+  nav {
+    .navigation-items {
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: solid 1px $border-color;
+      display: flex;
+      flex-direction: column;
+      left: 0;
+      padding: 10px;
+      position: absolute;
+      top: 58px;
+      transform: scaleY(0);
+      transform-origin: left top;
+      transition: all 0.2s ease-in-out;
+      width: 100%;
+    }
+
+    .navigation-items.open {
+      
+      transform: scaleY(1);
+    }  
+  }
+}
+
+

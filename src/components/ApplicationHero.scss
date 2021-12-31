@@ -1,53 +1,57 @@
-.application-hero-container {
-    
-  padding: 100px 50px 0 50px;
-  min-height: 830px;
+.application-hero {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+  padding: 56px 25px 0;
 
-  @media (min-width: 768px) {
-    min-height: 600px;
-  }
-
- .application-hero-image {
-    margin: 10px;
-    text-align: center;
-    img {
-      max-height: 400px;
-    }
+  .application-hero-image {
+    max-height: 50vh;
+    width: auto;
   }
 
   .application-hero-teaser {
-    margin: 0 20px 50px 20px;
+    height: 40vh;
 
-    text-align: center;
-
-    h2, p, a {
-      color: white;
+    h1 {
+      margin: 0;
+      padding: 0;
     }
 
-    h2 {
-      margin-top: 30px;
-      font-size: 30px;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    a:hover {
+    a {
+      color: #fff;
       text-decoration: none;
     }
+  }
+}
 
-    @media (min-width: 768px) {
-      h2 {
-        font-size: 36px;
-      }
+@media only screen and (min-width : 576px) {
+  .application-hero {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-evenly;
+
+    .application-hero-image {
+      height: auto;
+      max-width: 40%;
+    }
   
-      p {
-        font-size: 24px;
-      }
+    .application-hero-teaser {
+      max-width: 700px;
+      width: 40%;
+    }
+  }
+}
 
-      img {
-        padding-top: 20px;
+@media only screen and (min-width : 992px) {
+  .application-hero {
+    .application-hero-teaser {
+      font-size: 1.5rem;
+      
+      h1 {
+        font-size: 3rem;
       }
     }
   }

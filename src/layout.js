@@ -4,14 +4,11 @@ export default (assets, markup) => `
   <head>
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta charset="utf-8" />
-      <title>Code Cowboys</title>
+      <title>codecowboys</title>
       <link href='https://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css' async defer>
       <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous" async defer>
-      <script src="https://cdn.polyfill.io/v2/polyfill.min.js" async defer></script>
       <script src='https://www.google.com/recaptcha/api.js' async defer></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" async defer/>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js" async defer></script>
       ${assets.client.css
     ? `<link rel="stylesheet" href="${assets.client.css}" async defer>`
     : ''}

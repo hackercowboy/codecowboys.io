@@ -2,18 +2,10 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
-import { isArray } from 'lodash';
-
-import {
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-} from 'reactstrap';
 
 import './ApplicationCarousel.scss';
 
-const ApplicatinCarousel = ({ children }) => {
+function ApplicatinCarousel({ children }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const animating = useRef(false);
 
@@ -42,45 +34,45 @@ const ApplicatinCarousel = ({ children }) => {
     setActiveIndex(newIndex);
   };
 
-  const childs = isArray(children) ? children : [children];
+  const childs = Array.isArray(children) ? children : [children];
 
   const slides = childs.map((child, index) => (
-    <CarouselItem
+    <div
       onExiting={onExiting}
       onExited={onExited}
       key={index}
     >
       {child}
-    </CarouselItem>
+    </div>
   ));
 
   return childs.length > 1 ? (
     <Element name="application-carousel">
-      <Carousel
+      <div
         activeIndex={activeIndex}
         next={next}
         previous={previous}
         className="application-carousel"
       >
-        <CarouselIndicators items={childs.map((child, index) => ({ key: index }))} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        <div items={childs.map((child, index) => ({ key: index }))} activeIndex={activeIndex} onClickHandler={goToIndex} />
         {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-      </Carousel>
+        <div direction="prev" directionText="Previous" onClickHandler={previous} />
+        <div direction="next" directionText="Next" onClickHandler={next} />
+      </div>
     </Element>
   ) : (
     <Element name="application-carousel">
-      <Carousel
+      <div
         activeIndex={activeIndex}
         next={() => true}
         previous={() => true}
         className="application-carousel"
       >
         {slides}
-      </Carousel>
+      </div>
     </Element>
   );
-};
+}
 
 ApplicatinCarousel.propTypes = {
   children: PropTypes.node.isRequired,

@@ -9,7 +9,7 @@ import Section from './Section';
 import InputText from './InputText';
 import Textarea from './Textarea';
 
-const ContactForm = ({ intl }) => {
+function ContactForm({ intl }) {
   const ContactSchema = Yup.object().shape({
     email: Yup.string()
       .email(intl.formatMessage({ id: 'contact.email_error' }))
@@ -61,7 +61,7 @@ const ContactForm = ({ intl }) => {
       </Formik>
     </Section>
   );
-};
+}
 
 ContactForm.propTypes = {
   intl: PropTypes.shape({

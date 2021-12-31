@@ -5,10 +5,10 @@ exports[`<Navigation/> should render 1`] = `
   <Container tag=\\"div\\">
     <NavbarBrand href=\\"/\\" tag=\\"a\\">
       <img src=\\"logo.svg\\" alt=\\"Codecowboys.io logo\\" />
-      Code Cowboys
+      codecowboys
     </NavbarBrand>
     <NavbarToggler onClick={[Function: toggleNavigation]} tag=\\"button\\" type=\\"button\\" />
-    <Collapse isOpen={false} navbar={true} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} onExiting={[Function: noop]} onExited={[Function: noop]} tag=\\"div\\" timeout={350}>
+    <divlapse isOpen={false} navbar={true} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} onExiting={[Function: noop]} onExited={[Function: noop]} tag=\\"div\\" timeout={350}>
       <Nav className=\\"ml-auto nav-pills\\" navbar={true} tag=\\"ul\\" vertical={false} />
     </Collapse>
   </Container>

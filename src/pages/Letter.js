@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
 import ImageGallery from 'react-image-gallery';
-import { Container, Row, Col } from 'reactstrap';
 
+import Container from '../components/Container';
 import Content from '../components/Content';
 import Navigation from '../components/Navigation';
 import NavigationItem from '../components/NavigationItem';
@@ -19,7 +19,7 @@ const letterCarouselImage = require('../assets/images/letter_carousel.png');
 const heroBackground = require('../assets/images/bg-7.jpg');
 const letterFeatures = require('../assets/images/letter_features.png');
 
-const Letter = ({ intl }) => {
+function Letter({ intl }) {
   const ipadImages = [1, 2, 3, 4, 5].map((index) => ({
     original: `/screenshots/letter/letter_ipad_${index}_de.png`,
     thumbnail: `/screenshots/letter/letter_ipad_${index}_de.png`,
@@ -33,11 +33,11 @@ const Letter = ({ intl }) => {
   return (
     <Content>
       <Navigation>
-        <NavigationItem to="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
-        <NavigationItem to="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
-        <NavigationItem to="screenshots" offset={-85}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
-        <NavigationItem to="video" offset={-55}>{intl.formatMessage({ id: 'letter.video' })}</NavigationItem>
-        <NavigationItem to="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
+        <NavigationItem target="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
+        <NavigationItem target="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
+        <NavigationItem target="screenshots" offset={-85}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
+        <NavigationItem target="video" offset={-55}>{intl.formatMessage({ id: 'letter.video' })}</NavigationItem>
+        <NavigationItem target="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
       </Navigation>
       <Parallax
         bgImage={heroBackground}
@@ -58,8 +58,8 @@ const Letter = ({ intl }) => {
         subtitle={intl.formatMessage({ id: 'letter.features_subtitle' })}
       />
       <Container id="features" style={{ marginTop: '-20px', paddingBottom: '60px' }}>
-        <Row>
-          <Col md="12" lg="4">
+        <div>
+          <div md="12" lg="4">
             <Feature
               title={intl.formatMessage({ id: 'letter.features_print_title' })}
               description={intl.formatMessage({ id: 'letter.features_print_description' })}
@@ -75,11 +75,11 @@ const Letter = ({ intl }) => {
               description={intl.formatMessage({ id: 'letter.features_search_description' })}
               icon="fa-search"
             />
-          </Col>
-          <Col className="center d-none d-lg-block d-xl-block">
+          </div>
+          <div className="center d-none d-lg-block d-xl-block">
             <img style={{ height: '500px' }} src={letterFeatures} alt={intl.formatMessage({ id: 'letter.features' })} />
-          </Col>
-          <Col md="12" lg="4">
+          </div>
+          <div md="12" lg="4">
             <Feature
               title={intl.formatMessage({ id: 'letter.features_addresses_title' })}
               description={intl.formatMessage({ id: 'letter.features_addresses_description' })}
@@ -98,14 +98,14 @@ const Letter = ({ intl }) => {
               icon="fa-file-alt"
               right
             />
-          </Col>
-        </Row>
+          </div>
+        </div>
       </Container>
       <Section
         id="description"
         title={intl.formatMessage({ id: 'letter.description' })}
         subtitle={intl.formatMessage({ id: 'letter.description_subtitle' })}
-        zebra
+        light
       >
         <div className="justify">
           <p>{intl.formatMessage({ id: 'letter.description_1' })}</p>
@@ -128,7 +128,7 @@ const Letter = ({ intl }) => {
         id="video"
         title={intl.formatMessage({ id: 'letter.video' })}
         subtitle={intl.formatMessage({ id: 'letter.video_subtitle' })}
-        zebra
+        light
       >
         <div className="embed-responsive embed-responsive-16by9">
           <iframe title="video" className="embed-responsive-item" src="//www.youtube.com/embed/b0j3EmhudzQ?list=UUHPQwvjmHnlm3vcnnfAoliw" />
@@ -137,7 +137,7 @@ const Letter = ({ intl }) => {
       <ContactForm />
     </Content>
   );
-};
+}
 
 Letter.propTypes = {
   intl: PropTypes.shape({ formatMessage: PropTypes.func.isRequired }).isRequired,

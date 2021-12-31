@@ -1,27 +1,29 @@
-.section {
-  padding-bottom: 40px;
+section {
+  padding: 0 10px 40px;
 
   .section-title-wrapper {    
-    margin: 30px auto 10px auto;
+    margin: 30px auto 10px;
     overflow: hidden;
     text-align: center;
   }
 
-  h2, h3 {
+  h2,
+  h3 {
     text-align: center;
   }
 
-  h2:before, h2:after {
-    content: "";
-    vertical-align: top;
+  h2::before,
+  h2::after {
+    border-bottom: 1px solid #222;
+    content: '';
     display: inline-block;
-    width: 50%;
     height: 0.65em;
-    border-bottom: 1px solid #222222;
     margin: 2px 2% 0 -55%;
+    vertical-align: top;
+    width: 50%;
   }
 
-  h2:after {
+  h2::after {
     margin: 2px -55% 0 2%;
   }
 
@@ -31,14 +33,14 @@
 
   h3 {
     font-size: 26px;
-    padding-top: 10px;
     padding-bottom: 5px;
+    padding-top: 10px;
   }
 
   h4 {
     font-size: 20px;
-    padding-top: 10px;
     padding-bottom: 15px;
+    padding-top: 10px;
   }
 }
 
@@ -46,17 +48,19 @@
   max-width: 750px;
 }
 
-.section-zebra {
+.section-light {
   background: #eee;
   padding-top: 5px;
 }
 
 .section-dark {  
-  padding-top: 50px;
-  margin-top: -50px; 
-  color: white;  
   background: rgba(0, 0, 0, 0.6);
-  h2:before, h2:after {
-    border-bottom: 1px solid white;
+  color: #fff;
+  margin-top: -50px;
+  padding-top: 50px;
+
+  h2::before,
+  h2::after {
+    border-bottom: 1px solid #fff;
   }
 }

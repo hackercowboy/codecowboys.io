@@ -1,44 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-scroll';
-import { NavLink } from 'reactstrap';
 
-const NavigationItem = ({
-  to, offset, children, active, href, onSetActive,
-}) => (to ? (
-  <Link
-    activeClass="god"
-    className={active ? 'nav-link active' : 'nav-link'}
-    onClick={(target) => onSetActive(to, target !== to)}
-    to={to}
-    spy
-    offset={offset}
-    smooth
-    duration={500}
-    onSetActive={(target) => onSetActive(to, target !== to)}
-  >
-    {children}
-  </Link>
-) : (
-  <NavLink href={href}>{children}</NavLink>
-));
+import './NavigationItem.scss';
+
+function NavigationItem({
+  target, offset, children,
+}) {
+  return (
+    <Link
+      activeClass="active"
+      className="navigation-item"
+      to={target}
+      spy
+      offset={offset}
+      smooth
+      duration={500}
+    >
+      {children}
+    </Link>
+  );
+}
 
 NavigationItem.propTypes = {
-  to: PropTypes.string,
-  href: PropTypes.string,
+  target: PropTypes.string.isRequired,
   offset: PropTypes.number,
-  active: PropTypes.bool,
   children: PropTypes.node,
-  onSetActive: PropTypes.func,
 };
 
 NavigationItem.defaultProps = {
-  to: undefined,
-  href: undefined,
   offset: 0,
-  active: false,
   children: undefined,
-  onSetActive: undefined,
 };
 
 export default NavigationItem;

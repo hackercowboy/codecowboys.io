@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Feature/> should render left 1`] = `
-"<Media className=\\"feature\\">
-  <Media body={true}>
+"<div className=\\"feature\\">
+  <div body={true}>
     <h4>
       Title
     </h4>
     <p>
       Description
     </p>
-  </Media>
-  <Media className=\\"pull-right\\">
+  </div>
+  <div className=\\"pull-right\\">
     <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
-  </Media>
-</Media>"
+  </div>
+</div>"
 `;
 
 exports[`<Feature/> should render right 1`] = `
-"<Media className=\\"feature right\\">
-  <Media body={true}>
+"<div className=\\"feature right\\">
+  <div body={true}>
     <h4>
       Title
     </h4>
     <p>
       Description
     </p>
-  </Media>
-  <Media className=\\"pull-right\\">
+  </div>
+  <div className=\\"pull-right\\">
     <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
-  </Media>
-</Media>"
+  </div>
+</div>"
 `;

@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import './Button.scss';
 
-const Button = ({ id }) => (
-  <div id={id}>
-    Button
-  </div>
-);
+function Button({ id }) {
+  return (
+    <div id={id}>
+      Button
+    </div>
+  );
+}
 
 Button.propTypes = {
   id: PropTypes.string,

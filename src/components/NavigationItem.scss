@@ -1,3 +1,18 @@
-.navigation-item {
+@import '../styles/colors';
 
+.navigation-item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.navigation-item {
+  &:hover {
+    background: $active-color;
+  }
+}
+
+.navigation-item.active {
+  background-color: $active-color;
 }

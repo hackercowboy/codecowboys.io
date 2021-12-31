@@ -1,3 +1,4 @@
+/* eslint-disable import/no-import-module-exports */
 import http from 'http';
 import app from './server';
 

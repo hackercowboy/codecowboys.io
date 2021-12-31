@@ -5,18 +5,20 @@ import { Field, ErrorMessage } from 'formik';
 
 import './InputText.scss';
 
-const InputText = ({
+function InputText({
   name, placeholder,
-}) => (
-  <div className="input-text">
-    <Field
-      type="text"
-      name={name}
-      placeholder={placeholder}
-    />
-    <ErrorMessage name={name} />
-  </div>
-);
+}) {
+  return (
+    <div className="input-text">
+      <Field
+        type="text"
+        name={name}
+        placeholder={placeholder}
+      />
+      <ErrorMessage name={name} />
+    </div>
+  );
+}
 
 InputText.propTypes = {
   name: PropTypes.string.isRequired,

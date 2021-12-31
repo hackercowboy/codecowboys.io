@@ -2,9 +2,9 @@
 
 exports[`<About/> should render 1`] = `
 "<Parallax bgImage=\\"bg-5.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
-  <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true} zebra={false} teaser={[undefined]} big={false}>
-    <Media>
-      <Media body={true}>
+  <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true} light={false} teaser={[undefined]} big={false}>
+    <div>
+      <div body={true}>
         <h4>
           David Übelacker
         </h4>
@@ -14,11 +14,11 @@ exports[`<About/> should render 1`] = `
         <p>
           From time to time i work on some nice projects in my free time, which i publish on this site.
         </p>
-      </Media>
-      <Media right={true} className=\\"ml-3\\">
+      </div>
+      <div right={true} className=\\"ml-3\\">
         <img alt=\\"Photo of David Übelacker\\" className=\\"rounded-circle\\" src=\\"david.png\\" style={{...}} />
-      </Media>
-    </Media>
+      </div>
+    </div>
   </Section>
 </Parallax>"
 `;

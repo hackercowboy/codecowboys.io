@@ -8,7 +8,9 @@ const reactIntl = jest.requireActual('react-intl');
 const intl = new reactIntl.createIntl({ locale: 'en', messages }, {});
 
 const injectIntl = (ChildComponent) => {
-  const IntlComponent = (props) => (<ChildComponent {...props} intl={intl} />);
+  function IntlComponent(props) {
+    return <ChildComponent {...props} intl={intl} />;
+  }
   IntlComponent.displayName = ChildComponent.displayName || ChildComponent.name;
   return IntlComponent;
 };

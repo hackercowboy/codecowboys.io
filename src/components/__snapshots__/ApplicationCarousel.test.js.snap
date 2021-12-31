@@ -2,29 +2,29 @@
 
 exports[`<ApplicationCarousel/> should render with multiple children 1`] = `
 "<Element name=\\"application-carousel\\">
-  <Carousel activeIndex={0} next={[Function: next]} previous={[Function: previous]} className=\\"application-carousel\\" interval={5000} pause=\\"hover\\" keyboard={true} slide={true} enableTouch={true}>
-    <CarouselIndicators items={{...}} activeIndex={0} onClickHandler={[Function: goToIndex]} />
-    <CarouselItem onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
+  div activeIndex={0} next={[Function: next]} previous={[Function: previous]} className=\\"application-carousel\\" interval={5000} pause=\\"hover\\" keyboard={true} slide={true} enableTouch={true}>
+    <div items={{...}} activeIndex={0} onClickHandler={[Function: goToIndex]} />
+    <div onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
       <div />
-    </CarouselItem>
-    <CarouselItem onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
+    </div>
+    <div onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
       <div />
-    </CarouselItem>
-    <CarouselItem onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
+    </div>
+    <div onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
       <div />
-    </CarouselItem>
-    <CarouselControl direction=\\"prev\\" directionText=\\"Previous\\" onClickHandler={[Function: previous]} />
-    <CarouselControl direction=\\"next\\" directionText=\\"Next\\" onClickHandler={[Function: next]} />
-  </Carousel>
+    </div>
+    <div direction=\\"prev\\" directionText=\\"Previous\\" onClickHandler={[Function: previous]} />
+    <div direction=\\"next\\" directionText=\\"Next\\" onClickHandler={[Function: next]} />
+  </div>
 </Element>"
 `;
 
 exports[`<ApplicationCarousel/> should render with one child 1`] = `
 "<Element name=\\"application-carousel\\">
-  <Carousel activeIndex={0} next={[Function: next]} previous={[Function: previous]} className=\\"application-carousel\\" interval={5000} pause=\\"hover\\" keyboard={true} slide={true} enableTouch={true}>
-    <CarouselItem onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
+  div activeIndex={0} next={[Function: next]} previous={[Function: previous]} className=\\"application-carousel\\" interval={5000} pause=\\"hover\\" keyboard={true} slide={true} enableTouch={true}>
+    <div onExiting={[Function: onExiting]} onExited={[Function: onExited]} in={false} mountOnEnter={false} unmountOnExit={false} appear={false} enter={true} exit={true} onEnter={[Function: noop]} onEntering={[Function: noop]} onEntered={[Function: noop]} onExit={[Function: noop]} tag=\\"div\\" timeout={600} slide={true}>
       <div />
-    </CarouselItem>
-  </Carousel>
+    </div>
+  </div>
 </Element>"
 `;

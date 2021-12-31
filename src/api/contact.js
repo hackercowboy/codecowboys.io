@@ -1,7 +1,7 @@
 import Recaptcha from 'recaptcha-verify';
-import utils from 'lodash';
 import validator from 'validator';
 import mailgun from 'mailgun.js';
+import { isEmpty } from '../utils';
 
 export default {
   post: (request, response) => {
@@ -10,10 +10,10 @@ export default {
     });
 
     const message = request.body;
-    if (!utils.isEmpty(message.email)
+    if (!isEmpty(message.email)
     && validator.isEmail(message.email)
-    && !utils.isEmpty(message.subject)
-    && !utils.isEmpty(message.message)
+    && !isEmpty(message.subject)
+    && !isEmpty(message.message)
     && message.privacy) {
       console.log('fdsa');
       recaptcha.checkResponse(message.captcha, (recaptchaError, recaptchaResponse) => {

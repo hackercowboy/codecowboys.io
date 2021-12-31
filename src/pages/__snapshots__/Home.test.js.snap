@@ -3,13 +3,13 @@
 exports[`<Home/> should render 1`] = `
 "<Content space={false}>
   <Navigation>
-    <NavigationItem to=\\"apps\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"apps\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
       Apps
     </NavigationItem>
-    <NavigationItem to=\\"about\\" offset={-5} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"about\\" offset={-5} href={[undefined]} active={false} onSetActive={[undefined]}>
       About
     </NavigationItem>
-    <NavigationItem to=\\"contact\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"contact\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
       Contact
     </NavigationItem>
   </Navigation>
@@ -18,9 +18,9 @@ exports[`<Home/> should render 1`] = `
       <ApplicationHero image=\\"letter_carousel.png\\" title=\\"Letter\\" link=\\"/en/letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} />
     </ApplicatinCarousel>
   </Parallax>
-  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false} zebra={false} teaser={[undefined]} big={false}>
-    <Media>
-      <Media body={true}>
+  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false} light={false} teaser={[undefined]} big={false}>
+    <div>
+      <div body={true}>
         <h4>
           Letter
         </h4>
@@ -32,13 +32,13 @@ exports[`<Home/> should render 1`] = `
             ...
           </a>
         </p>
-      </Media>
-      <Media right={true} className=\\"ml-3\\">
+      </div>
+      <div right={true} className=\\"ml-3\\">
         <a href=\\"/en/letter\\">
           <img src=\\"letter_icon.svg\\" style={{...}} alt=\\"Letter\\" />
         </a>
-      </Media>
-    </Media>
+      </div>
+    </div>
   </Section>
   <About />
   <ContactForm />
