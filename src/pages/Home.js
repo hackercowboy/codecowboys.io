@@ -21,10 +21,11 @@ import ScrollButton from '../components/ScrollButton';
 const letterCarouselImage = require('../assets/images/letter_carousel.png');
 const heroBackground = require('../assets/images/bg-6.jpg');
 const letterIcon = require('../assets/images/letter_icon.svg');
+const aboutBackground = require('../assets/images/bg-5.jpg');
 
 function Home({ intl }) {
   return (
-    <Main>
+    <Main className="presentation">
       <Header>
         <Navigation>
           <NavigationItem target="apps" offset={-76}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
@@ -60,7 +61,19 @@ function Home({ intl }) {
           image={letterIcon}
         />
       </Section>
-      <About />
+      <Parallax
+        bgImage={aboutBackground}
+        strength={500}
+      >
+        <Section
+          id="about"
+          title={intl.formatMessage({ id: 'about.title' })}
+          subtitle={intl.formatMessage({ id: 'about.subtitle' })}
+          dark
+        >
+          <About />
+        </Section>
+      </Parallax>
       <ContactForm />
     </Main>
   );

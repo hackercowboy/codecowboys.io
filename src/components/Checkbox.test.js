@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Application from './Application';
+import Checkbox from './Checkbox';
 
-describe('<Application/>', () => {
+describe('<Checkbox/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Application />);
+    const wrapper = shallow(<Checkbox />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

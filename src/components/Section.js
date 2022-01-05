@@ -6,21 +6,20 @@ import Container from './Container';
 import './Section.scss';
 
 function Section({
-  id, dark, light, title, subtitle, teaser, children, offset,
+  id, dark, title, subtitle, children, offset,
 }) {
   return (
     <Element
       name={id}
       offset={offset}
       duration={500}
-      smooth
+      smooth="true"
     >
-      <section className={(dark && 'section-dark') || (light && 'section-light')}>
+      <section className={dark ? 'section-dark' : 'section-light'}>
         <Container>
           <div className="section-title-wrapper">
             {title && (<h2>{title}</h2>)}
             {subtitle ? (<h3>{subtitle}</h3>) : null}
-            {teaser ? (<h4>{teaser}</h4>) : null}
           </div>
           {children}
         </Container>
@@ -35,9 +34,7 @@ Section.propTypes = {
   id: PropTypes.string,
   offset: PropTypes.number,
   subtitle: PropTypes.string,
-  teaser: PropTypes.string,
   title: PropTypes.string,
-  light: PropTypes.bool,
 };
 
 Section.defaultProps = {
@@ -46,9 +43,7 @@ Section.defaultProps = {
   id: undefined,
   offset: 0,
   subtitle: undefined,
-  teaser: undefined,
   title: undefined,
-  light: false,
 };
 
 export default Section;

@@ -76,5 +76,5 @@ exports[`<Letter/> should render 1`] = `
     </div>
   </Section>
   <ContactForm />
-</Content>"
+</Main>"
 `;

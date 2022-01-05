@@ -1,0 +1,17 @@
+.checkbox {
+  margin-bottom: 20px;
+}
+
+.checkbox-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  
+  input {
+    cursor: pointer;
+    height: 20px;
+    margin-right: 10px;
+    width: 20px;
+  }
+  
+}

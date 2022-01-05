@@ -12,25 +12,6 @@ const background = require('../assets/images/bg-7.jpg');
 function Footer({ intl }) {
   return (
     <footer>
-      <div className="footer">
-        ©
-        {new Date().getFullYear()}
-        {' '}
-        David Übelacker,
-        {intl.formatMessage({ id: 'footer.rights' })}
-        &nbsp;
-        |
-        <a href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
-        &nbsp;
-        |
-        <a href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
-        <br />
-        <a href="/en">English</a>
-        {' '}
-        |
-        <a href="/de">Deutsch</a>
-      </div>
-
       <Parallax
         bgImage={background}
         strength={500}
@@ -42,6 +23,28 @@ function Footer({ intl }) {
             <i className="fas fa-angle-double-right" aria-hidden="true" />
             <br />
             - Fred Brooks
+          </div>
+          <div className="footer">
+            <div className="footer-copyright">
+              ©
+              {new Date().getFullYear()}
+              {' '}
+              David Übelacker
+            </div>
+            <div className="footer-item">
+            &nbsp;
+              <a href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
+              &nbsp;
+              |
+              &nbsp;
+              <a href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
+            </div>
+            <div className="footer-item">
+              <a href="/en">English</a>
+              {' '}
+              |
+              <a href="/de">Deutsch</a>
+            </div>
           </div>
         </Section>
       </Parallax>

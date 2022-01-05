@@ -14,7 +14,7 @@ function NavigationItem({
       to={target}
       spy
       offset={offset}
-      smooth
+      smooth="true"
       duration={500}
     >
       {children}

@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Container from '../../components/Container';
-import Content from '../../components/Content';
+import Main from '../../components/Main';
 import Navigation from '../../components/Navigation';
 
 function Imprint() {
   return (
-    <Content space>
+    <Main>
       <Navigation />
       <Container className="article">
         <h1>Impressum</h1>
@@ -38,7 +38,7 @@ function Imprint() {
           Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.
         </p>
       </Container>
-    </Content>
+    </Main>
   );
 }
 

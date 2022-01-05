@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 
 import './Main.scss';
 
-function Main({ children }) {
+function Main({ className, children }) {
   return (
-    <main>
+    <main className={className}>
       {children}
     </main>
   );
 }
 
 Main.propTypes = {
+  className: PropTypes.string,
   children: PropTypes.node,
 };
 
 Main.defaultProps = {
+  className: undefined,
   children: undefined,
 };
 

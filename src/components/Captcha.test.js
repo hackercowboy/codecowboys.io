@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Application from './Application';
+import Captcha from './Captcha';
 
-describe('<Application/>', () => {
+describe('<Captcha/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Application />);
+    const wrapper = shallow(<Captcha />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

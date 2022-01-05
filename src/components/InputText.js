@@ -1,18 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Field, ErrorMessage } from 'formik';
+import { Field } from 'formik';
+import ErrorMessage from './ErrorMessage';
 
 import './InputText.scss';
 
 function InputText({
-  name, placeholder,
+  name, placeholder, disabled,
 }) {
   return (
     <div className="input-text">
       <Field
         type="text"
         name={name}
+        disabled={disabled}
         placeholder={placeholder}
       />
       <ErrorMessage name={name} />
@@ -22,7 +24,12 @@ function InputText({
 
 InputText.propTypes = {
   name: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
   placeholder: PropTypes.string.isRequired,
+};
+
+InputText.defaultProps = {
+  disabled: false,
 };
 
 export default InputText;

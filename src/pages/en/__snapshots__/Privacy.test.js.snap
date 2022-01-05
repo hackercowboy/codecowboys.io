@@ -6,5 +6,5 @@ exports[`<Privacy/> should render 1`] = `
   <Container className=\\"article\\" tag=\\"div\\">
     <Privacy.md />
   </Container>
-</Content>"
+</Main>"
 `;

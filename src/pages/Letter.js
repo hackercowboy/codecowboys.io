@@ -5,7 +5,7 @@ import { injectIntl } from 'react-intl';
 import ImageGallery from 'react-image-gallery';
 
 import Container from '../components/Container';
-import Content from '../components/Content';
+import Main from '../components/Main';
 import Navigation from '../components/Navigation';
 import NavigationItem from '../components/NavigationItem';
 import Feature from '../components/Feature';
@@ -31,7 +31,7 @@ function Letter({ intl }) {
   }));
 
   return (
-    <Content>
+    <Main>
       <Navigation>
         <NavigationItem target="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
         <NavigationItem target="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
@@ -135,7 +135,7 @@ function Letter({ intl }) {
         </div>
       </Section>
       <ContactForm />
-    </Content>
+    </Main>
   );
 }
 

@@ -1,0 +1,25 @@
+.about {
+  margin-bottom: 50px;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.about-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.about-teaser {
+  flex-grow: 1;
+}
+
+.about-image {
+  margin-left: 10px;
+  width: 100px;
+
+  img {
+    border-radius: 50px;
+  }
+}

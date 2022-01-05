@@ -42,5 +42,5 @@ exports[`<Home/> should render 1`] = `
   </Section>
   <About />
   <ContactForm />
-</Content>"
+</Main>"
 `;

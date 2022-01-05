@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Container from '../../components/Container';
-import Content from '../../components/Content';
+import Main from '../../components/Main';
 import Navigation from '../../components/Navigation';
 
 function Imprint() {
   return (
-    <Content space>
+    <Main>
       <Navigation />
       <Container className="article">
         <h1>Imprint</h1>
@@ -43,7 +43,7 @@ function Imprint() {
           Unauthorized utilization of copyrighted works is punishable by the copyright law.
         </p>
       </Container>
-    </Content>
+    </Main>
   );
 }
 

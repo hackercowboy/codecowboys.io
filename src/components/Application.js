@@ -32,8 +32,7 @@ Application.propTypes = {
   title: PropTypes.string.isRequired,
   teaser: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  image: PropTypes.object.isRequired,
+  image: PropTypes.string.isRequired,
   intl: PropTypes.shape({
     formatMessage: PropTypes.func,
   }).isRequired,

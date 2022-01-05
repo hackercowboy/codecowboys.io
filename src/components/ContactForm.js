@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
-
-import { Formik, Form } from 'formik';
+import { injectIntl, FormattedMessage } from 'react-intl';
+import axios from 'axios';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import Section from './Section';
+import Form from './Form';
 import InputText from './InputText';
 import Textarea from './Textarea';
+import Checkbox from './Checkbox';
+import Captcha from './Captcha';
+
+import Button from './Button';
+
+import './ContactForm.scss';
 
 function ContactForm({ intl }) {
+  const [state, setState] = useState('initial');
+
   const ContactSchema = Yup.object().shape({
     email: Yup.string()
       .email(intl.formatMessage({ id: 'contact.email_error' }))
@@ -20,45 +29,77 @@ function ContactForm({ intl }) {
       .required(intl.formatMessage({ id: 'contact.message_error' })),
     captcha: Yup.string()
       .required(intl.formatMessage({ id: 'contact.captcha_error' })),
-    privacy: Yup.boolean()
-      .required(intl.formatMessage({ id: 'contact.privacy_error' })),
+    privacy: Yup.bool().oneOf([true], intl.formatMessage({ id: 'contact.privacy_error' })),
   });
+
+  const handleOnSubmit = async (values) => {
+    try {
+      await axios.post('/api/contact', values);
+      setState('submitted');
+    } catch (error) {
+      console.error(error);
+      setState('error');
+    }
+  };
 
   return (
     <Section
       id="contact"
       title={intl.formatMessage({ id: 'contact.title' })}
-      teaser={intl.formatMessage({ id: 'contact.subtitle' })}
+      subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
     >
+      { state === 'initial' && (
       <Formik
-        initialValues={{}}
-        validationSchema={ContactSchema}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            setSubmitting(false);
-          }, 400);
+        initialValues={{
+          email: '', subject: '', message: '', captcha: '', privacy: false,
         }}
+        validationSchema={ContactSchema}
+        onSubmit={handleOnSubmit}
       >
         {({ isSubmitting }) => (
           <Form>
             <InputText
               name="email"
               placeholder={intl.formatMessage({ id: 'contact.email_placeholder' })}
+              disabled={isSubmitting}
             />
             <InputText
               name="subject"
               placeholder={intl.formatMessage({ id: 'contact.subject_placeholder' })}
+              disabled={isSubmitting}
             />
             <Textarea
               name="message"
               placeholder={intl.formatMessage({ id: 'contact.message_placeholder' })}
+              disabled={isSubmitting}
             />
-            <button type="submit" disabled={isSubmitting}>
-              Submit
-            </button>
+            <Captcha
+              name="captcha"
+              disabled={isSubmitting}
+            />
+            <Checkbox
+              name="privacy"
+              disabled={isSubmitting}
+            >
+              <FormattedMessage id="contact.privacy_1" />
+              {' '}
+              <a href={intl.formatMessage({ id: 'contact.privacy_link' })}>
+                <FormattedMessage id="contact.privacy_2" />
+              </a>
+            </Checkbox>
+            <Button type="submit" disabled={isSubmitting}>
+              <FormattedMessage id="contact.submit" />
+            </Button>
           </Form>
         )}
       </Formik>
+      )}
+      { state === 'submitted' && (
+        <p className="contact-form-success">{intl.formatMessage({ id: 'contact.success' })}</p>
+      )}
+      { state === 'error' && (
+        <p className="contact-form-error">{intl.formatMessage({ id: 'contact.error' })}</p>
+      )}
     </Section>
   );
 }

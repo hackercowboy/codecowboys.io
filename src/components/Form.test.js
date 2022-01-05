@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Application from './Application';
+import Form from './Form';
 
-describe('<Application/>', () => {
+describe('<Form/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Application />);
+    const wrapper = shallow(<Form />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });
