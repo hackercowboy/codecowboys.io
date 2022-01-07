@@ -1,24 +1,38 @@
-import Recaptcha from 'recaptcha-verify';
-import validator from 'validator';
 import mailgun from 'mailgun.js';
-import { isEmpty } from '../utils';
+import * as Yup from 'yup';
+
+Yup.addMethod(Yup.string, 'captcha', function captcha() {
+  return this.test('captcha', 'Captcha validation failed', (value) => new Promise((resolve, reject) => {
+    setTimeout(() => resolve(false), 5000);
+  }));
+});
+
+const messageSchema = Yup.object({
+  email: Yup.string().email().required(),
+  subject: Yup.string().required(),
+  message: Yup.string().required(),
+  captcha: Yup.string().required().captcha(),
+  privacy: Yup.bool().oneOf([true]),
+});
 
 export default {
   post: async (request, response) => {
-    console.log(request.body);
-    response.status(204).send();
+    const message = request.body;
+    console.log(message);
 
-    // const recaptcha = new Recaptcha({
-    //   secret: process.env.RECAPTCHA_SECRET,
-    // });
+    try {
+      await messageSchema.validate(message);
+      response.status(204).send();
+    } catch (error) {
+      console.error(error);
+      response.status(400).send(JSON.stringify({ error: 'validation failed', causes: error.errors }));
+    }
 
-    // const message = request.body;
     // if (!isEmpty(message.email)
     // && validator.isEmail(message.email)
     // && !isEmpty(message.subject)
     // && !isEmpty(message.message)
     // && message.privacy) {
-    //   console.log('fdsa');
     //   recaptcha.checkResponse(message.captcha, (recaptchaError, recaptchaResponse) => {
     //     if (recaptchaError || !recaptchaResponse.success) {
     //       console.log('Captcha invalid :-(');
@@ -41,5 +55,6 @@ export default {
     //   });
     // } else {
     //   response.status(400).send();
+    // }
   },
 };

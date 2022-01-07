@@ -19,6 +19,7 @@ server
   .use(forceDomain({
     hostname: process.env.CODECOWBOYS_HOSTNAME,
     protocol: 'https',
+    excludeRule: /lvh\.me/i,
   }))
   .use(compression())
   .use(express.static(process.env.RAZZLE_PUBLIC_DIR))
