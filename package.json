@@ -25,6 +25,7 @@
     "express": "^4.17.2",
     "flat": "^5.0.2",
     "forcedomain": "^2.2.11",
+    "form-data": "^4.0.0",
     "formik": "^2.2.9",
     "mailgun.js": "^4.1.4",
     "prop-types": "^15.8.0",
