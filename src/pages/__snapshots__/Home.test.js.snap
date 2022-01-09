@@ -1,46 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Home/> should render 1`] = `
-"<Content space={false}>
-  <Navigation>
-    <NavigationItem target=\\"apps\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
-      Apps
-    </NavigationItem>
-    <NavigationItem target=\\"about\\" offset={-5} href={[undefined]} active={false} onSetActive={[undefined]}>
-      About
-    </NavigationItem>
-    <NavigationItem target=\\"contact\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
-      Contact
-    </NavigationItem>
-  </Navigation>
+"<Main className=\\"presentation\\">
+  <Header>
+    <Navigation>
+      <NavigationItem target=\\"apps\\" offset={-94}>
+        Apps
+      </NavigationItem>
+      <NavigationItem target=\\"about\\" offset={-88}>
+        About
+      </NavigationItem>
+      <NavigationItem target=\\"contact\\" offset={-94}>
+        Contact
+      </NavigationItem>
+    </Navigation>
+  </Header>
   <Parallax bgImage=\\"bg-6.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <ApplicatinCarousel>
       <ApplicationHero image=\\"letter_carousel.png\\" title=\\"Letter\\" link=\\"/en/letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} />
     </ApplicatinCarousel>
+    <ScrollButton target=\\"apps\\" />
   </Parallax>
-  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false} light={false} teaser={[undefined]} big={false}>
-    <div>
-      <div body={true}>
-        <h4>
-          Letter
-        </h4>
-        <p>
-          With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.
-           
-          <a href=\\"/en/letter\\">
-            More
-            ...
-          </a>
-        </p>
-      </div>
-      <div right={true} className=\\"ml-3\\">
-        <a href=\\"/en/letter\\">
-          <img src=\\"letter_icon.svg\\" style={{...}} alt=\\"Letter\\" />
-        </a>
-      </div>
-    </div>
+  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false}>
+    <Application title=\\"Letter\\" teaser=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" link=\\"/en/letter\\" image=\\"letter_icon.svg\\" />
   </Section>
-  <About />
-  <ContactForm />
+  <Parallax bgImage=\\"bg-5.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+    <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true}>
+      <About />
+    </Section>
+  </Parallax>
+  <Section id=\\"contact\\" title=\\"Contact\\" subtitle=\\"Please contact me if you have any questions\\" dark={false}>
+    <ContactForm />
+  </Section>
 </Main>"
 `;

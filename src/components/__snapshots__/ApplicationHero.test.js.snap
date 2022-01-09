@@ -1,30 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ApplicationHero/> should render 1`] = `
-"<Container className=\\"application-hero-container\\" tag=\\"div\\">
-  <div tag=\\"div\\" widths={{...}}>
-    <div sm=\\"12\\" md=\\"6\\" tag=\\"div\\" widths={{...}}>
-      <div className=\\"application-hero-image\\">
-        <img src=\\"image.png\\" className=\\"img-fluid\\" alt=\\"title\\" />
-      </div>
-    </div>
-    <div tag=\\"div\\" widths={{...}}>
-      <div className=\\"application-hero-teaser\\">
-        <h2>
-          <a href=\\"/test\\">
-            title
-          </a>
-        </h2>
-        <p>
-          <a href=\\"/test\\">
-            description
-          </a>
-        </p>
-        <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
-          <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
-        </a>
-      </div>
-    </div>
+"<div className=\\"application-hero\\">
+  <div className=\\"application-hero-image\\">
+    <img src=\\"image.png\\" alt=\\"title\\" />
   </div>
-</Container>"
+  <div className=\\"application-hero-teaser\\">
+    <h1>
+      <a href=\\"/test\\">
+        title
+      </a>
+    </h1>
+    <p>
+      <a href=\\"/test\\">
+        description
+      </a>
+    </p>
+    <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
+      <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
+    </a>
+  </div>
+</div>"
 `;

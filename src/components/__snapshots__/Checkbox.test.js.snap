@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox/> should render 1`] = `
+"<div className=\\"checkbox\\">
+  <div className=\\"checkbox-wrapper\\">
+    <Field type=\\"checkbox\\" id={[undefined]} name={[undefined]} disabled={false} />
+    <label htmlFor={[undefined]} />
+  </div>
+  <ErrorMessage name={[undefined]} />
+</div>"
+`;

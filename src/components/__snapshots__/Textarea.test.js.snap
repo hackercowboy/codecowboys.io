@@ -2,7 +2,7 @@
 
 exports[`<Textarea/> should render 1`] = `
 "<div className=\\"textarea\\">
-  <Field component=\\"textarea\\" name=\\"test\\" maxLength={4000} placeholder=\\"Test\\" />
-  <FormikConnect(ErrorMessageImpl) name=\\"test\\" />
+  <Field component=\\"textarea\\" name=\\"test\\" disabled={false} maxLength={4000} placeholder=\\"Test\\" />
+  <ErrorMessage name=\\"test\\" />
 </div>"
 `;

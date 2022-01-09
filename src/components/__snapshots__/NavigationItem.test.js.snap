@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<NavigationItem/> should render 1`] = `"<NavLink href={[undefined]} tag=\\"a\\" />"`;
+exports[`<NavigationItem/> should render 1`] = `"<Link activeClass=\\"active\\" className=\\"navigation-item\\" to={[undefined]} spy={true} offset={0} smooth=\\"true\\" duration={500} />"`;

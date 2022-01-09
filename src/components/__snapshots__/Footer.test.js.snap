@@ -1,33 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Footer/> should render 1`] = `
-"<div>
-  <div className=\\"footer\\">
-    ©
-    2050
-     
-    David Übelacker,
-    all rights reserved.
-      |
-    <a href=\\"/en/imprint\\">
-      Imprint
-    </a>
-      |
-    <a href=\\"/en/privacy\\">
-      Privacy Policy
-    </a>
-    <br />
-    <a href=\\"/en\\">
-      English
-    </a>
-     
-    |
-    <a href=\\"/de\\">
-      Deutsch
-    </a>
-  </div>
+"<footer>
   <Parallax bgImage=\\"bg-7.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
-    <Section dark={true} id={[undefined]} light={false} title={[undefined]} subtitle={[undefined]} teaser={[undefined]} big={false}>
+    <Section dark={true} id={[undefined]} subtitle={[undefined]} title={[undefined]}>
       <div className=\\"footer-quote\\">
         <i className=\\"fas fa-angle-double-left\\" aria-hidden=\\"true\\" />
          What one programmer can do in one month, two programmers can do in two months. 
@@ -35,7 +11,35 @@ exports[`<Footer/> should render 1`] = `
         <br />
         - Fred Brooks
       </div>
+      <div className=\\"footer\\">
+        <div className=\\"footer-copyright\\">
+          ©
+          2050
+           
+          David Übelacker
+        </div>
+        <div className=\\"footer-item\\">
+           
+          <a href=\\"/en/imprint\\">
+            Imprint
+          </a>
+            |  
+          <a href=\\"/en/privacy\\">
+            Privacy Policy
+          </a>
+        </div>
+        <div className=\\"footer-item\\">
+          <a href=\\"/en\\">
+            English
+          </a>
+           
+          |
+          <a href=\\"/de\\">
+            Deutsch
+          </a>
+        </div>
+      </div>
     </Section>
   </Parallax>
-</div>"
+</footer>"
 `;

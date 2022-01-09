@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hamburger/> should render 1`] = `
+"<button className=\\"hamburger\\" type=\\"button\\" onClick={[undefined]}>
+  <span className=\\"hamburger-box\\">
+    <span className=\\"hamburger-inner\\" />
+  </span>
+</button>"
+`;

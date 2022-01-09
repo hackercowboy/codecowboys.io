@@ -1,3 +1,52 @@
-.cookie-consent {
+@import '../styles/colors';
 
+/* stylelint-disable-next-line selector-class-pattern */
+.CookieConsent {
+  background: $dark-color !important;
+  padding: 0 !important;
+
+  div {
+    width: 100%;
+  }
+
+  a {
+    display: block;
+  }
+}
+
+#rcc-confirm-button {
+  background: $light-color !important;
+  border: 1px solid $text-color;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1em !important;
+  height: 40px;
+  margin: 0 !important;
+  width: 100%;
+}
+
+@media only screen and (min-width : 992px) {
+  /* stylelint-disable-next-line selector-class-pattern */
+  .CookieConsent {
+    flex-wrap: nowrap !important;
+
+    div {
+      width: auto;
+    }
+
+    div:first-of-type {
+      flex: 1 0 auto !important;
+      margin: 0 !important;
+      padding: 15px;
+    }
+
+    a {
+      display: inline;
+    }
+  }
+
+  #rcc-confirm-button {
+    height: 52px;
+    width: 140px;
+  }
 }

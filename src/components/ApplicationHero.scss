@@ -6,7 +6,7 @@
   padding: 56px 25px 0;
 
   .application-hero-image {
-    max-height: 50vh;
+    max-height: 30vh;
     width: auto;
 
     img {
@@ -40,6 +40,7 @@
 
     .application-hero-image {
       height: auto;
+      max-height: 50vh;
       max-width: 40%;
     }
   

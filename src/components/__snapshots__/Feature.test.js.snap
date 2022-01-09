@@ -1,33 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Feature/> should render left 1`] = `
-"<div className=\\"feature\\">
-  <div body={true}>
-    <h4>
-      Title
-    </h4>
-    <p>
-      Description
-    </p>
-  </div>
-  <div className=\\"pull-right\\">
-    <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
-  </div>
-</div>"
+"<Fragment>
+  <h4>
+    Title
+  </h4>
+  <p>
+    Description
+  </p>
+  <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
+</Fragment>"
 `;
 
 exports[`<Feature/> should render right 1`] = `
-"<div className=\\"feature right\\">
-  <div body={true}>
-    <h4>
-      Title
-    </h4>
-    <p>
-      Description
-    </p>
-  </div>
-  <div className=\\"pull-right\\">
-    <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
-  </div>
-</div>"
+"<Fragment>
+  <h4>
+    Title
+  </h4>
+  <p>
+    Description
+  </p>
+  <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
+</Fragment>"
 `;

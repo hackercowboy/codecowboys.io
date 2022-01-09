@@ -6,7 +6,6 @@ import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
-import Section from './Section';
 import Form from './Form';
 import InputText from './InputText';
 import Textarea from './Textarea';
@@ -47,11 +46,7 @@ function ContactForm({ intl }) {
   };
 
   return (
-    <Section
-      id="contact"
-      title={intl.formatMessage({ id: 'contact.title' })}
-      subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
-    >
+    <>
       <GoogleReCaptcha onVerify={handleOnCaptchaVeriry} />
       { state === 'initial' && (
       <Formik
@@ -101,7 +96,7 @@ function ContactForm({ intl }) {
       { state === 'error' && (
         <p className="contact-form-error">{intl.formatMessage({ id: 'contact.error' })}</p>
       )}
-    </Section>
+    </>
   );
 }
 

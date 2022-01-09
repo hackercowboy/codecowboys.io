@@ -4,6 +4,7 @@
     ],
     "extends": "stylelint-config-sass-guidelines",
     "rules": {
-        "max-nesting-depth": 5
+        "max-nesting-depth": 5,
+        "selector-max-id": 2
     }
 }

@@ -28,9 +28,9 @@ function Home({ intl }) {
     <Main className="presentation">
       <Header>
         <Navigation>
-          <NavigationItem target="apps" offset={-76}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
-          <NavigationItem target="about" offset={-5}>{intl.formatMessage({ id: 'about.title' })}</NavigationItem>
-          <NavigationItem target="contact" offset={-76}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
+          <NavigationItem target="apps" offset={-94}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
+          <NavigationItem target="about" offset={-88}>{intl.formatMessage({ id: 'about.title' })}</NavigationItem>
+          <NavigationItem target="contact" offset={-94}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
         </Navigation>
       </Header>
       <Parallax
@@ -52,7 +52,6 @@ function Home({ intl }) {
         id="apps"
         title={intl.formatMessage({ id: 'home.apps_title' })}
         subtitle={intl.formatMessage({ id: 'home.apps_subtitle' })}
-        offset={-76}
       >
         <Application
           title={intl.formatMessage({ id: 'letter.title' })}
@@ -74,7 +73,13 @@ function Home({ intl }) {
           <About />
         </Section>
       </Parallax>
-      <ContactForm />
+      <Section
+        id="contact"
+        title={intl.formatMessage({ id: 'contact.title' })}
+        subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
+      >
+        <ContactForm />
+      </Section>
     </Main>
   );
 }

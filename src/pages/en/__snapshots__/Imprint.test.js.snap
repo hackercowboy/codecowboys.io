@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Imprint/> should render 1`] = `
-"<Content space={true}>
+"<Main className={[undefined]}>
   <Navigation />
-  <Container className=\\"article\\" tag=\\"div\\">
+  <Container className=\\"article\\">
     <h1>
       Imprint
     </h1>

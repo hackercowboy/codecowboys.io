@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Letter/> should render 1`] = `
-"<Content space={false}>
+"<Main className={[undefined]}>
   <Navigation>
-    <NavigationItem target=\\"features\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"features\\" offset={-85}>
       Features
     </NavigationItem>
-    <NavigationItem target=\\"description\\" offset={-55} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"description\\" offset={-55}>
       Description
     </NavigationItem>
-    <NavigationItem target=\\"screenshots\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"screenshots\\" offset={-85}>
       Screenshots
     </NavigationItem>
-    <NavigationItem target=\\"video\\" offset={-55} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"video\\" offset={-55}>
       Video
     </NavigationItem>
-    <NavigationItem target=\\"contact\\" offset={-85} href={[undefined]} active={false} onSetActive={[undefined]}>
+    <NavigationItem target=\\"contact\\" offset={-85}>
       Contact
     </NavigationItem>
   </Navigation>
@@ -24,25 +24,25 @@ exports[`<Letter/> should render 1`] = `
       <ApplicationHero image=\\"letter_carousel.png\\" title=\\"Letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} link={[undefined]} />
     </ApplicatinCarousel>
   </Parallax>
-  <Section id=\\"features\\" title=\\"Features\\" subtitle=\\"Overview of all features\\" dark={false} light={false} teaser={[undefined]} big={false} />
-  <Container id=\\"features\\" style={{...}} tag=\\"div\\">
-    <div tag=\\"div\\" widths={{...}}>
-      <div md=\\"12\\" lg=\\"4\\" tag=\\"div\\" widths={{...}}>
+  <Section id=\\"features\\" title=\\"Features\\" subtitle=\\"Overview of all features\\" dark={false} />
+  <Container id=\\"features\\" style={{...}}>
+    <div>
+      <div md=\\"12\\" lg=\\"4\\">
         <Feature title=\\"Printing & Sharing\\" description=\\"Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.\\" icon=\\"fa-print\\" right={false} />
         <Feature title=\\"Storage\\" description=\\"All letters are stored securely and synchronized between devices using iCloud.\\" icon=\\"fa-cloud\\" right={false} />
         <Feature title=\\"Search\\" description=\\"With the search function letters can be found again quickly and easily.\\" icon=\\"fa-search\\" right={false} />
       </div>
-      <div className=\\"center d-none d-lg-block d-xl-block\\" tag=\\"div\\" widths={{...}}>
+      <div className=\\"center d-none d-lg-block d-xl-block\\">
         <img style={{...}} src=\\"letter_features.png\\" alt=\\"Features\\" />
       </div>
-      <div md=\\"12\\" lg=\\"4\\" tag=\\"div\\" widths={{...}}>
+      <div md=\\"12\\" lg=\\"4\\">
         <Feature title=\\"Addresses\\" description=\\"International addresses are formatted automatically. Senders and receivers can easily be selected from your address book.\\" icon=\\"fa-user\\" right={true} />
         <Feature title=\\"Signature\\" description=\\"Letters can be signed directly in the application.\\" icon=\\"fa-pencil\\" right={true} />
         <Feature title=\\"Templates\\" description=\\"Text templates can be used to create ready letter in just a few seconds.\\" icon=\\"fa-file-alt\\" right={true} />
       </div>
     </div>
   </Container>
-  <Section id=\\"description\\" title=\\"Description\\" subtitle=\\"The Letter App in detail\\" light={true} dark={false} teaser={[undefined]} big={false}>
+  <Section id=\\"description\\" title=\\"Description\\" subtitle=\\"The Letter App in detail\\" light={true} dark={false}>
     <div className=\\"justify\\">
       <p>
         With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.
@@ -61,8 +61,8 @@ exports[`<Letter/> should render 1`] = `
       </p>
     </div>
   </Section>
-  <Section id=\\"screenshots\\" title=\\"Screenshots\\" subtitle=\\"The main screens of the Letter App\\" dark={false} light={false} teaser={[undefined]} big={false} />
-  <Container tag=\\"div\\">
+  <Section id=\\"screenshots\\" title=\\"Screenshots\\" subtitle=\\"The main screens of the Letter App\\" dark={false} />
+  <Container>
     <div className=\\"gallery gallery-ipad\\">
       <l items={{...}} onErrorImageURL=\\"\\" additionalClass=\\"\\" showNav={true} autoPlay={false} lazyLoad={false} infinite={true} showIndex={false} showBullets={false} showThumbnails={true} showPlayButton={true} showFullscreenButton={true} disableThumbnailScroll={false} disableKeyDown={false} disableSwipe={false} disableThumbnailSwipe={false} useTranslate3D={true} isRTL={false} useBrowserFullscreen={true} flickThreshold={0.4} stopPropagation={false} indexSeparator=\\" / \\" thumbnailPosition=\\"bottom\\" startIndex={0} slideDuration={450} swipingTransitionDuration={0} swipingThumbnailTransitionDuration={0} onSlide={{...}} onBeforeSlide={{...}} onScreenChange={{...}} onPause={{...}} onPlay={{...}} onClick={{...}} onImageLoad={{...}} onImageError={{...}} onTouchMove={{...}} onTouchEnd={{...}} onTouchStart={{...}} onMouseOver={{...}} onMouseLeave={{...}} onThumbnailError={{...}} onThumbnailClick={{...}} renderCustomControls={{...}} renderThumbInner={{...}} renderItem={{...}} slideInterval={3000} slideOnThumbnailOver={false} swipeThreshold={30} renderLeftNav={[Function: renderLeftNav]} renderRightNav={[Function: renderRightNav]} renderPlayPauseButton={[Function: renderPlayPauseButton]} renderFullscreenButton={[Function: renderFullscreenButton]} useWindowKeyDown={true} />
     </div>
@@ -70,7 +70,7 @@ exports[`<Letter/> should render 1`] = `
       <l items={{...}} onErrorImageURL=\\"\\" additionalClass=\\"\\" showNav={true} autoPlay={false} lazyLoad={false} infinite={true} showIndex={false} showBullets={false} showThumbnails={true} showPlayButton={true} showFullscreenButton={true} disableThumbnailScroll={false} disableKeyDown={false} disableSwipe={false} disableThumbnailSwipe={false} useTranslate3D={true} isRTL={false} useBrowserFullscreen={true} flickThreshold={0.4} stopPropagation={false} indexSeparator=\\" / \\" thumbnailPosition=\\"bottom\\" startIndex={0} slideDuration={450} swipingTransitionDuration={0} swipingThumbnailTransitionDuration={0} onSlide={{...}} onBeforeSlide={{...}} onScreenChange={{...}} onPause={{...}} onPlay={{...}} onClick={{...}} onImageLoad={{...}} onImageError={{...}} onTouchMove={{...}} onTouchEnd={{...}} onTouchStart={{...}} onMouseOver={{...}} onMouseLeave={{...}} onThumbnailError={{...}} onThumbnailClick={{...}} renderCustomControls={{...}} renderThumbInner={{...}} renderItem={{...}} slideInterval={3000} slideOnThumbnailOver={false} swipeThreshold={30} renderLeftNav={[Function: renderLeftNav]} renderRightNav={[Function: renderRightNav]} renderPlayPauseButton={[Function: renderPlayPauseButton]} renderFullscreenButton={[Function: renderFullscreenButton]} useWindowKeyDown={true} />
     </div>
   </Container>
-  <Section id=\\"video\\" title=\\"Video\\" subtitle=\\"A video illustrating the operation of the Letter App\\" light={true} dark={false} teaser={[undefined]} big={false}>
+  <Section id=\\"video\\" title=\\"Video\\" subtitle=\\"A video illustrating the operation of the Letter App\\" light={true} dark={false}>
     <div className=\\"embed-responsive embed-responsive-16by9\\">
       <iframe title=\\"video\\" className=\\"embed-responsive-item\\" src=\\"//www.youtube.com/embed/b0j3EmhudzQ?list=UUHPQwvjmHnlm3vcnnfAoliw\\" />
     </div>
