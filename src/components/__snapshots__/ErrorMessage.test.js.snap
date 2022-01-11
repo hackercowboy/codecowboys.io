@@ -2,6 +2,6 @@
 
 exports[`<ErrorMessage/> should render 1`] = `
 "<div className=\\"error-message\\">
-  <FormikConnect(ErrorMessageImpl) name={[undefined]} />
+  <FormikConnect(ErrorMessageImpl) name=\\"test\\" />
 </div>"
 `;

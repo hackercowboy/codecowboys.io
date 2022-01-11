@@ -5,7 +5,7 @@ import Checkbox from './Checkbox';
 
 describe('<Checkbox/>', () => {
   it('should render', () => {
-    const wrapper = shallow(<Checkbox />);
+    const wrapper = shallow(<Checkbox name="test"><div /></Checkbox>);
     expect(wrapper.debug()).toMatchSnapshot();
   });
 });

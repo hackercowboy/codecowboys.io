@@ -3,9 +3,11 @@
 exports[`<Checkbox/> should render 1`] = `
 "<div className=\\"checkbox\\">
   <div className=\\"checkbox-wrapper\\">
-    <Field type=\\"checkbox\\" id={[undefined]} name={[undefined]} disabled={false} />
-    <label htmlFor={[undefined]} />
+    <Field type=\\"checkbox\\" id=\\"test\\" name=\\"test\\" disabled={false} />
+    <label htmlFor=\\"test\\">
+      <div />
+    </label>
   </div>
-  <ErrorMessage name={[undefined]} />
+  <ErrorMessage name=\\"test\\" />
 </div>"
 `;

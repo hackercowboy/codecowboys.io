@@ -15,7 +15,7 @@ export default (assets, markup) => `
     ? `<link rel="stylesheet" href="${assets.client.css}" async defer>`
     : ''}
       ${process.env.NODE_ENV === 'production'
-    ? `<script src="${assets.client.js}" defer async></script>`
+    ? /* istanbul ignore next */ `<script src="${assets.client.js}" defer async></script>`
     : `<script src="${assets.client.js}" defer crossorigin async></script>`}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->

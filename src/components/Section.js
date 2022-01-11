@@ -14,7 +14,6 @@ function Section({
         name={id}
         duration={500}
         smooth="true"
-        isDynamic
       >
         <Container>
           <div className="section-title-wrapper">

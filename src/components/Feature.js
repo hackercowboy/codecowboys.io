@@ -6,7 +6,6 @@ import './Feature.scss';
 function Feature({
   title, description, icon, right,
 }) {
-  console.log(right);
   return (
     <>
       <h4>{title}</h4>

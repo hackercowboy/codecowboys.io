@@ -11,7 +11,7 @@ function ScrollButton({ target }) {
     <button
       className="scroll-button"
       type="button"
-      onClick={() => scroller.scrollTo(target, { offset: -76, duration: 500, smooth: true })}
+      onClick={() => scroller.scrollTo(target, { offset: -94, duration: 500, smooth: true })}
     />
   );
 }

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import flat from 'flat';
 
 import en from './en';

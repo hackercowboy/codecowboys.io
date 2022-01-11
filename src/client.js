@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable import/no-relative-packages */
 /* eslint-disable import/no-import-module-exports */
 import { BrowserRouter } from 'react-router-dom';
@@ -6,7 +7,7 @@ import { hydrate } from 'react-dom';
 
 import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 
-import Routes from './routes';
+import Routes from './Routes';
 
 hydrate(
   <BrowserRouter>

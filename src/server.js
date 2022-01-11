@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import express from 'express';
@@ -7,7 +8,7 @@ import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 
 import contact from './api/contact';
-import Routes from './routes';
+import Routes from './Routes';
 import layout from './layout';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);

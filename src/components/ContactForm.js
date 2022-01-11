@@ -17,7 +17,7 @@ import './ContactForm.scss';
 
 function ContactForm({ intl }) {
   const [state, setState] = useState('initial');
-  const [captcha, setCaptcha] = useState('captchainitial');
+  const [captcha, setCaptcha] = useState();
 
   const ContactSchema = Yup.object().shape({
     email: Yup.string()
@@ -30,8 +30,7 @@ function ContactForm({ intl }) {
     privacy: Yup.bool().oneOf([true], intl.formatMessage({ id: 'contact.privacy_error' })),
   });
 
-  const handleOnCaptchaVeriry = useCallback((token) => {
-    console.log(token);
+  const handleOnCaptchaVerify = useCallback((token) => {
     setCaptcha(token);
   }, []);
 
@@ -40,14 +39,13 @@ function ContactForm({ intl }) {
       await axios.post('/api/contact', { ...values, captcha });
       setState('submitted');
     } catch (error) {
-      console.error(error);
       setState('error');
     }
   };
 
   return (
     <>
-      <GoogleReCaptcha onVerify={handleOnCaptchaVeriry} />
+      <GoogleReCaptcha id="recaptcha-verify" onVerify={handleOnCaptchaVerify} />
       { state === 'initial' && (
       <Formik
         initialValues={{

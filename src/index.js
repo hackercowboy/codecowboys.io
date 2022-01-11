@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable import/no-import-module-exports */
 import http from 'http';
 import app from './server';
@@ -13,7 +14,6 @@ server.listen(port, (error) => {
   if (error) {
     console.log(error);
   }
-
   console.log(`🚀 started on port ${port}, let's rock!`);
 });
 

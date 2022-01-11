@@ -9,6 +9,7 @@ exports[`<Header/> should render 1`] = `
         codecowboys
       </div>
     </a>
+    <div />
   </div>
 </header>"
 `;

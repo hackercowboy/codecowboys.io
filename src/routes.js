@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Routes as ReactRoutes } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
@@ -19,6 +19,14 @@ import { language, messages } from './i18n';
 import './styles/base.scss';
 
 function Routes() {
+  useEffect(() => {
+    document.addEventListener('keydown', (event) => {
+      if (['Space', 'PageDown', 'PageUp'].indexOf(event.code) >= 0) {
+        event.preventDefault();
+      }
+    });
+  }, []);
+
   return (
     <IntlProvider locale={language} defaultLocale="en" messages={messages}>
       <GoogleReCaptchaProvider reCaptchaKey={configuration.RECAPTCHA_SITE_KEY}>

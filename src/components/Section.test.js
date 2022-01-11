@@ -8,4 +8,9 @@ describe('<Section/>', () => {
     const wrapper = shallow(<Section />);
     expect(wrapper.debug()).toMatchSnapshot();
   });
+
+  it('should render dark', () => {
+    const wrapper = shallow(<Section title="test" subtitle="Test 2" dark />);
+    expect(wrapper.debug()).toMatchSnapshot();
+  });
 });

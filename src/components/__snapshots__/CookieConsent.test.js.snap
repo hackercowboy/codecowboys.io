@@ -4,7 +4,7 @@ exports[`<CookieConsent/> should render 1`] = `
 "<a location=\\"bottom\\" buttonText=\\"Got it!\\" cookieName=\\"codecowboys_consent\\" disableStyles={false} hideOnAccept={true} hideOnDecline={true} visible=\\"byCookieValue\\" onAccept={[Function: onAccept]} onDecline={[Function: onDecline]} cookieValue={true} declineCookieValue={false} setDeclineCookie={true} declineButtonText=\\"I decline\\" debug={false} expires={365} containerClasses=\\"CookieConsent\\" contentClasses=\\"\\" buttonClasses=\\"\\" buttonWrapperClasses=\\"\\" declineButtonClasses=\\"\\" buttonId=\\"rcc-confirm-button\\" declineButtonId=\\"rcc-decline-button\\" extraCookieOptions={{...}} disableButtonStyles={false} enableDeclineButton={false} flipButtons={false} sameSite=\\"lax\\" ButtonComponent={[Function: ButtonComponent]} overlay={false} overlayClasses=\\"\\" onOverlayClick={[Function: onOverlayClick]} acceptOnOverlayClick={false} ariaAcceptLabel=\\"Accept cookies\\" ariaDeclineLabel=\\"Decline cookies\\" acceptOnScroll={false} acceptOnScrollPercentage={25} customContentAttributes={{...}} customContainerAttributes={{...}}>
   This website uses cookies to ensure you get the best experience on our website.
    
-  <a href=\\"https://www.cookiesandyou.com/\\">
+  <a href=\\"/en/privacy\\">
     Learn more
   </a>
 </a>"

@@ -6,6 +6,7 @@ import { messages } from '../../i18n';
 
 const reactIntl = jest.requireActual('react-intl');
 const intl = new reactIntl.createIntl({ locale: 'en', messages }, {});
+const { IntlProvider, FormattedMessage } = reactIntl;
 
 const injectIntl = (ChildComponent) => {
   function IntlComponent(props) {
@@ -15,4 +16,4 @@ const injectIntl = (ChildComponent) => {
   return IntlComponent;
 };
 
-export { injectIntl };
+export { IntlProvider, FormattedMessage, injectIntl };

@@ -14,7 +14,7 @@ function CookieConsent({ intl }) {
     >
       {intl.formatMessage({ id: 'cookie_consent.message' })}
       {' '}
-      <a href="https://www.cookiesandyou.com/">{intl.formatMessage({ id: 'cookie_consent.link' })}</a>
+      <a href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'cookie_consent.link' })}</a>
     </ReactCookieConsent>
   );
 }
