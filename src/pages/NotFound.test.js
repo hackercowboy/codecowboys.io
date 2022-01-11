@@ -6,6 +6,6 @@ import NotFound from './NotFound';
 describe('<NotFound/>', () => {
   it('should render', () => {
     const wrapper = shallow(<NotFound />);
-    expect(wrapper.debug()).toMatchSnapshot();
+    expect(wrapper.shallow().debug()).toMatchSnapshot();
   });
 });

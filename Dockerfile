@@ -9,6 +9,8 @@ RUN yarn install --no-progress
 
 COPY ./ .
 
+RUN yarn lint
+RUN yarn test:coverage
 RUN yarn build
 
 CMD yarn start:prod

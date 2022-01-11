@@ -6,3 +6,17 @@ exports[`<Navigation/> should render 1`] = `
   <div className=\\"navigation-items\\" />
 </nav>"
 `;
+
+exports[`<Navigation/> should render 2`] = `
+"<nav>
+  <Hamburger open={true} onClick={[Function: onClick]} />
+  <div className=\\"navigation-items open\\" />
+</nav>"
+`;
+
+exports[`<Navigation/> should render 3`] = `
+"<nav>
+  <Hamburger open={false} onClick={[Function: onClick]} />
+  <div className=\\"navigation-items\\" />
+</nav>"
+`;

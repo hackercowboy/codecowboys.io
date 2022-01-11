@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ApplicationHero/> should render 1`] = `
+exports[`<ApplicationHero/> should render with link 1`] = `
 "<div className=\\"application-hero\\">
   <div className=\\"application-hero-image\\">
     <img src=\\"image.png\\" alt=\\"title\\" />
@@ -19,6 +19,23 @@ exports[`<ApplicationHero/> should render 1`] = `
     <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
       <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
     </a>
+  </div>
+</div>"
+`;
+
+exports[`<ApplicationHero/> should render withou link 1`] = `
+"<div className=\\"application-hero\\">
+  <div className=\\"application-hero-image\\">
+    <img src=\\"image.png\\" alt=\\"title\\" />
+  </div>
+  <div className=\\"application-hero-teaser\\">
+    <h1>
+      title
+    </h1>
+    <p>
+      description
+    </p>
+    <img src=\\"app_store_button_soon.svg\\" alt=\\"App Store\\" />
   </div>
 </div>"
 `;
