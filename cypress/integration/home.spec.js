@@ -6,21 +6,21 @@ describe('Home', () => {
   it('should scroll to apps when clicking on the apps navigation', () => {
     cy.get('#apps h2').isNotInViewport();
     cy.get('#navigation-item-apps').click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('#apps h2').isInViewport();
   });
 
   it('should scroll to about when clicking on the apps navigation', () => {
     cy.get('#about h2').isNotInViewport();
     cy.get('#navigation-item-about').click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('#about h2').isInViewport();
   });
 
   it('should scroll to contact when clicking on the contact navigation', () => {
     cy.get('#contact h2').isNotInViewport();
     cy.get('#navigation-item-contact').click();
-    cy.wait(1000);
+    cy.wait(2000);
     cy.get('#contact h2').isInViewport();
   });
 
