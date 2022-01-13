@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "build": "razzle build --noninteractive",
-    "integration": "concurrently --kill-others --success first \"yarn start\" \"cypress open\"",
+    "cypress": "concurrently --kill-others --success first \"yarn start\" \"cypress open\"",
+    "cypress:run": "concurrently --kill-others --success first \"yarn start\" \"cypress run\"",
     "lint:fix": "eslint src --fix && stylelint src/**/*.scss --fix",
     "lint": "eslint src && stylelint src/**/*.scss",
     "eslint:fix": "eslint src --fix",

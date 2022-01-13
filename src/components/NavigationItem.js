@@ -5,11 +5,12 @@ import { Link } from 'react-scroll';
 import './NavigationItem.scss';
 
 function NavigationItem({
-  target, offset, children,
+  id, target, offset, children,
 }) {
   return (
     <Link
       activeClass="active"
+      id={id}
       className="navigation-item"
       to={target}
       spy
@@ -23,12 +24,14 @@ function NavigationItem({
 }
 
 NavigationItem.propTypes = {
+  id: PropTypes.string,
   target: PropTypes.string.isRequired,
   offset: PropTypes.number,
   children: PropTypes.node,
 };
 
 NavigationItem.defaultProps = {
+  id: undefined,
   offset: 0,
   children: undefined,
 };

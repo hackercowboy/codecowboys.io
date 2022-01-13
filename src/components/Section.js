@@ -9,7 +9,7 @@ function Section({
   id, dark, title, subtitle, children,
 }) {
   return (
-    <section className={dark ? 'section-dark' : 'section-light'}>
+    <section id={id} className={dark ? 'section-dark' : 'section-light'}>
       <Element
         name={id}
         duration={500}

@@ -28,9 +28,9 @@ function Home({ intl }) {
     <Main className="presentation">
       <Header>
         <Navigation>
-          <NavigationItem target="apps" offset={-94}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
-          <NavigationItem target="about" offset={-88}>{intl.formatMessage({ id: 'about.title' })}</NavigationItem>
-          <NavigationItem target="contact" offset={-94}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
+          <NavigationItem id="navigation-item-apps" target="apps" offset={-94}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
+          <NavigationItem id="navigation-item-about" target="about" offset={-88}>{intl.formatMessage({ id: 'about.title' })}</NavigationItem>
+          <NavigationItem id="navigation-item-contact" target="contact" offset={-94}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
         </Navigation>
       </Header>
       <Parallax

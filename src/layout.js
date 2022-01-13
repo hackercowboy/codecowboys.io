@@ -14,11 +14,6 @@ export default (assets, markup) => `
       ${assets.client.css
     ? `<link rel="stylesheet" href="${assets.client.css}" async defer>`
     : ''}
-      ${process.env.NODE_ENV === 'production'
-    ? /* istanbul ignore next */ `<script src="${assets.client.js}" defer async></script>`
-    : `<script src="${assets.client.js}" defer crossorigin async></script>`}
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119498871-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,6 +25,9 @@ export default (assets, markup) => `
   </head>
   <body>
       <div id="root">${markup}</div>
+      ${process.env.NODE_ENV === 'production'
+    ? /* istanbul ignore next */ `<script src="${assets.client.js}" defer async></script>`
+    : `<script src="${assets.client.js}" defer crossorigin async></script>`}
   </body>
 </html>
 `.trim();

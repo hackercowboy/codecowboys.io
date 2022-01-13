@@ -81,7 +81,7 @@ function ContactForm({ intl }) {
                 <FormattedMessage id="contact.privacy_2" />
               </a>
             </Checkbox>
-            <Button type="submit" disabled={isSubmitting || !captcha}>
+            <Button id="contact-form-button" type="submit" disabled={isSubmitting || !captcha}>
               <FormattedMessage id="contact.submit" />
             </Button>
           </Form>
