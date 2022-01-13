@@ -12,9 +12,9 @@ jobs:
         run: yarn install
       - name: Lint
         run: yarn lint
-      - name: Test
+      - name: Unit Tests
         run: yarn test:coverage
-      - name: Cypress
+      - name: Integration Tests
         uses: cypress-io/github-action@v2
         with:
           build: yarn build
