@@ -6,3 +6,5 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 enableHooks(jest);
 
 configure({ adapter: new Adapter() });
+
+process.env.RECAPTCHA_SECRET = 'test';
