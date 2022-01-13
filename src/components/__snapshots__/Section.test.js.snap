@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Section/> should render 1`] = `
-"<section className=\\"section-light\\">
+"<section id={[undefined]} className=\\"section-light\\">
   <Element name={[undefined]} duration={500} smooth=\\"true\\">
     <Container>
       <div className=\\"section-title-wrapper\\" />
@@ -11,7 +11,7 @@ exports[`<Section/> should render 1`] = `
 `;
 
 exports[`<Section/> should render dark 1`] = `
-"<section className=\\"section-dark\\">
+"<section id={[undefined]} className=\\"section-dark\\">
   <Element name={[undefined]} duration={500} smooth=\\"true\\">
     <Container>
       <div className=\\"section-title-wrapper\\">

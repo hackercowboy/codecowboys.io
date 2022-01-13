@@ -14,9 +14,6 @@ exports[`layout should work 1`] = `
       <script src='https://www.google.com/recaptcha/api.js' async defer></script>
       <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">
       
-      <script src=\\"undefined\\" defer crossorigin async></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src=\\"https://www.googletagmanager.com/gtag/js?id=UA-119498871-1\\"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -28,6 +25,7 @@ exports[`layout should work 1`] = `
   </head>
   <body>
       <div id=\\"root\\">undefined</div>
+      <script src=\\"undefined\\" defer crossorigin async></script>
   </body>
 </html>"
 `;
@@ -46,9 +44,6 @@ exports[`layout should work 2`] = `
       <script src='https://www.google.com/recaptcha/api.js' async defer></script>
       <meta name=\\"viewport\\" content=\\"width=device-width, initial-scale=1\\">
       <link rel=\\"stylesheet\\" href=\\"test\\" async defer>
-      <script src=\\"undefined\\" defer crossorigin async></script>
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src=\\"https://www.googletagmanager.com/gtag/js?id=UA-119498871-1\\"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -60,6 +55,7 @@ exports[`layout should work 2`] = `
   </head>
   <body>
       <div id=\\"root\\">undefined</div>
+      <script src=\\"undefined\\" defer crossorigin async></script>
   </body>
 </html>"
 `;

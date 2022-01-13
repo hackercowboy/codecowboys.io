@@ -31,7 +31,7 @@ exports[`<ContactForm/> should render 2`] = `
         <MemoizedFormattedMessage id=\\"contact.privacy_2\\" />
       </a>
     </Checkbox>
-    <Button type=\\"submit\\" disabled={true}>
+    <Button id=\\"contact-form-button\\" type=\\"submit\\" disabled={true}>
       <MemoizedFormattedMessage id=\\"contact.submit\\" />
     </Button>
   </Form>
