@@ -4,15 +4,18 @@ import PropTypes from 'prop-types';
 import './Feature.scss';
 
 function Feature({
-  title, description, icon, right,
+  title, description, icon,
 }) {
-  console.log(right);
   return (
-    <>
-      <h4>{title}</h4>
-      <p>{description}</p>
-      <i className={`fal ${icon}`} aria-hidden="true" />
-    </>
+    <div className="feature">
+      <div className="feature-wrapper">
+        <h4>{title}</h4>
+        <p>{description}</p>
+      </div>
+      <div className="feature-icon">
+        <i className={`fal ${icon}`} aria-hidden="true" />
+      </div>
+    </div>
   );
 }
 
@@ -20,11 +23,6 @@ Feature.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
-  right: PropTypes.bool,
-};
-
-Feature.defaultProps = {
-  right: false,
 };
 
 export default Feature;

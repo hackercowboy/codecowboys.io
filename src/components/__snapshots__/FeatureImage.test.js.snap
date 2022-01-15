@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeatureImage/> should render 1`] = `
+"<div className=\\"feature-image\\">
+  <img src=\\"http://example.com/test.png\\" alt=\\"Lorem Ipsum\\" style={[undefined]} />
+</div>"
+`;

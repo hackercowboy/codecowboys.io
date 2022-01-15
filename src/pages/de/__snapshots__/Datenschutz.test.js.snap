@@ -2,7 +2,7 @@
 
 exports[`<Datenschutz/> should render 1`] = `
 "<Main className={[undefined]}>
-  <Navigation />
+  <Header />
   <Container className=\\"article\\">
     <Datenschutz.md />
   </Container>

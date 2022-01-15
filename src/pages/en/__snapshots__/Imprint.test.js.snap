@@ -2,7 +2,7 @@
 
 exports[`<Imprint/> should render 1`] = `
 "<Main className={[undefined]}>
-  <Navigation />
+  <Header />
   <Container className=\\"article\\">
     <h1>
       Imprint

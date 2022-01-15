@@ -2,12 +2,12 @@ import React from 'react';
 
 import Container from '../../components/Container';
 import Main from '../../components/Main';
-import Navigation from '../../components/Navigation';
+import Header from '../../components/Header';
 
 function Imprint() {
   return (
     <Main>
-      <Navigation />
+      <Header />
       <Container className="article">
         <h1>Imprint</h1>
         <h2>Contact</h2>

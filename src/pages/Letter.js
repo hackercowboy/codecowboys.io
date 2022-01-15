@@ -4,16 +4,20 @@ import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
 import ImageGallery from 'react-image-gallery';
 
+import ApplicationCarousel from '../components/ApplicationCarousel';
+import ApplicationHero from '../components/ApplicationHero';
+import ContactForm from '../components/ContactForm';
 import Container from '../components/Container';
+import Feature from '../components/Feature';
+import Features from '../components/Features';
+import FeatureGroup from '../components/FeatureGroup';
+import FeatureImage from '../components/FeatureImage';
+import Header from '../components/Header';
 import Main from '../components/Main';
 import Navigation from '../components/Navigation';
 import NavigationItem from '../components/NavigationItem';
-import Feature from '../components/Feature';
-
-import ApplicationCarousel from '../components/ApplicationCarousel';
-import ApplicationHero from '../components/ApplicationHero';
+import ScrollButton from '../components/ScrollButton';
 import Section from '../components/Section';
-import ContactForm from '../components/ContactForm';
 
 const letterCarouselImage = require('../assets/images/letter_carousel.png');
 const heroBackground = require('../assets/images/bg-7.jpg');
@@ -31,14 +35,16 @@ function Letter({ intl }) {
   }));
 
   return (
-    <Main>
-      <Navigation>
-        <NavigationItem target="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
-        <NavigationItem target="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
-        <NavigationItem target="screenshots" offset={-85}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
-        <NavigationItem target="video" offset={-55}>{intl.formatMessage({ id: 'letter.video' })}</NavigationItem>
-        <NavigationItem target="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
-      </Navigation>
+    <Main className="presentation">
+      <Header>
+        <Navigation>
+          <NavigationItem target="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
+          <NavigationItem target="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
+          <NavigationItem target="screenshots" offset={-85}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
+          <NavigationItem target="video" offset={-55}>{intl.formatMessage({ id: 'letter.video' })}</NavigationItem>
+          <NavigationItem target="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
+        </Navigation>
+      </Header>
       <Parallax
         bgImage={heroBackground}
         strength={500}
@@ -51,15 +57,15 @@ function Letter({ intl }) {
             description={intl.formatMessage({ id: 'letter.teaser' })}
           />
         </ApplicationCarousel>
+        <ScrollButton target="features" />
       </Parallax>
       <Section
         id="features"
         title={intl.formatMessage({ id: 'letter.features' })}
         subtitle={intl.formatMessage({ id: 'letter.features_subtitle' })}
-      />
-      <Container id="features" style={{ marginTop: '-20px', paddingBottom: '60px' }}>
-        <div>
-          <div md="12" lg="4">
+      >
+        <Features>
+          <FeatureGroup>
             <Feature
               title={intl.formatMessage({ id: 'letter.features_print_title' })}
               description={intl.formatMessage({ id: 'letter.features_print_description' })}
@@ -75,11 +81,13 @@ function Letter({ intl }) {
               description={intl.formatMessage({ id: 'letter.features_search_description' })}
               icon="fa-search"
             />
-          </div>
-          <div className="center d-none d-lg-block d-xl-block">
-            <img style={{ height: '500px' }} src={letterFeatures} alt={intl.formatMessage({ id: 'letter.features' })} />
-          </div>
-          <div md="12" lg="4">
+          </FeatureGroup>
+          <FeatureImage
+            src={letterFeatures}
+            style={{ width: '280px' }}
+            alt={intl.formatMessage({ id: 'letter.features' })}
+          />
+          <FeatureGroup>
             <Feature
               title={intl.formatMessage({ id: 'letter.features_addresses_title' })}
               description={intl.formatMessage({ id: 'letter.features_addresses_description' })}
@@ -98,9 +106,9 @@ function Letter({ intl }) {
               icon="fa-file-alt"
               right
             />
-          </div>
-        </div>
-      </Container>
+          </FeatureGroup>
+        </Features>
+      </Section>
       <Section
         id="description"
         title={intl.formatMessage({ id: 'letter.description' })}

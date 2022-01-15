@@ -1,47 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Letter/> should render 1`] = `
-"<Main className={[undefined]}>
-  <Navigation>
-    <NavigationItem target=\\"features\\" offset={-85} id={[undefined]}>
-      Features
-    </NavigationItem>
-    <NavigationItem target=\\"description\\" offset={-55} id={[undefined]}>
-      Description
-    </NavigationItem>
-    <NavigationItem target=\\"screenshots\\" offset={-85} id={[undefined]}>
-      Screenshots
-    </NavigationItem>
-    <NavigationItem target=\\"video\\" offset={-55} id={[undefined]}>
-      Video
-    </NavigationItem>
-    <NavigationItem target=\\"contact\\" offset={-85} id={[undefined]}>
-      Contact
-    </NavigationItem>
-  </Navigation>
+"<Main className=\\"presentation\\">
+  <Header>
+    <Navigation>
+      <NavigationItem target=\\"features\\" offset={-85} id={[undefined]}>
+        Features
+      </NavigationItem>
+      <NavigationItem target=\\"description\\" offset={-55} id={[undefined]}>
+        Description
+      </NavigationItem>
+      <NavigationItem target=\\"screenshots\\" offset={-85} id={[undefined]}>
+        Screenshots
+      </NavigationItem>
+      <NavigationItem target=\\"video\\" offset={-55} id={[undefined]}>
+        Video
+      </NavigationItem>
+      <NavigationItem target=\\"contact\\" offset={-85} id={[undefined]}>
+        Contact
+      </NavigationItem>
+    </Navigation>
+  </Header>
   <Parallax bgImage=\\"bg-7.jpg\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <ApplicatinCarousel>
       <ApplicationHero image=\\"letter_carousel.png\\" title=\\"Letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} link={[undefined]} />
     </ApplicatinCarousel>
+    <ScrollButton target=\\"features\\" />
   </Parallax>
-  <Section id=\\"features\\" title=\\"Features\\" subtitle=\\"Overview of all features\\" dark={false} />
-  <Container id=\\"features\\" style={{...}}>
-    <div>
-      <div md=\\"12\\" lg=\\"4\\">
-        <Feature title=\\"Printing & Sharing\\" description=\\"Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.\\" icon=\\"fa-print\\" right={false} />
-        <Feature title=\\"Storage\\" description=\\"All letters are stored securely and synchronized between devices using iCloud.\\" icon=\\"fa-cloud\\" right={false} />
-        <Feature title=\\"Search\\" description=\\"With the search function letters can be found again quickly and easily.\\" icon=\\"fa-search\\" right={false} />
-      </div>
-      <div className=\\"center d-none d-lg-block d-xl-block\\">
-        <img style={{...}} src=\\"letter_features.png\\" alt=\\"Features\\" />
-      </div>
-      <div md=\\"12\\" lg=\\"4\\">
+  <Section id=\\"features\\" title=\\"Features\\" subtitle=\\"Overview of all features\\" dark={false}>
+    <Features>
+      <FeatureGroup>
+        <Feature title=\\"Printing & Sharing\\" description=\\"Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.\\" icon=\\"fa-print\\" />
+        <Feature title=\\"Storage\\" description=\\"All letters are stored securely and synchronized between devices using iCloud.\\" icon=\\"fa-cloud\\" />
+        <Feature title=\\"Search\\" description=\\"With the search function letters can be found again quickly and easily.\\" icon=\\"fa-search\\" />
+      </FeatureGroup>
+      <FeatureImage src=\\"letter_features.png\\" style={{...}} alt=\\"Features\\" />
+      <FeatureGroup>
         <Feature title=\\"Addresses\\" description=\\"International addresses are formatted automatically. Senders and receivers can easily be selected from your address book.\\" icon=\\"fa-user\\" right={true} />
         <Feature title=\\"Signature\\" description=\\"Letters can be signed directly in the application.\\" icon=\\"fa-pencil\\" right={true} />
         <Feature title=\\"Templates\\" description=\\"Text templates can be used to create ready letter in just a few seconds.\\" icon=\\"fa-file-alt\\" right={true} />
-      </div>
-    </div>
-  </Container>
+      </FeatureGroup>
+    </Features>
+  </Section>
   <Section id=\\"description\\" title=\\"Description\\" subtitle=\\"The Letter App in detail\\" light={true} dark={false}>
     <div className=\\"justify\\">
       <p>

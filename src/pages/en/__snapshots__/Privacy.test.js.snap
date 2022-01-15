@@ -2,7 +2,7 @@
 
 exports[`<Privacy/> should render 1`] = `
 "<Main className={[undefined]}>
-  <Navigation />
+  <Header />
   <Container className=\\"article\\">
     <Privacy.md />
   </Container>
