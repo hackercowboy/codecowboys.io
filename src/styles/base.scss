@@ -89,3 +89,18 @@ input {
 *:focus {
   outline: none;
 }
+
+
+.desktop {
+  display: none;
+}
+
+@media only screen and (min-width : 992px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}

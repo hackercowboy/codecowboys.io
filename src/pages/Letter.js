@@ -2,20 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
-import ImageGallery from 'react-image-gallery';
 
 import ApplicationCarousel from '../components/ApplicationCarousel';
 import ApplicationHero from '../components/ApplicationHero';
 import ContactForm from '../components/ContactForm';
-import Container from '../components/Container';
 import Feature from '../components/Feature';
-import Features from '../components/Features';
 import FeatureGroup from '../components/FeatureGroup';
 import FeatureImage from '../components/FeatureImage';
+import Features from '../components/Features';
 import Header from '../components/Header';
 import Main from '../components/Main';
 import Navigation from '../components/Navigation';
 import NavigationItem from '../components/NavigationItem';
+import Screenshots from '../components/Screenshots';
 import ScrollButton from '../components/ScrollButton';
 import Section from '../components/Section';
 
@@ -113,36 +112,27 @@ function Letter({ intl }) {
         id="description"
         title={intl.formatMessage({ id: 'letter.description' })}
         subtitle={intl.formatMessage({ id: 'letter.description_subtitle' })}
-        light
       >
-        <div className="justify">
-          <p>{intl.formatMessage({ id: 'letter.description_1' })}</p>
-          <p>{intl.formatMessage({ id: 'letter.description_2' })}</p>
-          <p>{intl.formatMessage({ id: 'letter.description_3' })}</p>
-          <p>{intl.formatMessage({ id: 'letter.description_4' })}</p>
-          <p>{intl.formatMessage({ id: 'letter.description_5' })}</p>
-        </div>
+        <p>{intl.formatMessage({ id: 'letter.description_1' })}</p>
+        <p>{intl.formatMessage({ id: 'letter.description_2' })}</p>
+        <p>{intl.formatMessage({ id: 'letter.description_3' })}</p>
+        <p>{intl.formatMessage({ id: 'letter.description_4' })}</p>
+        <p>{intl.formatMessage({ id: 'letter.description_5' })}</p>
       </Section>
       <Section
         id="screenshots"
         title={intl.formatMessage({ id: 'letter.screenshots' })}
         subtitle={intl.formatMessage({ id: 'letter.screenshots_subtitle' })}
-      />
-      <Container>
-        <div className="gallery gallery-ipad"><ImageGallery items={ipadImages} /></div>
-        <div className="gallery gallery-iphone"><ImageGallery items={iphoneImages} /></div>
-      </Container>
-      <Section
-        id="video"
-        title={intl.formatMessage({ id: 'letter.video' })}
-        subtitle={intl.formatMessage({ id: 'letter.video_subtitle' })}
-        light
       >
-        <div className="embed-responsive embed-responsive-16by9">
-          <iframe title="video" className="embed-responsive-item" src="//www.youtube.com/embed/b0j3EmhudzQ?list=UUHPQwvjmHnlm3vcnnfAoliw" />
-        </div>
+        <Screenshots ipadImages={ipadImages} iphoneImages={iphoneImages} />
       </Section>
-      <ContactForm />
+      <Section
+        id="contact"
+        title={intl.formatMessage({ id: 'contact.title' })}
+        subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
+      >
+        <ContactForm />
+      </Section>
     </Main>
   );
 }
