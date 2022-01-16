@@ -7,11 +7,19 @@ import { hydrate } from 'react-dom';
 
 import '../node_modules/react-image-gallery/styles/css/image-gallery.css';
 
-import Routes from './Routes';
+import Main from './Main';
+
+let language = 'en';
+
+if (typeof window !== 'undefined' && window && window.location && window.location.pathname) {
+  if (window.location.pathname.indexOf('/de') === 0) {
+    language = 'de';
+  }
+}
 
 hydrate(
   <BrowserRouter>
-    <Routes />
+    <Main language={language} />
   </BrowserRouter>,
   document.getElementById('root'),
 );

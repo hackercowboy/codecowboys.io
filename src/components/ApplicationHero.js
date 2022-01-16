@@ -11,7 +11,7 @@ function ApplicationHero({
 }) {
   return (
     <div className="application-hero">
-      <div className="application-hero-image"><img src={image} alt={title} /></div>
+      <div className="application-hero-image">{ link ? (<a href={link}><img src={image} alt={title} /></a>) : (<img src={image} alt={title} />)}</div>
       <div className="application-hero-teaser">
         { link ? (<h1><a href={link}>{title}</a></h1>) : (<h1>{title}</h1>)}
         { link ? (<p><a href={link}>{description}</a></p>) : (<p>{description}</p>)}

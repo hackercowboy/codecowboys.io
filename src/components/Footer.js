@@ -33,17 +33,17 @@ function Footer({ intl }) {
             </div>
             <div className="footer-item">
             &nbsp;
-              <a href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
+              <a id="imprint-link" href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
               &nbsp;
               |
               &nbsp;
-              <a href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
+              <a id="privacy-link" href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
             </div>
             <div className="footer-item">
-              <a href="/en">English</a>
+              <a id="language-switch-en" href="/en">English</a>
               {' '}
               |
-              <a href="/de">Deutsch</a>
+              <a id="language-switch-de" href="/de">Deutsch</a>
             </div>
           </div>
         </Section>

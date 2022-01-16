@@ -4,7 +4,7 @@ exports[`routes should not prevent key events 1`] = `
 "<ContextProvider value={{...}}>
   <Component reCaptchaKey=\\"6LcBmfgdAAAAAFn4U1zxAvIvx5u_3QMyt6nxG3vU\\">
     <CookieConsent />
-    <Routes>
+    <Main>
       <Route path=\\"/de/impressum\\" element={{...}} />
       <Route path=\\"/de/datenschutz\\" element={{...}} />
       <Route path=\\"/de/briefe\\" element={{...}} />
@@ -14,7 +14,7 @@ exports[`routes should not prevent key events 1`] = `
       <Route path=\\"/en/letter\\" element={{...}} />
       <Route path=\\"/en\\" element={{...}} />
       <Route element={{...}} />
-    </Routes>
+    </Main>
     <Footer />
   </Component>
 </ContextProvider>"
@@ -24,7 +24,7 @@ exports[`routes should prevent some key events 1`] = `
 "<ContextProvider value={{...}}>
   <Component reCaptchaKey=\\"6LcBmfgdAAAAAFn4U1zxAvIvx5u_3QMyt6nxG3vU\\">
     <CookieConsent />
-    <Routes>
+    <Main>
       <Route path=\\"/de/impressum\\" element={{...}} />
       <Route path=\\"/de/datenschutz\\" element={{...}} />
       <Route path=\\"/de/briefe\\" element={{...}} />
@@ -34,7 +34,7 @@ exports[`routes should prevent some key events 1`] = `
       <Route path=\\"/en/letter\\" element={{...}} />
       <Route path=\\"/en\\" element={{...}} />
       <Route element={{...}} />
-    </Routes>
+    </Main>
     <Footer />
   </Component>
 </ContextProvider>"
@@ -44,7 +44,7 @@ exports[`routes should render 1`] = `
 "<ContextProvider value={{...}}>
   <Component reCaptchaKey=\\"6LcBmfgdAAAAAFn4U1zxAvIvx5u_3QMyt6nxG3vU\\">
     <CookieConsent />
-    <Routes>
+    <Main>
       <Route path=\\"/de/impressum\\" element={{...}} />
       <Route path=\\"/de/datenschutz\\" element={{...}} />
       <Route path=\\"/de/briefe\\" element={{...}} />
@@ -54,7 +54,7 @@ exports[`routes should render 1`] = `
       <Route path=\\"/en/letter\\" element={{...}} />
       <Route path=\\"/en\\" element={{...}} />
       <Route element={{...}} />
-    </Routes>
+    </Main>
     <Footer />
   </Component>
 </ContextProvider>"

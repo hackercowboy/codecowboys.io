@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { Route, Routes as ReactRoutes } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { Route, Routes } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import configuration from './configuration';
@@ -14,11 +15,11 @@ import NotFound from './pages/NotFound';
 
 import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
-import { language, messages } from './i18n';
+import messages from './i18n';
 
 import './styles/base.scss';
 
-function Routes() {
+function Main({ language }) {
   useEffect(() => {
     document.addEventListener('keydown', (event) => {
       if (['Space', 'PageDown', 'PageUp'].indexOf(event.code) >= 0) {
@@ -28,11 +29,11 @@ function Routes() {
   }, []);
 
   return (
-    <IntlProvider locale={language} defaultLocale="en" messages={messages}>
+    <IntlProvider locale={language} defaultLocale="en" messages={messages[language]}>
       <GoogleReCaptchaProvider reCaptchaKey={configuration.RECAPTCHA_SITE_KEY}>
         <>
           <CookieConsent />
-          <ReactRoutes>
+          <Routes>
             <Route path="/de/impressum" element={<Impressum />} />
             <Route path="/de/datenschutz" element={<Datenschutz />} />
             <Route path="/de/briefe" element={<Letter />} />
@@ -42,7 +43,7 @@ function Routes() {
             <Route path="/en/letter" element={<Letter />} />
             <Route path="/en" element={<Home />} />
             <Route element={<NotFound />} />
-          </ReactRoutes>
+          </Routes>
           <Footer />
         </>
       </GoogleReCaptchaProvider>
@@ -50,4 +51,8 @@ function Routes() {
   );
 }
 
-export default Routes;
+Main.propTypes = {
+  language: PropTypes.string.isRequired,
+};
+
+export default Main;

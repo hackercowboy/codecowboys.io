@@ -8,7 +8,7 @@ import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 
 import contact from './api/contact';
-import Routes from './Routes';
+import Main from './Main';
 import layout from './layout';
 
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
@@ -32,9 +32,10 @@ server
   })
   .get('/*', (req, res) => {
     const context = {};
+    const language = req.acceptsLanguages('de', 'en') || 'en';
     const markup = renderToString(
       <StaticRouter context={context} location={req.url}>
-        <Routes />
+        <Main language={language} />
       </StaticRouter>,
     );
 

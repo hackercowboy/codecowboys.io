@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Routes from './Routes';
+import Main from './Main';
 
 describe('routes', () => {
   it('should render', async () => {
     jest.spyOn(document, 'addEventListener');
-    const wrapper = await shallow(<Routes />);
+    const wrapper = await shallow(<Main />);
     expect(wrapper.shallow().debug()).toMatchSnapshot();
   });
 
@@ -15,7 +15,7 @@ describe('routes', () => {
       preventDefault: jest.fn(),
     };
     jest.spyOn(document, 'addEventListener').mockImplementation((type, callback) => callback(event));
-    const wrapper = await shallow(<Routes />);
+    const wrapper = await shallow(<Main />);
     expect(wrapper.shallow().debug()).toMatchSnapshot();
     expect(event.preventDefault).toHaveBeenCalled();
   });
@@ -26,7 +26,7 @@ describe('routes', () => {
       preventDefault: jest.fn(),
     };
     jest.spyOn(document, 'addEventListener').mockImplementation((type, callback) => callback(event));
-    const wrapper = await shallow(<Routes />);
+    const wrapper = await shallow(<Main />);
     expect(wrapper.shallow().debug()).toMatchSnapshot();
     expect(event.preventDefault).not.toHaveBeenCalled();
   });
