@@ -2,10 +2,10 @@
 /* eslint-disable new-cap */
 import React from 'react';
 
-import { messages } from '../../i18n';
+import messages from '../../i18n';
 
 const reactIntl = jest.requireActual('react-intl');
-const intl = new reactIntl.createIntl({ locale: 'en', messages }, {});
+const intl = new reactIntl.createIntl({ locale: 'en', messages: messages.en }, {});
 const { IntlProvider, FormattedMessage } = reactIntl;
 
 const injectIntl = (ChildComponent) => {

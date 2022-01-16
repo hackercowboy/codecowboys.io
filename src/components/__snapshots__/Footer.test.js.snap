@@ -20,21 +20,21 @@ exports[`<Footer/> should render 1`] = `
         </div>
         <div className=\\"footer-item\\">
            
-          <a href=\\"/en/imprint\\">
+          <a id=\\"imprint-link\\" href=\\"/en/imprint\\">
             Imprint
           </a>
             |  
-          <a href=\\"/en/privacy\\">
+          <a id=\\"privacy-link\\" href=\\"/en/privacy\\">
             Privacy Policy
           </a>
         </div>
         <div className=\\"footer-item\\">
-          <a href=\\"/en\\">
+          <a id=\\"language-switch-en\\" href=\\"/en\\">
             English
           </a>
            
           |
-          <a href=\\"/de\\">
+          <a id=\\"language-switch-de\\" href=\\"/de\\">
             Deutsch
           </a>
         </div>

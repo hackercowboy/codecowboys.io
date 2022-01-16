@@ -3,7 +3,9 @@
 exports[`<ApplicationHero/> should render with link 1`] = `
 "<div className=\\"application-hero\\">
   <div className=\\"application-hero-image\\">
-    <img src=\\"image.png\\" alt=\\"title\\" />
+    <a href=\\"/test\\">
+      <img src=\\"image.png\\" alt=\\"title\\" />
+    </a>
   </div>
   <div className=\\"application-hero-teaser\\">
     <h1>
