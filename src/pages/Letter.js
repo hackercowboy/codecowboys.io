@@ -37,11 +37,10 @@ function Letter({ intl }) {
     <Main className="presentation">
       <Header>
         <Navigation>
-          <NavigationItem target="features" offset={-85}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
-          <NavigationItem target="description" offset={-55}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
-          <NavigationItem target="screenshots" offset={-85}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
-          <NavigationItem target="video" offset={-55}>{intl.formatMessage({ id: 'letter.video' })}</NavigationItem>
-          <NavigationItem target="contact" offset={-85}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
+          <NavigationItem target="features" offset={-94}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
+          <NavigationItem target="description" offset={-88}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
+          <NavigationItem target="screenshots" offset={-94}>{intl.formatMessage({ id: 'letter.screenshots' })}</NavigationItem>
+          <NavigationItem target="contact" offset={-94}>{intl.formatMessage({ id: 'contact.title' })}</NavigationItem>
         </Navigation>
       </Header>
       <Parallax

@@ -8,10 +8,10 @@ function Screenshots({ ipadImages, iphoneImages }) {
   return (
     <div className="screenshots">
       <div className="mobile">
-        <ImageGallery items={iphoneImages} />
+        <ImageGallery items={iphoneImages} showPlayButton={false} />
       </div>
       <div className="desktop">
-        <ImageGallery items={ipadImages} />
+        <ImageGallery items={ipadImages} showPlayButton={false} />
       </div>
     </div>
   );
