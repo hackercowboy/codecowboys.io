@@ -16,7 +16,7 @@ function ApplicationHero({
       <div className="application-hero-teaser">
         { link ? (<h1><a href={link}>{title}</a></h1>) : (<h1>{title}</h1>)}
         { link ? (<p><a href={link}>{description}</a></p>) : (<p>{description}</p>)}
-        {soon ? (<Image src={appStoreButtonSoon} alt="App Store" />) : (<a href={appStoreLink}><Image src={appStoreButton} alt="App Store" /></a>) }
+        {soon ? (<Image src={appStoreButtonSoon} alt="App Store" height={40} width={40} />) : (<a href={appStoreLink}><Image src={appStoreButton} alt="App Store" height={40} width={40} /></a>) }
       </div>
     </div>
   );

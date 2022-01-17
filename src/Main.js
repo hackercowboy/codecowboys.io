@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import { Route, Routes } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import loadable from '@loadable/component';
 import configuration from './configuration';
-
-import Home from './pages/Home';
-import Letter from './pages/Letter';
-import Imprint from './pages/en/Imprint';
-import Privacy from './pages/en/Privacy';
-import Impressum from './pages/de/Impressum';
-import Datenschutz from './pages/de/Datenschutz';
-import NotFound from './pages/NotFound';
 
 import CookieConsent from './components/CookieConsent';
 import Footer from './components/Footer';
 import messages from './i18n';
 
 import './styles/base.scss';
+
+const Home = loadable(() => import('./pages/Home'));
+const Letter = loadable(() => import('./pages/Letter'));
+const Imprint = loadable(() => import('./pages/en/Imprint'));
+const Privacy = loadable(() => import('./pages/en/Privacy'));
+const Impressum = loadable(() => import('./pages/de/Impressum'));
+const Datenschutz = loadable(() => import('./pages/de/Datenschutz'));
+const NotFound = loadable(() => import('./pages/NotFound'));
 
 function Main({ language }) {
   useEffect(() => {
