@@ -7,8 +7,8 @@ export default (assets, markup) => `
       <title>codecowboys</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-oi8o31xSQq8S0RpBcb4FaLB8LJi9AT8oIdmS1QldR8Ui7KUQjNAnDlJjp55Ba8FG" crossorigin="anonymous" async defer>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" media="all" rel="stylesheet" crossorigin="anonymous" async defer>
+      <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" media="all" crossorigin="anonymous" async defer>
       <script src='https://www.google.com/recaptcha/api.js' async defer></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       ${assets.client.css
