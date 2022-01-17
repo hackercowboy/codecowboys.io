@@ -12,7 +12,7 @@ export default (assets, markup) => `
       <script src='https://www.google.com/recaptcha/api.js' async defer></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       ${assets.client.css
-    ? `<link rel="stylesheet" href="${assets.client.css}" async defer>`
+    ? `<link rel="stylesheet" href="${assets.client.css}" media="all" async defer>`
     : ''}
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119498871-1"></script>
     <script>
