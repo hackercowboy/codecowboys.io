@@ -15,7 +15,9 @@ module.exports = {
 
     if (env.target === 'web') {
       const miniCssExtractPlugin = webpackConfig.plugins.find((plugin) => plugin.constructor.name === 'MiniCssExtractPlugin');
-      miniCssExtractPlugin.options.ignoreOrder = true;
+      if (miniCssExtractPlugin && miniCssExtractPlugin.options) {
+        miniCssExtractPlugin.options.ignoreOrder = true;
+      }
     }
 
     if (env.target === 'web') {
