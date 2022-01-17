@@ -37,7 +37,7 @@ exports[`<ApplicationHero/> should render withou link 1`] = `
     <p>
       description
     </p>
-    <Image src=\\"app_store_button_soon.svg\\" alt=\\"App Store\\" height={40} width={40} />
+    <Image src=\\"app_store_button_soon.svg\\" alt=\\"App Store\\" height={40} width={135} />
   </div>
 </div>"
 `;
