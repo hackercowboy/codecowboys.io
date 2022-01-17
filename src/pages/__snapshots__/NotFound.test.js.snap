@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotFound/> should render 1`] = `
+"<Main className={[undefined]}>
+  <Navigation />
+  <Container>
+    <h1 style={{...}}>
+      You&#39;re Lost! 404 - Not Found
+    </h1>
+    <p className=\\"lead\\">
+      The page your are looking for doesn&#39;t exist
+    </p>
+    <p className=\\"flex-grow\\">
+      <a className=\\"btn btn-primary\\" href=\\"https://codecowboys.io\\">
+        Go Home
+      </a>
+    </p>
+  </Container>
+</Main>"
+`;

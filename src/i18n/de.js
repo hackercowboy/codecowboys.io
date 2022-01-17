@@ -7,6 +7,7 @@ export default {
     subtitle: 'I programmiere coole Apps wie ein Cowboy!',
     content_1: 'Ich bin ein leidenschaftlicher Softwareentwickler und arbeite für ein Schweizer Unternehmen.',
     content_2: 'Von Zeit zu Zeit arbeite ich in meiner Freizeit an einigen eigenen Projekten, die ich auf dieser Seite veröffentliche.',
+    photo_alt: 'Foto von David Übelacker',
   },
   contact: {
     title: 'Kontakt',
@@ -17,8 +18,7 @@ export default {
     privacy_1: 'Ich akzeptiere die',
     privacy_2: 'Datenschutzerklärung',
     privacy_link: '/de/datenschutz',
-    privacy_info_1: 'Ihre E-Mail-Adresse und Ihre Nachricht werden gespeichert, damit ich darauf antworten kann.',
-    privacy_info_2: 'Ihre Daten werden nicht für andere Zwecke verwendet.',
+    privacy_info: 'Ihre E-Mail-Adresse und Ihre Nachricht werden gespeichert, damit ich darauf antworten kann. Ihre Daten werden nicht für andere Zwecke verwendet.',
     submit: 'Senden',
     email_error: 'Bitte geben Sie eine gültige E-Mail Adrese ein',
     subject_error: 'Bitte geben Sie Ihr Anliegen ein',

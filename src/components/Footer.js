@@ -1,43 +1,59 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
-import moment from 'moment';
-import { withTranslation } from 'react-i18next';
+import { injectIntl } from 'react-intl';
 
 import Section from './Section';
 
-import './Footer.css';
+import './Footer.scss';
 
-const background = require('../assets/images/bg-7.jpg');
+const background = require('../assets/images/bg-7.webp');
 
-class Footer extends Component {
-  static propTypes = {
-    t: PropTypes.func,
-  }
-
-  render() {
-    const { t } = this.props;
-    return (
-      <div>
-        <div className="footer">© {moment().year()} David Übelacker, {t('footer.rights')}&nbsp;
-          | <a href={t('footer.imprint_link')}>{t('footer.imprint')}</a>&nbsp;
-          | <a href={t('footer.privacy_link')}>{t('footer.privacy')}</a>
-        </div>
-        <Parallax
-          bgImage={background}
-          strength={500}>
-          <Section dark>
-            <div className="footer-quote">
-              <i className="fas fa-angle-double-left" aria-hidden="true"/>
+function Footer({ intl }) {
+  return (
+    <footer>
+      <Parallax
+        bgImage={background}
+        strength={500}
+      >
+        <Section dark>
+          <div className="footer-quote">
+            <i className="fas fa-angle-double-left" aria-hidden="true" />
               &nbsp;What one programmer can do in one month, two programmers can do in two months.&nbsp;
-              <i className="fas fa-angle-double-right" aria-hidden="true"></i>
-              <br/>- Fred Brooks
+            <i className="fas fa-angle-double-right" aria-hidden="true" />
+            <br />
+            - Fred Brooks
+          </div>
+          <div className="footer">
+            <div className="footer-copyright">
+              ©
+              {new Date().getFullYear()}
+              {' '}
+              David Übelacker
             </div>
-          </Section>
-        </Parallax>
-      </div>
-    );
-  }
+            <div className="footer-item">
+            &nbsp;
+              <a id="imprint-link" href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
+              &nbsp;
+              |
+              &nbsp;
+              <a id="privacy-link" href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
+            </div>
+            <div className="footer-item">
+              <a id="language-switch-en" href="/en">English</a>
+              {' '}
+              |
+              <a id="language-switch-de" href="/de">Deutsch</a>
+            </div>
+          </div>
+        </Section>
+      </Parallax>
+    </footer>
+  );
 }
 
-export default withTranslation()(Footer);
+Footer.propTypes = {
+  intl: PropTypes.shape({ formatMessage: PropTypes.func.isRequired }).isRequired,
+};
+
+export default injectIntl(Footer);

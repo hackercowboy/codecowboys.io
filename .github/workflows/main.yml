@@ -1,0 +1,29 @@
+name: Build
+
+on: [push]
+
+jobs:
+  default:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install
+        run: yarn install
+      - name: Lint
+        run: yarn lint
+      - name: Unit Tests
+        run: yarn test:coverage
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Integration Tests
+        uses: cypress-io/github-action@v2
+        with:
+          build: yarn build
+          start: yarn start:prod
+        env: 
+          CODECOWBOYS_HOSTNAME: localhost:3000
+          CODECOWBOYS_PROTOCOL: http
+          PORT: 3000

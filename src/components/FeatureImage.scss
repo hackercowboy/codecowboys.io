@@ -1,0 +1,10 @@
+.feature-image {
+  display: none;
+}
+
+@media only screen and (min-width : 992px) {
+  .feature-image {
+    display: block;
+    margin: 0 30px;
+  }
+}

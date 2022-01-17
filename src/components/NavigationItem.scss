@@ -1,0 +1,18 @@
+@import '../styles/colors';
+
+.navigation-item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 5px 10px;
+}
+
+.navigation-item {
+  &:hover {
+    background: $medium-color;
+  }
+}
+
+.navigation-item.active {
+  background-color: $medium-color;
+}

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hamburger/> should render closed 1`] = `
+"<button className=\\"hamburger\\" type=\\"button\\" onClick={[Function: onClick]}>
+  <span className=\\"hamburger-box\\">
+    <span className=\\"hamburger-inner\\" />
+  </span>
+</button>"
+`;
+
+exports[`<Hamburger/> should render open 1`] = `
+"<button className=\\"hamburger\\" type=\\"button\\" onClick={[Function: onClick]}>
+  <span className=\\"hamburger-box\\">
+    <span className=\\"hamburger-inner open\\" />
+  </span>
+</button>"
+`;

@@ -7,6 +7,7 @@ export default {
     subtitle: 'I code great apps like a cowboy!',
     content_1: 'I am a passionate software engineer working for a Swiss company.',
     content_2: 'From time to time i work on some nice projects in my free time, which i publish on this site.',
+    photo_alt: 'Photo of David Übelacker',
   },
   contact: {
     title: 'Contact',
@@ -17,8 +18,7 @@ export default {
     privacy_1: 'I agree to the',
     privacy_2: 'privacy policy',
     privacy_link: '/en/privacy',
-    privacy_info_1: 'Your email address and message will be stored so that I can reply to it.',
-    privacy_info_2: 'Your data will not be used for any other purposes.',
+    privacy_info: 'Your email address and message will be stored so that I can reply to it. Your data will not be used for any other purposes.',
     submit: 'Submit',
     email_error: 'Please enter a valid email address',
     subject_error: 'Please enter a subject',

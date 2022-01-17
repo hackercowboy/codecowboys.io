@@ -1,39 +1,46 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
-import { Container } from 'reactstrap';
+import Container from './Container';
 
-import './Section.css';
+import './Section.scss';
 
-export default class Section extends Component {
-  static propTypes = {
-    id: PropTypes.string,
-    dark: PropTypes.bool,
-    zebra: PropTypes.bool,
-    title: PropTypes.string,
-    subtitle: PropTypes.string,
-    teaser: PropTypes.string,
-    children: PropTypes.node,
-    big: PropTypes.bool,
-  }
-
-  render() {
-    const {
-      id, dark, zebra, title, subtitle, teaser, children, big,
-    } = this.props;
-    return (
-      <Element name={id}>
-        <section className={(dark && 'section-dark') || (zebra && 'section-zebra') }>
-          <Container className={ big ? 'section' : 'section notbig' }>
-            <div className="section-title-wrapper">
-              {title && (<h2>{title}</h2>)}
-              {subtitle ? (<h3>{subtitle}</h3>) : null}
-              {teaser ? (<h4>{teaser}</h4>) : null}
-            </div>
-            {children}
-          </Container>
-        </section>
+function Section({
+  id, dark, title, subtitle, children,
+}) {
+  return (
+    <section id={id} className={dark ? 'section-dark' : 'section-light'}>
+      <Element
+        name={id}
+        duration={500}
+        smooth="true"
+      >
+        <Container>
+          <div className="section-title-wrapper">
+            {title && (<h2>{title}</h2>)}
+            {subtitle ? (<h3>{subtitle}</h3>) : null}
+          </div>
+          {children}
+        </Container>
       </Element>
-    );
-  }
+    </section>
+  );
 }
+
+Section.propTypes = {
+  children: PropTypes.node,
+  dark: PropTypes.bool,
+  id: PropTypes.string,
+  subtitle: PropTypes.string,
+  title: PropTypes.string,
+};
+
+Section.defaultProps = {
+  children: undefined,
+  dark: false,
+  id: undefined,
+  subtitle: undefined,
+  title: undefined,
+};
+
+export default Section;

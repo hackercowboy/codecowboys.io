@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Application/> should render 1`] = `
+"<div className=\\"application\\">
+  <h4>
+    Test
+  </h4>
+  <div className=\\"application-wrapper\\">
+    <div className=\\"application-teaser\\">
+      <p>
+        Lorem Ipsum
+         
+        <a href=\\"http://test.com\\">
+          More
+          ...
+        </a>
+      </p>
+    </div>
+    <a className=\\"application-image\\" href=\\"/en/letter\\">
+      <Image src=\\"test.webp\\" width={100} height={100} alt=\\"Test\\" />
+    </a>
+  </div>
+</div>"
+`;

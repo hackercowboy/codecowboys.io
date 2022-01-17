@@ -68,7 +68,7 @@ Name and Address of the controller
 Controller for the purposes of the General Data Protection Regulation (GDPR), other data protection laws applicable in Member states of the European Union and other provisions related to data protection is:
 
 David Übelacker  
-Haltingerstrasse 24  
+Bläsiring 28  
 4057 Basel  
 Switzerland
 

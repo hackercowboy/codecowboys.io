@@ -1,32 +1,28 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Media } from 'reactstrap';
 
-import './Feature.css';
+import './Feature.scss';
 
-export default class Feature extends Component {
-  static propTypes = {
-    title: PropTypes.string,
-    description: PropTypes.string,
-    icon: PropTypes.string,
-    right: PropTypes.bool,
-  }
-
-  render() {
-    const {
-      title, description, icon, right,
-    } = this.props;
-
-    return (
-      <Media className={ right ? 'feature right' : 'feature'}>
-        <Media body>
-          <h4>{title}</h4>
-          <p>{description}</p>
-        </Media>
-        <Media className="pull-right">
-          <i className={`fal ${icon}`} aria-hidden="true"></i>
-        </Media>
-      </Media>
-    );
-  }
+function Feature({
+  title, description, icon,
+}) {
+  return (
+    <div className="feature">
+      <div className="feature-wrapper">
+        <h4>{title}</h4>
+        <p>{description}</p>
+      </div>
+      <div className="feature-icon">
+        <i className={`fal ${icon}`} aria-hidden="true" />
+      </div>
+    </div>
+  );
 }
+
+Feature.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
+};
+
+export default Feature;

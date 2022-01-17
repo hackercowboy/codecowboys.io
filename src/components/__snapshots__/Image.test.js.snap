@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Image/> should render 1`] = `
+"<div className=\\"image\\">
+  <t alt=\\"Test\\" height={[undefined]} src=\\"http://example.com/image/test.png\\" width={[undefined]} afterLoad={[Function: afterLoad]} beforeLoad={[Function: beforeLoad]} delayMethod=\\"throttle\\" delayTime={300} effect=\\"\\" placeholderSrc={{...}} threshold={100} useIntersectionObserver={true} visibleByDefault={false} wrapperClassName=\\"\\" />
+</div>"
+`;

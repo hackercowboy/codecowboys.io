@@ -1,0 +1,14 @@
+@media only screen and (min-width : 992px) {
+  .feature-group:first-child {
+    text-align: right;
+
+    .feature {
+      flex-flow: row-reverse;
+    }
+
+    .feature-icon {
+      margin-left: 0;
+      margin-right: 10px;
+    }
+  }
+}

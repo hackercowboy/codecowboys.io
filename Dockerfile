@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
@@ -9,6 +9,8 @@ RUN yarn install --no-progress
 
 COPY ./ .
 
+RUN yarn lint
+RUN yarn test:coverage
 RUN yarn build
 
 CMD yarn start:prod

@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Datenschutz/> should render 1`] = `
+"<Main className={[undefined]}>
+  <Header />
+  <Container className=\\"article\\">
+    <Datenschutz.md />
+  </Container>
+</Main>"
+`;

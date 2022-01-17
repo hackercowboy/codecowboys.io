@@ -1,49 +1,36 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { Parallax } from 'react-parallax';
-import { Media } from 'reactstrap';
-import { withTranslation } from 'react-i18next';
+import { injectIntl } from 'react-intl';
+import Image from './Image';
 
-import Section from './Section';
+import './About.scss';
 
-import './About.css';
+const aboutIcon = require('../assets/images/david.webp');
 
-const aboutIcon = require('../assets/images/david.png');
-const aboutBackground = require('../assets/images/bg-5.jpg');
-
-class About extends Component {
-  static propTypes = {
-    t: PropTypes.func,
-  }
-
-  render() {
-    const { t } = this.props;
-
-    return (
-      <Parallax
-        bgImage={aboutBackground}
-        strength={500}>
-        <Section
-          id="about"
-          title={t('about.title')}
-          subtitle={t('about.subtitle')}
-          dark
-        >
-          <Media>
-            <Media body>
-              <h4>David Übelacker</h4>
-              <p>{t('about.content_1')}</p>
-              <p>{t('about.content_2')}</p>
-            </Media>
-            <Media right className="ml-3">
-              <img src={aboutIcon} style={ { width: '100px', height: '100px' } } className="rounded-circle"/>
-            </Media>
-          </Media>
-
-        </Section>
-      </Parallax>
-    );
-  }
+function About({ intl }) {
+  return (
+    <div className="about">
+      <h4>David Übelacker</h4>
+      <div className="about-wrapper">
+        <div className="about-teaser">
+          <p>{intl.formatMessage({ id: 'about.content_1' })}</p>
+          <p>{intl.formatMessage({ id: 'about.content_2' })}</p>
+        </div>
+        <div className="about-image">
+          <Image
+            alt={intl.formatMessage({ id: 'about.photo_alt' })}
+            src={aboutIcon}
+            width={100}
+            height={100}
+          />
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default withTranslation()(About);
+About.propTypes = {
+  intl: PropTypes.shape({ formatMessage: PropTypes.func.isRequired }).isRequired,
+};
+
+export default injectIntl(About);

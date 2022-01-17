@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicationCarousel/> should render with multiple children 1`] = `
+"<Element name=\\"application-carousel\\">
+  <div className=\\"application-carousel\\">
+    <div />
+    <div />
+    <div />
+  </div>
+</Element>"
+`;
+
+exports[`<ApplicationCarousel/> should render with one child 1`] = `
+"<Element name=\\"application-carousel\\">
+  <div className=\\"application-carousel\\">
+    <div />
+  </div>
+</Element>"
+`;

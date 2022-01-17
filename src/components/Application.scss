@@ -1,0 +1,21 @@
+.application {
+  margin-bottom: 50px;
+
+  h4 {
+    margin: 0;
+  }
+}
+
+.application-wrapper {
+  align-items: center;
+  display: flex;
+}
+
+.application-teaser {
+  flex-grow: 1;
+}
+
+.application-image {
+  margin-left: 10px;
+  width: 100px;
+}

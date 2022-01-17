@@ -16,6 +16,8 @@ steps:
   when:
     branch:
     - development
+    event:
+    - push
 - name: production
   image: hackercowboy/dind
   volumes:
@@ -29,7 +31,8 @@ steps:
   when:
     branch:
     - master
-
+    event:
+    - push
 volumes:
 - name: dockersock
   host:

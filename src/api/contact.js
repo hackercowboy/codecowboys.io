@@ -1,41 +1,46 @@
-import Recaptcha from 'recaptcha-verify';
-import utils from 'lodash';
-import validator from 'validator';
-import mailgun from 'mailgun.js';
+import Mailgun from 'mailgun.js';
+import FormData from 'form-data';
+import axios from 'axios';
+import * as Yup from 'yup';
 
-const recaptcha = new Recaptcha({
-  secret: process.env.RECAPTCHA_SECRET,
+Yup.addMethod(Yup.string, 'captcha', function captcha() {
+  return this.test('captcha', 'Captcha validation failed', async (value) => {
+    const data = new FormData();
+    data.append('secret', process.env.RECAPTCHA_SECRET);
+    data.append('response', value);
+    const response = await axios.post('https://www.google.com/recaptcha/api/siteverify', data, { headers: data.getHeaders() });
+    return response.data.success;
+  });
+});
+
+const messageSchema = Yup.object({
+  email: Yup.string().email().required(),
+  subject: Yup.string().required(),
+  message: Yup.string().required(),
+  captcha: Yup.string().required().captcha(),
+  privacy: Yup.bool().oneOf([true]),
 });
 
 export default {
-  post: (request, response) => {
+  post: async (request, response) => {
     const message = request.body;
-    if (!utils.isEmpty(message.email)
-    && validator.isEmail(message.email)
-    && !utils.isEmpty(message.subject)
-    && !utils.isEmpty(message.message)
-    && message.privacy) {
-      recaptcha.checkResponse(message.captcha, (recaptchaError, recaptchaResponse) => {
-        if (recaptchaError || !recaptchaResponse.success) {
-          console.error(recaptchaError);
-          response.status(400).send();
-        } else {
-          console.log(process.env.MAILGUN_API_KEY);
-          console.log(process.env.MAILGUN_ACCOUNT);
-          mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY }).messages.create('mg.codecowboys.io', {
-            from: message.email,
-            to: ['support@codecowboys.io'],
-            subject: message.subject,
-            text: message.message,
-          }).then(() => response.status(204).send())
-            .catch((error) => {
-              console.error(error);
-              response.status(400).send();
-            });
-        }
-      });
-    } else {
-      response.status(400).send();
+    try {
+      await messageSchema.validate(message);
+      const mailgun = new Mailgun(FormData);
+      await mailgun.client({ username: 'api', key: process.env.MAILGUN_API_KEY })
+        .messages.create('mg.codecowboys.io', {
+          from: message.email,
+          to: ['support@codecowboys.io'],
+          subject: message.subject,
+          text: message.message,
+        });
+      response.status(204).send();
+    } catch (error) {
+      if (error.errors) {
+        response.status(400).send(JSON.stringify({ error: 'validation failed', causes: error.errors }));
+      } else {
+        response.status(400).send(JSON.stringify({ error: 'unknown error' }));
+      }
     }
   },
 };

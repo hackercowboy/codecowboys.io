@@ -1,12 +1,21 @@
 .footer {
-  width: 100%;
+  min-height: 50vh;
+  padding: 20px 10px;
   text-align: center;
-  padding: 20px 10px 20px 10px;
+  width: 100%;
 }
 
 .footer-quote {
-  padding: 50px 10px;
   font-size: 40px;
   font-weight: 100;
+  padding: 50px 10px;
   text-align: center;
+}
+
+.footer-copyright {
+  padding: 15px 0;
+}
+
+.footer-item {
+  padding: 3px 0;
 }
