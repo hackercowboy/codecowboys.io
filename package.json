@@ -15,7 +15,8 @@
     "start:prod": "NODE_ENV=production node build/server.js",
     "start": "razzle start",
     "test": "razzle test --coverage --watch --testEnvironment=jsdom",
-    "test:coverage": "razzle test --coverage --testEnvironment=jsdom"
+    "test:coverage": "razzle test --coverage --testEnvironment=jsdom",
+    "validate": "yarn lint && yarn test:coverage && yarn cypress:run"
   },
   "dependencies": {
     "axios": "^0.24.0",
@@ -37,6 +38,7 @@
     "react-image-gallery": "^1.2.7",
     "react-intl": "^5.24.3",
     "react-key-listener": "^1.0.0",
+    "react-lazy-load-image-component": "^1.5.1",
     "react-parallax": "^3.3.0",
     "react-router-dom": "^6.2.1",
     "react-scroll": "^1.8.4",

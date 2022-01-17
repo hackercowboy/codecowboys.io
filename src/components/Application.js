@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
+import Image from './Image';
 import './Application.scss';
 
 function Application({
@@ -21,7 +22,7 @@ function Application({
           </p>
         </div>
         <a className="application-image" href={intl.formatMessage({ id: 'letter.link' })}>
-          <img src={image} style={{ width: '100px', height: '100px' }} alt={title} />
+          <Image src={image} width={100} height={100} alt={title} />
         </a>
       </div>
     </div>

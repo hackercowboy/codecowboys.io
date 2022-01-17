@@ -6,7 +6,7 @@ import ApplicationHero from './ApplicationHero';
 describe('<ApplicationHero/>', () => {
   it('should render with link', () => {
     const wrapper = shallow(<ApplicationHero
-      image="image.png"
+      image="image.webp"
       title="title"
       link="/test"
       appStoreLink="http://itunes.apple.com/app/letter/id498506154"
@@ -17,7 +17,7 @@ describe('<ApplicationHero/>', () => {
 
   it('should render withou link', () => {
     const wrapper = shallow(<ApplicationHero
-      image="image.png"
+      image="image.webp"
       title="title"
       appStoreLink="http://itunes.apple.com/app/letter/id498506154"
       description="description"

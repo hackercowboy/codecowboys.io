@@ -4,7 +4,7 @@ exports[`<ApplicationHero/> should render with link 1`] = `
 "<div className=\\"application-hero\\">
   <div className=\\"application-hero-image\\">
     <a href=\\"/test\\">
-      <img src=\\"image.png\\" alt=\\"title\\" />
+      <Image src=\\"image.webp\\" alt=\\"title\\" height={[undefined]} width={[undefined]} />
     </a>
   </div>
   <div className=\\"application-hero-teaser\\">
@@ -19,7 +19,7 @@ exports[`<ApplicationHero/> should render with link 1`] = `
       </a>
     </p>
     <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
-      <img src=\\"app_store_button.svg\\" alt=\\"App Store\\" />
+      <Image src=\\"app_store_button.svg\\" alt=\\"App Store\\" height={[undefined]} width={[undefined]} />
     </a>
   </div>
 </div>"
@@ -28,7 +28,7 @@ exports[`<ApplicationHero/> should render with link 1`] = `
 exports[`<ApplicationHero/> should render withou link 1`] = `
 "<div className=\\"application-hero\\">
   <div className=\\"application-hero-image\\">
-    <img src=\\"image.png\\" alt=\\"title\\" />
+    <Image src=\\"image.webp\\" alt=\\"title\\" height={[undefined]} width={[undefined]} />
   </div>
   <div className=\\"application-hero-teaser\\">
     <h1>
@@ -37,7 +37,7 @@ exports[`<ApplicationHero/> should render withou link 1`] = `
     <p>
       description
     </p>
-    <img src=\\"app_store_button_soon.svg\\" alt=\\"App Store\\" />
+    <Image src=\\"app_store_button_soon.svg\\" alt=\\"App Store\\" height={[undefined]} width={[undefined]} />
   </div>
 </div>"
 `;

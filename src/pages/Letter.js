@@ -18,19 +18,19 @@ import Screenshots from '../components/Screenshots';
 import ScrollButton from '../components/ScrollButton';
 import Section from '../components/Section';
 
-const letterCarouselImage = require('../assets/images/letter_carousel.png');
-const heroBackground = require('../assets/images/bg-7.jpg');
-const letterFeatures = require('../assets/images/letter_features.png');
+const letterCarouselImage = require('../assets/images/letter_carousel.webp');
+const heroBackground = require('../assets/images/bg-7.webp');
+const letterFeatures = require('../assets/images/letter_features.webp');
 
 function Letter({ intl }) {
   const ipadImages = [1, 2, 3, 4, 5].map((index) => ({
-    original: `/screenshots/letter/letter_ipad_${index}_de.png`,
-    thumbnail: `/screenshots/letter/letter_ipad_${index}_de.png`,
+    original: `/screenshots/letter/letter_ipad_${index}_de.webp`,
+    thumbnail: `/screenshots/letter/letter_ipad_${index}_de.webp`,
   }));
 
   const iphoneImages = [1, 2, 3, 4, 5].map((index) => ({
-    original: `/screenshots/letter/letter_iphone_${index}_de.png`,
-    thumbnail: `/screenshots/letter/letter_iphone_${index}_de.png`,
+    original: `/screenshots/letter/letter_iphone_${index}_de.webp`,
+    thumbnail: `/screenshots/letter/letter_iphone_${index}_de.webp`,
   }));
 
   return (
@@ -82,7 +82,7 @@ function Letter({ intl }) {
           </FeatureGroup>
           <FeatureImage
             src={letterFeatures}
-            style={{ width: '280px' }}
+            width={280}
             alt={intl.formatMessage({ id: 'letter.features' })}
           />
           <FeatureGroup>

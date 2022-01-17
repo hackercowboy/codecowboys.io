@@ -2,6 +2,6 @@
 
 exports[`<FeatureImage/> should render 1`] = `
 "<div className=\\"feature-image\\">
-  <img src=\\"http://example.com/test.png\\" alt=\\"Lorem Ipsum\\" style={[undefined]} />
+  <Image src=\\"http://example.com/test.webp\\" alt=\\"Lorem Ipsum\\" height={[undefined]} width={[undefined]} />
 </div>"
 `;

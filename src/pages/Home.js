@@ -18,10 +18,10 @@ import About from '../components/About';
 
 import ScrollButton from '../components/ScrollButton';
 
-const letterCarouselImage = require('../assets/images/letter_carousel.png');
-const heroBackground = require('../assets/images/bg-6.jpg');
+const letterCarouselImage = require('../assets/images/letter_carousel.webp');
+const heroBackground = require('../assets/images/bg-6.webp');
 const letterIcon = require('../assets/images/letter_icon.svg');
-const aboutBackground = require('../assets/images/bg-5.jpg');
+const aboutBackground = require('../assets/images/bg-5.webp');
 
 function Home({ intl }) {
   return (

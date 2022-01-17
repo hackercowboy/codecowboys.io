@@ -8,7 +8,7 @@ describe('<Application/>', () => {
     const wrapper = shallow(<Application
       title="Test"
       teaser="Lorem Ipsum"
-      image="test.png"
+      image="test.webp"
       link="http://test.com"
     />);
     expect(wrapper.shallow().debug()).toMatchSnapshot();

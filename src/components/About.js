@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
+import Image from './Image';
 
 import './About.scss';
 
-const aboutIcon = require('../assets/images/david.png');
+const aboutIcon = require('../assets/images/david.webp');
 
 function About({ intl }) {
   return (
@@ -16,10 +17,11 @@ function About({ intl }) {
           <p>{intl.formatMessage({ id: 'about.content_2' })}</p>
         </div>
         <div className="about-image">
-          <img
+          <Image
             alt={intl.formatMessage({ id: 'about.photo_alt' })}
             src={aboutIcon}
-            style={{ width: '100px', height: '100px' }}
+            width={100}
+            height={100}
           />
         </div>
       </div>

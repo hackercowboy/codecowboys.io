@@ -1,12 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from './Image';
 
 import './FeatureImage.scss';
 
-function FeatureImage({ src, alt, style }) {
+function FeatureImage({
+  src, alt, width, height,
+}) {
   return (
     <div className="feature-image">
-      <img src={src} alt={alt} style={style} />
+      <Image src={src} alt={alt} height={height} width={width} />
     </div>
   );
 }
@@ -14,12 +17,13 @@ function FeatureImage({ src, alt, style }) {
 FeatureImage.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  style: PropTypes.object,
+  height: PropTypes.number,
+  width: PropTypes.number,
 };
 
 FeatureImage.defaultProps = {
-  style: undefined,
+  height: undefined,
+  width: undefined,
 };
 
 export default FeatureImage;

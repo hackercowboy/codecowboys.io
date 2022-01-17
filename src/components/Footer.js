@@ -7,7 +7,7 @@ import Section from './Section';
 
 import './Footer.scss';
 
-const background = require('../assets/images/bg-7.jpg');
+const background = require('../assets/images/bg-7.webp');
 
 function Footer({ intl }) {
   return (
