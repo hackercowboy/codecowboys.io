@@ -12,13 +12,13 @@ import messages from './i18n';
 
 import './styles/base.scss';
 
-const Home = loadable(/* istanbul ignore next */() => import('./pages/Home'));
-const Letter = loadable(/* istanbul ignore next */() => import('./pages/Letter'));
-const Imprint = loadable(/* istanbul ignore next */() => import('./pages/en/Imprint'));
-const Privacy = loadable(/* istanbul ignore next */() => import('./pages/en/Privacy'));
-const Impressum = loadable(/* istanbul ignore next */() => import('./pages/de/Impressum'));
-const Datenschutz = loadable(/* istanbul ignore next */() => import('./pages/de/Datenschutz'));
-const NotFound = loadable(/* istanbul ignore next */() => import('./pages/NotFound'));
+const Home = loadable(() => import('./pages/Home'));
+const Letter = loadable(() => import('./pages/Letter'));
+const Imprint = loadable(() => import('./pages/en/Imprint'));
+const Privacy = loadable(() => import('./pages/en/Privacy'));
+const Impressum = loadable(() => import('./pages/de/Impressum'));
+const Datenschutz = loadable(() => import('./pages/de/Datenschutz'));
+const NotFound = loadable(() => import('./pages/NotFound'));
 
 function Main({ language }) {
   useEffect(() => {

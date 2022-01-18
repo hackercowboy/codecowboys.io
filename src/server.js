@@ -6,7 +6,8 @@ import bodyParser from 'body-parser';
 import { renderToString } from 'react-dom/server';
 import { forceDomain } from 'forcedomain';
 import compression from 'compression';
-
+import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
+import path from 'path';
 import contact from './api/contact';
 import Main from './Main';
 import layout from './layout';
@@ -31,12 +32,20 @@ server
     res.redirect(`/${language}`);
   })
   .get('/*', (req, res) => {
+    const extractor = new ChunkExtractor({
+      statsFile: path.resolve('build/loadable-stats.json'),
+      // razzle client bundle entrypoint is client.js
+      entrypoints: ['client'],
+    });
+
     const context = {};
     const language = req.acceptsLanguages('de', 'en') || 'en';
     const markup = renderToString(
-      <StaticRouter context={context} location={req.url}>
-        <Main language={language} />
-      </StaticRouter>,
+      <ChunkExtractorManager extractor={extractor}>
+        <StaticRouter context={context} location={req.url}>
+          <Main language={language} />
+        </StaticRouter>
+      </ChunkExtractorManager>,
     );
 
     if (context.url) {
