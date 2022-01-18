@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Features.scss';
-
 function Features({ children }) {
   return (
     <div className="features">

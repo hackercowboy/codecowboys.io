@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 import Container from './Container';
 
-import './Section.scss';
-
 function Section({
   id, dark, title, subtitle, children,
 }) {

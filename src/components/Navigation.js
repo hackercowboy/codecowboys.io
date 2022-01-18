@@ -5,8 +5,6 @@ import { Events } from 'react-scroll';
 
 import Hamburger from './Hamburger';
 
-import './Navigation.scss';
-
 function Navigation({ children }) {
   const [open, setOpen] = useState(false);
 

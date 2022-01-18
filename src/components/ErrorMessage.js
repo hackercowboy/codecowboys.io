@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 import { ErrorMessage as FormikErrorMessage } from 'formik';
 
-import './ErrorMessage.scss';
-
 function ErrorMessage({ name }) {
   return (
     <div className="error-message">

@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { Field } from 'formik';
 import ErrorMessage from './ErrorMessage';
 
-import './InputText.scss';
-
 function InputText({
   name, placeholder, disabled,
 }) {

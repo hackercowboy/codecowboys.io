@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Field } from 'formik';
 
 import ErrorMessage from './ErrorMessage';
-import './Textarea.scss';
 
 function Textarea({
   name, placeholder, disabled,

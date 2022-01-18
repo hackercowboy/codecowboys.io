@@ -18,10 +18,6 @@ import Screenshots from '../components/Screenshots';
 import ScrollButton from '../components/ScrollButton';
 import Section from '../components/Section';
 
-const letterCarouselImage = require('../assets/images/letter_carousel.webp');
-const heroBackground = require('../assets/images/bg-7.webp');
-const letterFeatures = require('../assets/images/letter_features.webp');
-
 function Letter({ intl }) {
   const ipadImages = [1, 2, 3, 4, 5].map((index) => ({
     original: `/screenshots/letter/letter_ipad_${index}_de.webp`,
@@ -44,12 +40,12 @@ function Letter({ intl }) {
         </Navigation>
       </Header>
       <Parallax
-        bgImage={heroBackground}
+        bgImage="/images/bg-7.webp"
         strength={500}
       >
         <ApplicationCarousel>
           <ApplicationHero
-            image={letterCarouselImage}
+            image="/images/letter_carousel.webp"
             title={intl.formatMessage({ id: 'letter.title' })}
             appStoreLink="http://itunes.apple.com/app/letter/id498506154"
             description={intl.formatMessage({ id: 'letter.teaser' })}
@@ -81,7 +77,7 @@ function Letter({ intl }) {
             />
           </FeatureGroup>
           <FeatureImage
-            src={letterFeatures}
+            src="/images/letter_features.webp"
             width={280}
             alt={intl.formatMessage({ id: 'letter.features' })}
           />

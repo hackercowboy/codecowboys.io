@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Element } from 'react-scroll';
 
-import './ApplicationCarousel.scss';
-
 function ApplicatinCarousel({ children }) {
   return (
     <Element name="application-carousel">

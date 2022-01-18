@@ -13,8 +13,6 @@ import Checkbox from './Checkbox';
 
 import Button from './Button';
 
-import './ContactForm.scss';
-
 function ContactForm({ intl }) {
   const [state, setState] = useState('initial');
   const [captcha, setCaptcha] = useState();

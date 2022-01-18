@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import Image from './Image';
-import './Application.scss';
 
 function Application({
   title, teaser, image, link, intl,

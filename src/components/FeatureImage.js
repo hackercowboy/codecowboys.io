@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Image from './Image';
 
-import './FeatureImage.scss';
-
 function FeatureImage({
   src, alt, width, height,
 }) {
