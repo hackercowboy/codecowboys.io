@@ -13,11 +13,22 @@ module.exports = {
       hints: false,
     };
 
-    if (env.target === 'web') {
+    if (!env.dev && env.target === 'web') {
       const miniCssExtractPlugin = webpackConfig.plugins.find((plugin) => plugin.constructor.name === 'MiniCssExtractPlugin');
       if (miniCssExtractPlugin && miniCssExtractPlugin.options) {
         miniCssExtractPlugin.options.ignoreOrder = true;
       }
+    }
+
+    if (!env.dev && config.optimization.splitChunks) {
+      config.optimization.splitChunks.cacheGroups.styles = {
+        name: 'styles',
+        test: /\.s?css$/,
+        chunks: 'all',
+        minChunks: 1,
+        reuseExistingChunk: true,
+        enforce: true,
+      };
     }
 
     if (env.target === 'web') {

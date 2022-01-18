@@ -8,6 +8,7 @@ import { forceDomain } from 'forcedomain';
 import compression from 'compression';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 import path from 'path';
+import { minify } from 'html-minifier';
 import contact from './api/contact';
 import Main from './Main';
 import layout from './layout';
@@ -51,7 +52,7 @@ server
     if (context.url) {
       res.redirect(context.url);
     } else {
-      res.status(200).send(layout(assets, markup));
+      res.status(200).send(minify(layout(assets, markup), { collapseWhitespace: true }));
     }
   });
 
