@@ -1,6 +1,8 @@
 {
-  "name": "after-js",
   "version": 2,
+  "scripts": {
+    "build": "yarn build"
+  },
   "builds": [
       {
           "src": "build/public/**",
@@ -18,6 +20,5 @@
       { "src": "/robots.txt", "dest": "build/public/robots.txt" },
       { "src": "/static/(.*)", "dest": "build/public/static/$1" },
       { "src": "/(.*)", "dest": "build/server.js" }
-      
   ]
 }
