@@ -2,12 +2,14 @@
 
 exports[`<App/> should render in de 1`] = `
 "<ContextProvider value={{...}}>
+  <CookieConsent />
   <Component />
 </ContextProvider>"
 `;
 
 exports[`<App/> should render in en 1`] = `
 "<ContextProvider value={{...}}>
+  <CookieConsent />
   <Component />
 </ContextProvider>"
 `;

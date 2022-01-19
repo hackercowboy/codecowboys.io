@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Mailgun from 'mailgun.js';
-import contact from './contact';
+import contact from './contact.api';
 
 jest.mock('axios');
 jest.mock('mailgun.js');
@@ -11,7 +11,7 @@ describe('contact', () => {
     const send = jest.fn();
     response.status.mockImplementation(() => ({ send }));
 
-    await contact.post({ body: { captcha: 'test' } }, response);
+    await contact({ method: 'POST', body: { captcha: 'test' } }, response);
 
     expect(response.status).toBeCalledWith(400);
     expect(send).toBeCalledWith('{"error":"validation failed","causes":["message is a required field"]}');
@@ -27,7 +27,8 @@ describe('contact', () => {
     const send = jest.fn();
     response.status.mockImplementation(() => ({ send }));
 
-    await contact.post({
+    await contact({
+      method: 'POST',
       body: {
         email: 'test@example.org',
         subject: 'I have a problem!',
@@ -49,7 +50,8 @@ describe('contact', () => {
     const send = jest.fn();
     response.status.mockImplementation(() => ({ send }));
 
-    await contact.post({
+    await contact({
+      method: 'POST',
       body: {
         email: 'test@example.org',
         subject: 'I have a problem!',
@@ -61,5 +63,14 @@ describe('contact', () => {
 
     expect(response.status).toBeCalledWith(400);
     expect(send).toBeCalledWith('{"error":"unknown error"}');
+  });
+
+  it('should return 404 for unknown method', async () => {
+    const response = { status: jest.fn() };
+    await contact({
+      method: 'GET',
+    }, response);
+
+    expect(response.status).toBeCalledWith(404);
   });
 });

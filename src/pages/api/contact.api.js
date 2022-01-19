@@ -21,8 +21,8 @@ const messageSchema = Yup.object({
   privacy: Yup.bool().oneOf([true]),
 });
 
-export default {
-  post: async (request, response) => {
+export default async function handler(request, response) {
+  if (request.method === 'POST') {
     const message = request.body;
     try {
       await messageSchema.validate(message);
@@ -42,5 +42,7 @@ export default {
         response.status(400).send(JSON.stringify({ error: 'unknown error' }));
       }
     }
-  },
-};
+  } else {
+    response.status(404);
+  }
+}

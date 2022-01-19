@@ -7,5 +7,5 @@ module.exports = withMDX({
     locales: ['en', 'de'],
     defaultLocale: 'en',
   },
-  pageExtensions: ['page.js', 'page.mdx'],
+  pageExtensions: ['page.js', 'page.mdx', 'api.js'],
 });
