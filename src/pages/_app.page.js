@@ -3,9 +3,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { IntlProvider } from 'react-intl';
 import { useRouter } from 'next/router';
-import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+
+import CookieConsent from '../components/CookieConsent';
 
 import messages from '../i18n';
+
+import 'react-image-gallery/styles/css/image-gallery.css';
 import '../styles/styles.scss';
 
 function MyApp({ Component, pageProps }) {
@@ -19,9 +22,8 @@ function MyApp({ Component, pageProps }) {
       defaultLocale={defaultLocale}
       messages={messages[language]}
     >
-      <GoogleReCaptchaProvider reCaptchaKey={process.env.RECAPTCHA_SITE_KEY}>
-        <Component {...pageProps} />
-      </GoogleReCaptchaProvider>
+      <CookieConsent />
+      <Component {...pageProps} />
     </IntlProvider>
   );
 }

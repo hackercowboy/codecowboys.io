@@ -1,26 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
-import { useIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 
-import Main from '../components/Main';
-import Header from '../components/Header';
-
-import Navigation from '../components/Navigation';
-import NavigationItem from '../components/NavigationItem';
-
+import About from '../components/About';
+import Application from '../components/Application';
 import ApplicationCarousel from '../components/ApplicationCarousel';
 import ApplicationHero from '../components/ApplicationHero';
-import Application from '../components/Application';
-import Section from '../components/Section';
 import ContactForm from '../components/ContactForm';
-import About from '../components/About';
-
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Navigation from '../components/Navigation';
+import NavigationItem from '../components/NavigationItem';
+import Page from '../components/Page';
 import ScrollButton from '../components/ScrollButton';
+import Section from '../components/Section';
 
-function Home() {
-  const intl = useIntl();
+function Home({ intl }) {
   return (
-    <Main className="presentation">
+    <Page className="presentation">
       <Header>
         <Navigation>
           <NavigationItem id="navigation-item-apps" target="apps" offset={-94}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
@@ -75,8 +73,13 @@ function Home() {
       >
         <ContactForm />
       </Section>
-    </Main>
+      <Footer />
+    </Page>
   );
 }
 
-export default Home;
+Home.propTypes = {
+  intl: PropTypes.shape({ formatMessage: PropTypes.func.isRequired }).isRequired,
+};
+
+export default injectIntl(Home);

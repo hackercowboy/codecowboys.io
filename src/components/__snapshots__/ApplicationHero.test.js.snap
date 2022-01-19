@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ApplicationHero/> should render with link 1`] = `
+"<div className=\\"application-hero\\">
+  <div className=\\"application-hero-image\\">
+    <a href=\\"/test\\">
+      <Image src=\\"image.webp\\" alt=\\"title\\" layout=\\"fill\\" height={[undefined]} width={[undefined]} />
+    </a>
+  </div>
+  <div className=\\"application-hero-teaser\\">
+    <h1>
+      <a href=\\"/test\\">
+        title
+      </a>
+    </h1>
+    <p>
+      <a href=\\"/test\\">
+        description
+      </a>
+    </p>
+    <a href=\\"http://itunes.apple.com/app/letter/id498506154\\">
+      <Image src=\\"/images/app_store_button.svg\\" alt=\\"App Store\\" height={40} width={135} />
+    </a>
+  </div>
+</div>"
+`;
+
+exports[`<ApplicationHero/> should render withou link 1`] = `
+"<div className=\\"application-hero\\">
+  <div className=\\"application-hero-image\\">
+    <Image src=\\"image.webp\\" alt=\\"title\\" layout=\\"fill\\" height={[undefined]} width={[undefined]} />
+  </div>
+  <div className=\\"application-hero-teaser\\">
+    <h1>
+      title
+    </h1>
+    <p>
+      description
+    </p>
+    <Image src=\\"/images/app_store_button_soon.svg\\" alt=\\"App Store\\" height={40} width={135} />
+  </div>
+</div>"
+`;

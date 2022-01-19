@@ -86,6 +86,12 @@ input {
   width: 100%;
 }
 
+textarea:disabled,
+input:disabled { 
+  border: 1px solid $medium-color;
+}
+
+
 *:focus {
   outline: none;
 }

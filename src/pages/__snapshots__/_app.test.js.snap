@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> should render in de 1`] = `
+"<ContextProvider value={{...}}>
+  <Component />
+</ContextProvider>"
+`;
+
+exports[`<App/> should render in en 1`] = `
+"<ContextProvider value={{...}}>
+  <Component />
+</ContextProvider>"
+`;

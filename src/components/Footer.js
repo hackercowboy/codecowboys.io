@@ -9,7 +9,7 @@ function Footer({ intl }) {
   return (
     <footer>
       <Parallax
-        bgImage="/public/images/bg-7.webp"
+        bgImage="/images/bg-7.webp"
         strength={500}
       >
         <Section dark>

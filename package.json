@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cypress": "concurrently --kill-others --success first \"yarn start\" \"cypress open\"",
-    "cypress:run": "concurrently --kill-others --success first \"yarn start\" \"cypress run\"",
+    "cypress": "concurrently --kill-others --success first \"yarn dev\" \"cypress open\"",
+    "cypress:run": "concurrently --kill-others --success first \"yarn dev\" \"cypress run\"",
     "lint:fix": "eslint src --fix && stylelint src/**/*.scss --fix",
     "lint": "eslint src && stylelint src/**/*.scss",
     "eslint:fix": "eslint src cypress --fix",
@@ -15,13 +15,15 @@
     "stylelint:fix": "stylelint src/**/*.scss --fix",
     "stylelint": "stylelint src/**/*.scss",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "test": "razzle test --coverage --watch --testEnvironment=jsdom",
-    "test:coverage": "razzle test --coverage --testEnvironment=jsdom",
+    "test": "jest --coverage --watch",
+    "test:coverage": "jest --coverage",
     "validate": "yarn lint && yarn test:coverage && yarn cypress:run"
   },
   "dependencies": {
     "@babel/preset-env": "^7.16.8",
     "@babel/preset-react": "^7.16.7",
+    "@mdx-js/loader": "^1.6.22",
+    "@next/mdx": "^12.0.8",
     "axios": "^0.24.0",
     "concurrently": "^7.0.0",
     "flat": "^5.0.2",
@@ -58,6 +60,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.4.7",
     "jest-react-hooks-shallow": "^1.5.1",
     "postcss": "^8.4.5",
     "sass": "^1.48.0",
@@ -65,16 +68,5 @@
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-config-standard": "^24.0.0",
     "stylelint-scss": "^4.1.0"
-  },
-  "jest": {
-    "coverageThreshold": {
-      "global": {
-        "branches": 100,
-        "functions": 100,
-        "lines": 100,
-        "statements": 100
-      }
-    },
-    "testEnvironment": "jsdom"
   }
 }
