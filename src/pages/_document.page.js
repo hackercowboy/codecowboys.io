@@ -17,9 +17,6 @@ class MyDocument extends Document {
         <body>
           <Main />
           <NextScript />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.0.13/css/all.css" media="all" crossOrigin="anonymous" async defer />
           <script src="https://www.google.com/recaptcha/api.js" async defer />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119498871-1" />
           <script

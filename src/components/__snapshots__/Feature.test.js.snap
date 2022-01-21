@@ -11,7 +11,7 @@ exports[`<Feature/> should render left 1`] = `
     </p>
   </div>
   <div className=\\"feature-icon\\">
-    <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
+    fa-print
   </div>
 </div>"
 `;
@@ -27,7 +27,7 @@ exports[`<Feature/> should render right 1`] = `
     </p>
   </div>
   <div className=\\"feature-icon\\">
-    <i className=\\"fal fa-print\\" aria-hidden=\\"true\\" />
+    fa-print
   </div>
 </div>"
 `;

@@ -3,6 +3,10 @@ import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
 
+import {
+  IoPrintOutline, IoCloudyOutline, IoSearchOutline, IoPeopleOutline, IoPencilOutline, IoReaderOutline,
+} from 'react-icons/io5';
+
 import ApplicationCarousel from '../components/ApplicationCarousel';
 import ApplicationHero from '../components/ApplicationHero';
 import ContactForm from '../components/ContactForm';
@@ -64,17 +68,17 @@ function Letter({ intl }) {
             <Feature
               title={intl.formatMessage({ id: 'letter.features_print_title' })}
               description={intl.formatMessage({ id: 'letter.features_print_description' })}
-              icon="fa-print"
+              icon={<IoPrintOutline size="3em" />}
             />
             <Feature
               title={intl.formatMessage({ id: 'letter.features_storage_title' })}
               description={intl.formatMessage({ id: 'letter.features_storage_description' })}
-              icon="fa-cloud"
+              icon={<IoCloudyOutline size="3em" />}
             />
             <Feature
               title={intl.formatMessage({ id: 'letter.features_search_title' })}
               description={intl.formatMessage({ id: 'letter.features_search_description' })}
-              icon="fa-search"
+              icon={<IoSearchOutline size="3em" />}
             />
           </FeatureGroup>
           <FeatureImage
@@ -86,19 +90,19 @@ function Letter({ intl }) {
             <Feature
               title={intl.formatMessage({ id: 'letter.features_addresses_title' })}
               description={intl.formatMessage({ id: 'letter.features_addresses_description' })}
-              icon="fa-user"
+              icon={<IoPeopleOutline size="3em" />}
               right
             />
             <Feature
               title={intl.formatMessage({ id: 'letter.features_signature_title' })}
               description={intl.formatMessage({ id: 'letter.features_signature_description' })}
-              icon="fa-pencil"
+              icon={<IoPencilOutline size="3em" />}
               right
             />
             <Feature
               title={intl.formatMessage({ id: 'letter.features_templates_title' })}
               description={intl.formatMessage({ id: 'letter.features_templates_description' })}
-              icon="fa-file-alt"
+              icon={<IoReaderOutline size="3em" />}
               right
             />
           </FeatureGroup>

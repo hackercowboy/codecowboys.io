@@ -27,15 +27,15 @@ exports[`<Letter/> should render 1`] = `
   <Section id=\\"features\\" title=\\"Features\\" subtitle=\\"Overview of all features\\" dark={false}>
     <Features>
       <FeatureGroup>
-        <Feature title=\\"Printing & Sharing\\" description=\\"Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.\\" icon=\\"fa-print\\" />
-        <Feature title=\\"Storage\\" description=\\"All letters are stored securely and synchronized between devices using iCloud.\\" icon=\\"fa-cloud\\" />
-        <Feature title=\\"Search\\" description=\\"With the search function letters can be found again quickly and easily.\\" icon=\\"fa-search\\" />
+        <Feature title=\\"Printing & Sharing\\" description=\\"Letters can be printed (AirPrint), sent by email, and opened in other applications as PDF or image.\\" icon={{...}} />
+        <Feature title=\\"Storage\\" description=\\"All letters are stored securely and synchronized between devices using iCloud.\\" icon={{...}} />
+        <Feature title=\\"Search\\" description=\\"With the search function letters can be found again quickly and easily.\\" icon={{...}} />
       </FeatureGroup>
       <FeatureImage src=\\"/images/letter_features.webp\\" width={280} alt=\\"Features\\" height={[undefined]} />
       <FeatureGroup>
-        <Feature title=\\"Addresses\\" description=\\"International addresses are formatted automatically. Senders and receivers can easily be selected from your address book.\\" icon=\\"fa-user\\" right={true} />
-        <Feature title=\\"Signature\\" description=\\"Letters can be signed directly in the application.\\" icon=\\"fa-pencil\\" right={true} />
-        <Feature title=\\"Templates\\" description=\\"Text templates can be used to create ready letter in just a few seconds.\\" icon=\\"fa-file-alt\\" right={true} />
+        <Feature title=\\"Addresses\\" description=\\"International addresses are formatted automatically. Senders and receivers can easily be selected from your address book.\\" icon={{...}} right={true} />
+        <Feature title=\\"Signature\\" description=\\"Letters can be signed directly in the application.\\" icon={{...}} right={true} />
+        <Feature title=\\"Templates\\" description=\\"Text templates can be used to create ready letter in just a few seconds.\\" icon={{...}} right={true} />
       </FeatureGroup>
     </Features>
   </Section>

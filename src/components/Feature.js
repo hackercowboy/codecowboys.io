@@ -11,7 +11,7 @@ function Feature({
         <p>{description}</p>
       </div>
       <div className="feature-icon">
-        <i className={`fal ${icon}`} aria-hidden="true" />
+        {icon}
       </div>
     </div>
   );
@@ -20,7 +20,7 @@ function Feature({
 Feature.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
+  icon: PropTypes.node.isRequired,
 };
 
 export default Feature;
