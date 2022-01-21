@@ -13,11 +13,14 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" media="all" rel="stylesheet" crossOrigin="anonymous" async defer />
+        </Head>
         <body>
           <Main />
           <NextScript />
-          <script src="https://www.google.com/recaptcha/api.js" async defer />
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119498871-1" />
           <script
             dangerouslySetInnerHTML={{
