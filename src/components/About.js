@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import Image from './Image';
 
-import './About.scss';
-
-const aboutIcon = require('../assets/images/david.webp');
-
 function About({ intl }) {
   return (
     <div className="about">
@@ -19,7 +15,7 @@ function About({ intl }) {
         <div className="about-image">
           <Image
             alt={intl.formatMessage({ id: 'about.photo_alt' })}
-            src={aboutIcon}
+            src="/images/david.webp"
             width={100}
             height={100}
           />

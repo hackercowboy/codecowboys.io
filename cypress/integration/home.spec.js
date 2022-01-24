@@ -46,7 +46,7 @@ describe('Home', () => {
       expect({
         email, subject, message, privacy,
       }).to.deep.equal({
-        email: 'test@example.com', subject: 'TestSubject', message: 'TestMessage', privacy: true,
+        email: 'test@example.com', subject: 'Test Subject', message: 'Test Message', privacy: true,
       });
 
       cy.get('.contact-form-success').should('be.visible');

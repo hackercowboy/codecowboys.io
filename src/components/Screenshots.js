@@ -2,8 +2,6 @@ import React from 'react';
 import ImageGallery from 'react-image-gallery';
 import PropTypes from 'prop-types';
 
-import './Screenshots.scss';
-
 function Screenshots({ ipadImages, iphoneImages }) {
   return (
     <div className="screenshots">

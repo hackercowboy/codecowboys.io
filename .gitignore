@@ -14,3 +14,5 @@ build
 cache
 cypress/videos
 cypress/screenshots
+.vercel
+.next

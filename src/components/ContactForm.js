@@ -4,7 +4,7 @@ import { injectIntl, FormattedMessage } from 'react-intl';
 import axios from 'axios';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 import Form from './Form';
 import InputText from './InputText';
@@ -12,8 +12,6 @@ import Textarea from './Textarea';
 import Checkbox from './Checkbox';
 
 import Button from './Button';
-
-import './ContactForm.scss';
 
 function ContactForm({ intl }) {
   const [state, setState] = useState('initial');
@@ -44,7 +42,7 @@ function ContactForm({ intl }) {
   };
 
   return (
-    <>
+    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
       <GoogleReCaptcha id="recaptcha-verify" onVerify={handleOnCaptchaVerify} />
       { state === 'initial' && (
       <Formik
@@ -94,7 +92,7 @@ function ContactForm({ intl }) {
       { state === 'error' && (
         <p className="contact-form-error">{intl.formatMessage({ id: 'contact.error' })}</p>
       )}
-    </>
+    </GoogleReCaptchaProvider>
   );
 }
 

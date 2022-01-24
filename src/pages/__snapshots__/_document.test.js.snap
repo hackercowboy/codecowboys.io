@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Document/> should render 1`] = `""`;
+
+exports[`<Document/> should render 2`] = `Promise {}`;

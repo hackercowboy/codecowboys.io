@@ -1,21 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactForm/> should error during submit data 1`] = `
-"<Fragment>
+"<Component reCaptchaKey={[undefined]}>
   <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
   <p className=\\"contact-form-error\\">
     Sorry, something went wrong, please retry later...
   </p>
-</Fragment>"
+</Component>"
 `;
 
 exports[`<ContactForm/> should render 1`] = `
-"<Fragment>
+"<Component reCaptchaKey={[undefined]}>
   <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
   <Formik initialValues={{...}} validationSchema={{...}} onSubmit={[Function: handleOnSubmit]}>
     [function]
   </Formik>
-</Fragment>"
+</Component>"
 `;
 
 exports[`<ContactForm/> should render 2`] = `
@@ -39,10 +39,10 @@ exports[`<ContactForm/> should render 2`] = `
 `;
 
 exports[`<ContactForm/> should submit data 1`] = `
-"<Fragment>
+"<Component reCaptchaKey={[undefined]}>
   <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
   <p className=\\"contact-form-success\\">
     Thank you for your message! i will come back to you, as soon as possible!
   </p>
-</Fragment>"
+</Component>"
 `;

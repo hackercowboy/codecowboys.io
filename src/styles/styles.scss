@@ -1,0 +1,114 @@
+@import 'colors';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $text-color;
+  margin: 0;
+}
+
+body,
+textarea,
+input,
+button {
+  font-family: 'Noto Serif', 'Times New Roman', Times, serif;
+}
+
+a,
+a:visited { color: $text-color; }
+
+
+$multiplier-phone: 1.1;
+$multiplier-desktop: 1.2;
+
+h1 {
+  font-size: 2em * $multiplier-phone;
+}
+
+h2 {
+  font-size: 1.5em * $multiplier-phone;
+}
+
+h3 {
+  font-size: 1.17em * $multiplier-phone;
+}
+
+h4 {
+  font-size: 1.33em * $multiplier-phone;
+}
+
+p,
+input,
+label,
+textarea {
+  font-size: 0.9em * $multiplier-phone;
+}
+
+@media only screen and (min-width : 576px) {
+  h1 {
+    font-size: 2em * $multiplier-desktop;
+  }
+    
+  h2 {
+    font-size: 1.5em * $multiplier-desktop;
+  }
+    
+  h3 {
+    font-size: 1.17em * $multiplier-desktop;
+  }
+    
+  h4 {
+    font-size: 1.33em * $multiplier-desktop;
+  }
+    
+  p,
+  input,
+  label,
+  textarea {
+    font-size: 1em * $multiplier-desktop;
+  }
+}
+
+
+textarea,
+input {
+  border: 1px solid $text-color;
+  border-radius: 0 !important;
+  padding: 8px;
+  width: 100%;
+}
+
+textarea:disabled,
+input:disabled { 
+  border: 1px solid $medium-color;
+}
+
+
+*:focus {
+  outline: none;
+}
+
+
+.desktop {
+  display: none;
+}
+
+@media only screen and (min-width : 992px) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: block;
+  }
+}
+
+@import 'components';

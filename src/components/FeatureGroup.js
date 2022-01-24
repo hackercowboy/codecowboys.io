@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './FeatureGroup.scss';
-
 function FeatureGroup({ children }) {
   return (
     <div className="feature-group">

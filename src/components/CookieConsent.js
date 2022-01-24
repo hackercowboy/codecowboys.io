@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
 import ReactCookieConsent from 'react-cookie-consent';
 
-import './CookieConsent.scss';
-
 function CookieConsent({ intl }) {
   return (
     <ReactCookieConsent

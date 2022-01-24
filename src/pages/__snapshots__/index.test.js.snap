@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Index/> should render 1`] = `
+"<Page className=\\"presentation\\">
+  <Header>
+    <Navigation>
+      <NavigationItem id=\\"navigation-item-apps\\" target=\\"apps\\" offset={-94}>
+        Apps
+      </NavigationItem>
+      <NavigationItem id=\\"navigation-item-about\\" target=\\"about\\" offset={-88}>
+        About
+      </NavigationItem>
+      <NavigationItem id=\\"navigation-item-contact\\" target=\\"contact\\" offset={-94}>
+        Contact
+      </NavigationItem>
+    </Navigation>
+  </Header>
+  <Parallax bgImage=\\"/images/bg-6.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+    <ApplicatinCarousel>
+      <ApplicationHero image=\\"/images/letter_carousel.webp\\" title=\\"Letter\\" link=\\"/en/letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} />
+    </ApplicatinCarousel>
+    <ScrollButton target=\\"apps\\" />
+  </Parallax>
+  <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false}>
+    <Application title=\\"Letter\\" teaser=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" link=\\"/en/letter\\" image=\\"/images/letter_icon.svg\\" />
+  </Section>
+  <Parallax bgImage=\\"/images/bg-5.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+    <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true}>
+      <About />
+    </Section>
+  </Parallax>
+  <Section id=\\"contact\\" title=\\"Contact\\" subtitle=\\"Please contact me if you have any questions\\" dark={false}>
+    <ContactForm />
+  </Section>
+  <Footer />
+</Page>"
+`;

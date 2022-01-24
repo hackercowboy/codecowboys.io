@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Hamburger.scss';
-
 function Hamburger({ onClick, open }) {
   return (
     <button className="hamburger" type="button" onClick={onClick}>

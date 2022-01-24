@@ -2,7 +2,7 @@
 
 exports[`<Footer/> should render 1`] = `
 "<footer>
-  <Parallax bgImage=\\"bg-7.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+  <Parallax bgImage=\\"/images/bg-7.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <Section dark={true} id={[undefined]} subtitle={[undefined]} title={[undefined]}>
       <div className=\\"footer-quote\\">
         <i className=\\"fas fa-angle-double-left\\" aria-hidden=\\"true\\" />

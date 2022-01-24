@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 import { Field } from 'formik';
 import ErrorMessage from './ErrorMessage';
 
-import './Checkbox.scss';
-
 function Checkbox({
   name, disabled, children,
 }) {

@@ -13,4 +13,4 @@ RUN yarn lint
 RUN yarn test:coverage
 RUN yarn build
 
-CMD yarn start:prod
+CMD yarn start

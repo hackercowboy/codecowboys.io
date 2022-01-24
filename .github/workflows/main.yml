@@ -22,8 +22,6 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           build: yarn build
-          start: yarn start:prod
-        env: 
-          CODECOWBOYS_HOSTNAME: localhost:3000
-          CODECOWBOYS_PROTOCOL: http
-          PORT: 3000
+          start: yarn start
+        env:
+          NEXT_PUBLIC_RECAPTCHA_SITE_KEY: ${{ secrets.NEXT_PUBLIC_RECAPTCHA_SITE_KEY }}

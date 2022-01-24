@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './Flex.scss';
-
 function Flex({ children }) {
   return (
     <div className="flex">

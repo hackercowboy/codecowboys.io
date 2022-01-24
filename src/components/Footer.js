@@ -5,15 +5,11 @@ import { injectIntl } from 'react-intl';
 
 import Section from './Section';
 
-import './Footer.scss';
-
-const background = require('../assets/images/bg-7.webp');
-
 function Footer({ intl }) {
   return (
     <footer>
       <Parallax
-        bgImage={background}
+        bgImage="/images/bg-7.webp"
         strength={500}
       >
         <Section dark>

@@ -14,3 +14,10 @@
 .button:hover { 
   background-color: $medium-color;
 }
+
+.button:disabled { 
+  background-color: $light-color;
+  border: 1px solid $medium-color;
+  color: $medium-color;
+  cursor: not-allowed;
+}
