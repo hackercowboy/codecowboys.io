@@ -7,7 +7,7 @@ import Section from './Section';
 
 function Footer({ intl }) {
   return (
-    <LazyLoad offset={100}>
+    <LazyLoad offset={300}>
       <footer>
         <Parallax
           bgImage="/images/bg-7.webp"
