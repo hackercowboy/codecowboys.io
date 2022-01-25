@@ -51,7 +51,9 @@ describe('Language', () => {
     cy.get('h1').should('contain', 'Letter');
 
     cy.scrollTo('bottom');
-    cy.get('#imprint-link').click();
+    cy.wait(500);
+    cy.scrollTo('bottom');
+    cy.get('#imprint-link', { timeout: 10000 }).click();
     cy.get('h1').should('contain', 'Imprint');
   });
 
@@ -67,7 +69,9 @@ describe('Language', () => {
     cy.get('h1').should('contain', 'Briefe');
 
     cy.scrollTo('bottom');
-    cy.get('#imprint-link').click();
+    cy.wait(500);
+    cy.scrollTo('bottom');
+    cy.get('#imprint-link', { timeout: 10000 }).click();
     cy.get('h1').should('contain', 'Impressum');
   });
 });
