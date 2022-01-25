@@ -3,7 +3,7 @@
 exports[`<Letter/> should render 1`] = `
 "<Page className=\\"presentation\\">
   <Head>
-    <meta name=\\"apple-itunes-app\\" content=\\"app-id=id498506154\\" />
+    <meta name=\\"apple-itunes-app\\" content=\\"app-id=498506154\\" />
   </Head>
   <Header title=\\"Letter\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\">
     <Navigation>

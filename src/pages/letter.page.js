@@ -38,7 +38,7 @@ function Letter({ intl }) {
   return (
     <Page className="presentation">
       <Head>
-        <meta name="apple-itunes-app" content="app-id=id498506154" />
+        <meta name="apple-itunes-app" content="app-id=498506154" />
       </Head>
       <Header title={intl.formatMessage({ id: 'letter.title' })} description={intl.formatMessage({ id: 'letter.teaser' })}>
         <Navigation>
