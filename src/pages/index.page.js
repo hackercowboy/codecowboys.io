@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
 
+import LazyLoad from 'react-lazyload';
 import About from '../components/About';
 import Application from '../components/Application';
 import ApplicationCarousel from '../components/ApplicationCarousel';
@@ -71,7 +72,9 @@ function Home({ intl }) {
         title={intl.formatMessage({ id: 'contact.title' })}
         subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
       >
-        <ContactForm />
+        <LazyLoad offset={100}>
+          <ContactForm />
+        </LazyLoad>
       </Section>
       <Footer />
     </Page>

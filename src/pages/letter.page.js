@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
+import LazyLoad from 'react-lazyload';
 
 import {
   IoPrintOutline, IoCloudyOutline, IoSearchOutline, IoPeopleOutline, IoPencilOutline, IoReaderOutline,
@@ -131,7 +132,9 @@ function Letter({ intl }) {
         title={intl.formatMessage({ id: 'contact.title' })}
         subtitle={intl.formatMessage({ id: 'contact.subtitle' })}
       >
-        <ContactForm />
+        <LazyLoad offset={100}>
+          <ContactForm />
+        </LazyLoad>
       </Section>
       <Footer />
     </Page>

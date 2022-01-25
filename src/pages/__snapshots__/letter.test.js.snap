@@ -60,7 +60,9 @@ exports[`<Letter/> should render 1`] = `
     <Screenshots ipadImages={{...}} iphoneImages={{...}} />
   </Section>
   <Section id=\\"contact\\" title=\\"Contact\\" subtitle=\\"Please contact me if you have any questions\\" dark={false}>
-    <ContactForm />
+    <LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
+      <ContactForm />
+    </LazyLoad>
   </Section>
   <Footer />
 </Page>"
