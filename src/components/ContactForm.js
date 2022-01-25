@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import { GoogleReCaptchaProvider, GoogleReCaptcha } from 'react-google-recaptcha-v3';
+import LazyLoad from 'react-lazyload';
 
 import Form from './Form';
 import InputText from './InputText';
@@ -42,57 +43,59 @@ function ContactForm({ intl }) {
   };
 
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
-      <GoogleReCaptcha id="recaptcha-verify" onVerify={handleOnCaptchaVerify} />
-      { state === 'initial' && (
-      <Formik
-        initialValues={{
-          email: '', subject: '', message: '', captcha: '', privacy: false,
-        }}
-        validationSchema={ContactSchema}
-        onSubmit={handleOnSubmit}
-      >
-        {({ isSubmitting }) => (
-          <Form>
-            <InputText
-              name="email"
-              placeholder={intl.formatMessage({ id: 'contact.email_placeholder' })}
-              disabled={isSubmitting || !captcha}
-            />
-            <InputText
-              name="subject"
-              placeholder={intl.formatMessage({ id: 'contact.subject_placeholder' })}
-              disabled={isSubmitting || !captcha}
-            />
-            <Textarea
-              name="message"
-              placeholder={intl.formatMessage({ id: 'contact.message_placeholder' })}
-              disabled={isSubmitting || !captcha}
-            />
-            <Checkbox
-              name="privacy"
-              disabled={isSubmitting || !captcha}
-            >
-              <FormattedMessage id="contact.privacy_1" />
-              {' '}
-              <a href={intl.formatMessage({ id: 'contact.privacy_link' })}>
-                <FormattedMessage id="contact.privacy_2" />
-              </a>
-            </Checkbox>
-            <Button id="contact-form-button" type="submit" disabled={isSubmitting || !captcha}>
-              <FormattedMessage id="contact.submit" />
-            </Button>
-          </Form>
+    <LazyLoad offset={100}>
+      <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}>
+        <GoogleReCaptcha id="recaptcha-verify" onVerify={handleOnCaptchaVerify} />
+        { state === 'initial' && (
+        <Formik
+          initialValues={{
+            email: '', subject: '', message: '', captcha: '', privacy: false,
+          }}
+          validationSchema={ContactSchema}
+          onSubmit={handleOnSubmit}
+        >
+          {({ isSubmitting }) => (
+            <Form>
+              <InputText
+                name="email"
+                placeholder={intl.formatMessage({ id: 'contact.email_placeholder' })}
+                disabled={isSubmitting || !captcha}
+              />
+              <InputText
+                name="subject"
+                placeholder={intl.formatMessage({ id: 'contact.subject_placeholder' })}
+                disabled={isSubmitting || !captcha}
+              />
+              <Textarea
+                name="message"
+                placeholder={intl.formatMessage({ id: 'contact.message_placeholder' })}
+                disabled={isSubmitting || !captcha}
+              />
+              <Checkbox
+                name="privacy"
+                disabled={isSubmitting || !captcha}
+              >
+                <FormattedMessage id="contact.privacy_1" />
+                {' '}
+                <a href={intl.formatMessage({ id: 'contact.privacy_link' })}>
+                  <FormattedMessage id="contact.privacy_2" />
+                </a>
+              </Checkbox>
+              <Button id="contact-form-button" type="submit" disabled={isSubmitting || !captcha}>
+                <FormattedMessage id="contact.submit" />
+              </Button>
+            </Form>
+          )}
+        </Formik>
         )}
-      </Formik>
-      )}
-      { state === 'submitted' && (
+        { state === 'submitted' && (
         <p className="contact-form-success">{intl.formatMessage({ id: 'contact.success' })}</p>
-      )}
-      { state === 'error' && (
+        )}
+        { state === 'error' && (
         <p className="contact-form-error">{intl.formatMessage({ id: 'contact.error' })}</p>
-      )}
-    </GoogleReCaptchaProvider>
+        )}
+      </GoogleReCaptchaProvider>
+    </LazyLoad>
   );
 }
 
