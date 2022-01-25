@@ -2,7 +2,7 @@
 
 exports[`<Index/> should render 1`] = `
 "<Page className=\\"presentation\\">
-  <Header>
+  <Header description=\\"I am a passionate software engineer working for a Swiss company. From time to time i work on some nice projects in my free time, which i publish on this site.\\" title={[undefined]}>
     <Navigation>
       <NavigationItem id=\\"navigation-item-apps\\" target=\\"apps\\" offset={-94}>
         Apps
@@ -15,7 +15,7 @@ exports[`<Index/> should render 1`] = `
       </NavigationItem>
     </Navigation>
   </Header>
-  <Parallax bgImage=\\"/images/bg-6.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+  <Parallax bgImage=\\"/images/bg-6.webp\\" bgImageAlt=\\"Background image showing the Horseshoe Bend in Arizona\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <ApplicatinCarousel>
       <ApplicationHero image=\\"/images/letter_carousel.webp\\" title=\\"Letter\\" link=\\"/en/letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" placeholderImage={[undefined]} soon={false} />
     </ApplicatinCarousel>
@@ -24,15 +24,13 @@ exports[`<Index/> should render 1`] = `
   <Section id=\\"apps\\" title=\\"Apps\\" subtitle=\\"A couple of great apps for you!\\" dark={false}>
     <Application title=\\"Letter\\" teaser=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" link=\\"/en/letter\\" image=\\"/images/letter_icon.svg\\" />
   </Section>
-  <Parallax bgImage=\\"/images/bg-5.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+  <Parallax bgImage=\\"/images/bg-5.webp\\" bgImageAlt=\\"Background image showing the Grand Canyon in Arizona\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <Section id=\\"about\\" title=\\"About\\" subtitle=\\"I code great apps like a cowboy!\\" dark={true}>
       <About />
     </Section>
   </Parallax>
   <Section id=\\"contact\\" title=\\"Contact\\" subtitle=\\"Please contact me if you have any questions\\" dark={false}>
-    <LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
-      <ContactForm />
-    </LazyLoad>
+    <ContactForm />
   </Section>
   <Footer />
 </Page>"

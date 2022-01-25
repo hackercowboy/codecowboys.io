@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
+import Head from 'next/head';
 
 import {
   IoPrintOutline, IoCloudyOutline, IoSearchOutline, IoPeopleOutline, IoPencilOutline, IoReaderOutline,
@@ -36,7 +37,10 @@ function Letter({ intl }) {
 
   return (
     <Page className="presentation">
-      <Header>
+      <Head>
+        <meta name="apple-itunes-app" content="app-id=id498506154" />
+      </Head>
+      <Header title={intl.formatMessage({ id: 'letter.title' })} description={intl.formatMessage({ id: 'letter.teaser' })}>
         <Navigation>
           <NavigationItem id="navigation-item-features" target="features" offset={-94}>{intl.formatMessage({ id: 'letter.features' })}</NavigationItem>
           <NavigationItem id="navigation-item-description" target="description" offset={-88}>{intl.formatMessage({ id: 'letter.description' })}</NavigationItem>
@@ -46,6 +50,7 @@ function Letter({ intl }) {
       </Header>
       <Parallax
         bgImage="/images/bg-7.webp"
+        bgImageAlt={intl.formatMessage({ id: 'background.alt_7' })}
         strength={500}
       >
         <ApplicationCarousel>

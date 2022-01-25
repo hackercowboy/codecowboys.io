@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 function Imprint() {
   return (
     <Page>
-      <Header />
+      <Header title="Impressum" />
       <Container className="article">
         <h1>Impressum</h1>
         <h2>Kontaktadresse</h2>

@@ -83,4 +83,9 @@ export default {
     description: "The page your are looking for doesn't exist",
     button: 'Go Home',
   },
+  background: {
+    alt_5: 'Background image showing the Grand Canyon in Arizona',
+    alt_6: 'Background image showing the Horseshoe Bend in Arizona',
+    alt_7: 'Background image shoing the Wave in the Coyote Buttes North area of the Utah Arizona border',
+  },
 };

@@ -19,7 +19,7 @@ import Section from '../components/Section';
 function Home({ intl }) {
   return (
     <Page className="presentation">
-      <Header>
+      <Header description={`${intl.formatMessage({ id: 'about.content_1' })} ${intl.formatMessage({ id: 'about.content_2' })}`}>
         <Navigation>
           <NavigationItem id="navigation-item-apps" target="apps" offset={-94}>{intl.formatMessage({ id: 'home.apps_title' })}</NavigationItem>
           <NavigationItem id="navigation-item-about" target="about" offset={-88}>{intl.formatMessage({ id: 'about.title' })}</NavigationItem>
@@ -28,6 +28,7 @@ function Home({ intl }) {
       </Header>
       <Parallax
         bgImage="/images/bg-6.webp"
+        bgImageAlt={intl.formatMessage({ id: 'background.alt_6' })}
         strength={500}
       >
         <ApplicationCarousel>
@@ -55,6 +56,7 @@ function Home({ intl }) {
       </Section>
       <Parallax
         bgImage="/images/bg-5.webp"
+        bgImageAlt={intl.formatMessage({ id: 'background.alt_5' })}
         strength={500}
       >
         <Section

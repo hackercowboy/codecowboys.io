@@ -11,6 +11,7 @@ function Footer({ intl }) {
       <footer>
         <Parallax
           bgImage="/images/bg-7.webp"
+          bgImageAlt={intl.formatMessage({ id: 'background.alt_7' })}
           strength={500}
         >
           <Section dark>

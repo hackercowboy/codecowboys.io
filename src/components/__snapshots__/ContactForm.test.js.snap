@@ -1,21 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ContactForm/> should error during submit data 1`] = `
-"<Component reCaptchaKey={[undefined]}>
-  <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
-  <p className=\\"contact-form-error\\">
-    Sorry, something went wrong, please retry later...
-  </p>
-</Component>"
+"<LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
+  <Component reCaptchaKey={[undefined]}>
+    <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
+    <p className=\\"contact-form-error\\">
+      Sorry, something went wrong, please retry later...
+    </p>
+  </Component>
+</LazyLoad>"
 `;
 
 exports[`<ContactForm/> should render 1`] = `
-"<Component reCaptchaKey={[undefined]}>
-  <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
-  <Formik initialValues={{...}} validationSchema={{...}} onSubmit={[Function: handleOnSubmit]}>
-    [function]
-  </Formik>
-</Component>"
+"<LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
+  <Component reCaptchaKey={[undefined]}>
+    <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
+    <Formik initialValues={{...}} validationSchema={{...}} onSubmit={[Function: handleOnSubmit]}>
+      [function]
+    </Formik>
+  </Component>
+</LazyLoad>"
 `;
 
 exports[`<ContactForm/> should render 2`] = `
@@ -39,10 +43,12 @@ exports[`<ContactForm/> should render 2`] = `
 `;
 
 exports[`<ContactForm/> should submit data 1`] = `
-"<Component reCaptchaKey={[undefined]}>
-  <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
-  <p className=\\"contact-form-success\\">
-    Thank you for your message! i will come back to you, as soon as possible!
-  </p>
-</Component>"
+"<LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
+  <Component reCaptchaKey={[undefined]}>
+    <Component id=\\"recaptcha-verify\\" onVerify={[Function (anonymous)]} />
+    <p className=\\"contact-form-success\\">
+      Thank you for your message! i will come back to you, as soon as possible!
+    </p>
+  </Component>
+</LazyLoad>"
 `;

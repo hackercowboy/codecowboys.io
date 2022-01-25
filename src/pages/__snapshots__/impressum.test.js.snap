@@ -2,7 +2,7 @@
 
 exports[`<Impressum/> should render 1`] = `
 "<div className=\\"page\\">
-  <Header />
+  <Header title=\\"Impressum\\" description={[undefined]} />
   <Container className=\\"article\\">
     <h1>
       Impressum

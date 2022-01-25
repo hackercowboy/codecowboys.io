@@ -83,4 +83,9 @@ export default {
     description: 'Die Seite, die Sie suchen, existiert nicht.',
     button: 'Startseite',
   },
+  background: {
+    alt_5: 'Hintergrundbild, das den Grand Canyon in Arizona zeigt',
+    alt_6: 'Hintergrundbild, das den Horseshoe Bend in Arizona zeigt',
+    alt_7: 'Hintergrundbild, das die Welle im Gebiet Coyote Buttes North an der Grenze zwischen Utah und Arizona zeigt',
+  },
 };

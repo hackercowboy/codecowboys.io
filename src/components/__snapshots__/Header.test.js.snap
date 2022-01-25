@@ -2,6 +2,31 @@
 
 exports[`<Header/> should render 1`] = `
 "<header>
+  <Head>
+    <title>
+      codecowboys.io
+    </title>
+  </Head>
+  <div className=\\"container header-wrapper\\">
+    <a href=\\"/\\" className=\\"header-brand\\">
+      <img src=\\"/logo.svg\\" alt=\\"Codecowboys.io logo\\" style={{...}} />
+      <div>
+        codecowboys
+      </div>
+    </a>
+    <div />
+  </div>
+</header>"
+`;
+
+exports[`<Header/> should render with title and description 1`] = `
+"<header>
+  <Head>
+    <title>
+      Tile | codecowboys.io
+    </title>
+    <meta name=\\"description\\" content=\\"Description\\" />
+  </Head>
   <div className=\\"container header-wrapper\\">
     <a href=\\"/\\" className=\\"header-brand\\">
       <img src=\\"/logo.svg\\" alt=\\"Codecowboys.io logo\\" style={{...}} />

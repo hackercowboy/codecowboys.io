@@ -2,7 +2,10 @@
 
 exports[`<Letter/> should render 1`] = `
 "<Page className=\\"presentation\\">
-  <Header>
+  <Head>
+    <meta name=\\"apple-itunes-app\\" content=\\"app-id=id498506154\\" />
+  </Head>
+  <Header title=\\"Letter\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\">
     <Navigation>
       <NavigationItem id=\\"navigation-item-features\\" target=\\"features\\" offset={-94}>
         Features
@@ -18,7 +21,7 @@ exports[`<Letter/> should render 1`] = `
       </NavigationItem>
     </Navigation>
   </Header>
-  <Parallax bgImage=\\"/images/bg-7.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
+  <Parallax bgImage=\\"/images/bg-7.webp\\" bgImageAlt=\\"Background image shoing the Wave in the Coyote Buttes North area of the Utah Arizona border\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <ApplicatinCarousel>
       <ApplicationHero image=\\"/images/letter_carousel.webp\\" title=\\"Letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" placeholderImage={[undefined]} soon={false} link={[undefined]} />
     </ApplicatinCarousel>
@@ -60,9 +63,7 @@ exports[`<Letter/> should render 1`] = `
     <Screenshots ipadImages={{...}} iphoneImages={{...}} />
   </Section>
   <Section id=\\"contact\\" title=\\"Contact\\" subtitle=\\"Please contact me if you have any questions\\" dark={false}>
-    <LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
-      <ContactForm />
-    </LazyLoad>
+    <ContactForm />
   </Section>
   <Footer />
 </Page>"
