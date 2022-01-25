@@ -20,7 +20,7 @@ exports[`<Letter/> should render 1`] = `
   </Header>
   <Parallax bgImage=\\"/images/bg-7.webp\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" bgImageAlt=\\"\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
     <ApplicatinCarousel>
-      <ApplicationHero image=\\"/images/letter_carousel.webp\\" title=\\"Letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" soon={false} link={[undefined]} />
+      <ApplicationHero image=\\"/images/letter_carousel.webp\\" title=\\"Letter\\" appStoreLink=\\"http://itunes.apple.com/app/letter/id498506154\\" description=\\"With the Letter app you can now write your personal letters on the iPhone, iPad and iPod Touch too, when and where you want.\\" placeholderImage={[undefined]} soon={false} link={[undefined]} />
     </ApplicatinCarousel>
     <ScrollButton target=\\"features\\" />
   </Parallax>

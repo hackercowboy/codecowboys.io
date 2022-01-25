@@ -2,6 +2,6 @@
 
 exports[`<Image/> should render 1`] = `
 "<div className=\\"image\\">
-  <t alt=\\"Test\\" height={[undefined]} src=\\"http://example.com/image/test.png\\" width={[undefined]} afterLoad={[Function: afterLoad]} beforeLoad={[Function: beforeLoad]} delayMethod=\\"throttle\\" delayTime={300} effect=\\"\\" placeholderSrc={{...}} threshold={100} useIntersectionObserver={true} visibleByDefault={false} wrapperClassName=\\"\\" />
+  <t alt=\\"Test\\" height={[undefined]} src=\\"http://example.com/image/test.png\\" placeholderSrc={{...}} effect=\\"blur\\" width={[undefined]} visibleByDefault={false} afterLoad={[Function: afterLoad]} beforeLoad={[Function: beforeLoad]} delayMethod=\\"throttle\\" delayTime={300} threshold={100} useIntersectionObserver={true} wrapperClassName=\\"\\" />
 </div>"
 `;
