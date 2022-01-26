@@ -10,7 +10,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/hackercowboy/codecowboys.io">
-    <img src="src/assets/logo.svg" alt="Logo" width="80" height="80">
+    <img src="public/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">codecowboys.io</h3>
