@@ -8,9 +8,9 @@ const DOMAIN = 'https://codecowboys.io';
 
 const PAGES = {
   '/': { de: '/de' },
-  '/letter': { de: '/de/briefe' },
-  '/imprint': { de: '/de/impressum' },
-  '/privacy': { de: '/de/datenschutz' },
+  '/en/letter': { de: '/de/briefe' },
+  '/en/imprint': { de: '/de/impressum' },
+  '/en/privacy': { de: '/de/datenschutz' },
 };
 
 const sitemap = `
