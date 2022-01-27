@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Footer/> should render 1`] = `
-"<LazyLoad offset={100} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
+exports[`<Footer/> should render on browser 1`] = `
+"<LazyLoad offset={300} className=\\"\\" classNamePrefix=\\"lazyload\\" once={false} overflow={false} resize={false} scroll={true} unmountIfInvisible={false}>
   <footer>
     <Parallax bgImage=\\"/images/bg-7.webp\\" bgImageAlt=\\"Background image shoing the Wave in the Coyote Buttes North area of the Utah Arizona border\\" strength={500} bgClassName=\\"react-parallax-bgimage\\" className=\\"\\" contentClassName=\\"\\" disabled={false}>
       <Section dark={true} id={[undefined]} subtitle={[undefined]} title={[undefined]}>
@@ -44,4 +44,46 @@ exports[`<Footer/> should render 1`] = `
     </Parallax>
   </footer>
 </LazyLoad>"
+`;
+
+exports[`<Footer/> should render on server 1`] = `
+"<footer>
+  <Section dark={true} id={[undefined]} subtitle={[undefined]} title={[undefined]}>
+    <div className=\\"footer-quote\\">
+      <i className=\\"fas fa-angle-double-left\\" aria-hidden=\\"true\\" />
+       What one programmer can do in one month, two programmers can do in two months. 
+      <i className=\\"fas fa-angle-double-right\\" aria-hidden=\\"true\\" />
+      <br />
+      - Fred Brooks
+    </div>
+    <div className=\\"footer\\">
+      <div className=\\"footer-copyright\\">
+        ©
+        2050
+         
+        David Übelacker
+      </div>
+      <div className=\\"footer-item\\">
+         
+        <a id=\\"imprint-link\\" href=\\"/en/imprint\\">
+          Imprint
+        </a>
+          |  
+        <a id=\\"privacy-link\\" href=\\"/en/privacy\\">
+          Privacy Policy
+        </a>
+      </div>
+      <div className=\\"footer-item\\">
+        <a id=\\"language-switch-en\\" href=\\"/en\\">
+          English
+        </a>
+         
+        |
+        <a id=\\"language-switch-de\\" href=\\"/de\\">
+          Deutsch
+        </a>
+      </div>
+    </div>
+  </Section>
+</footer>"
 `;
