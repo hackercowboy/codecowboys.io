@@ -31,9 +31,13 @@ footer {
 }
 
 .social-links {
-  margin-top: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 
   a {
+    display: flex;
     margin: 10px;
   }
 }
