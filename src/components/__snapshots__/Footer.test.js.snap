@@ -13,12 +13,6 @@ exports[`<Footer/> should render on browser 1`] = `
           - Fred Brooks
         </div>
         <div className=\\"footer\\">
-          <div className=\\"footer-copyright\\">
-            ©
-            2050
-             
-            David Übelacker
-          </div>
           <div className=\\"footer-item\\">
              
             <a id=\\"imprint-link\\" href=\\"/en/imprint\\">
@@ -28,16 +22,28 @@ exports[`<Footer/> should render on browser 1`] = `
             <a id=\\"privacy-link\\" href=\\"/en/privacy\\">
               Privacy Policy
             </a>
-          </div>
-          <div className=\\"footer-item\\">
+              |  
             <a id=\\"language-switch-en\\" href=\\"/en\\">
               English
             </a>
-             
-            |
+              |  
             <a id=\\"language-switch-de\\" href=\\"/de\\">
               Deutsch
             </a>
+          </div>
+          <div className=\\"footer-item social-links\\">
+            <a id=\\"github-link\\" href=\\"https://github.com/hackercowboy\\">
+              <FaGithub size=\\"2.5em\\" />
+            </a>
+            <a id=\\"linkedin-link\\" href=\\"https://www.linkedin.com/in/daviduebelacker/\\">
+              <FaLinkedin size=\\"2.5em\\" />
+            </a>
+          </div>
+          <div className=\\"footer-copyright\\">
+            ©
+            2050
+             
+            David Übelacker
           </div>
         </div>
       </Section>
@@ -57,12 +63,6 @@ exports[`<Footer/> should render on server 1`] = `
       - Fred Brooks
     </div>
     <div className=\\"footer\\">
-      <div className=\\"footer-copyright\\">
-        ©
-        2050
-         
-        David Übelacker
-      </div>
       <div className=\\"footer-item\\">
          
         <a id=\\"imprint-link\\" href=\\"/en/imprint\\">
@@ -72,16 +72,28 @@ exports[`<Footer/> should render on server 1`] = `
         <a id=\\"privacy-link\\" href=\\"/en/privacy\\">
           Privacy Policy
         </a>
-      </div>
-      <div className=\\"footer-item\\">
+          |  
         <a id=\\"language-switch-en\\" href=\\"/en\\">
           English
         </a>
-         
-        |
+          |  
         <a id=\\"language-switch-de\\" href=\\"/de\\">
           Deutsch
         </a>
+      </div>
+      <div className=\\"footer-item social-links\\">
+        <a id=\\"github-link\\" href=\\"https://github.com/hackercowboy\\">
+          <FaGithub size=\\"2.5em\\" />
+        </a>
+        <a id=\\"linkedin-link\\" href=\\"https://www.linkedin.com/in/daviduebelacker/\\">
+          <FaLinkedin size=\\"2.5em\\" />
+        </a>
+      </div>
+      <div className=\\"footer-copyright\\">
+        ©
+        2050
+         
+        David Übelacker
       </div>
     </div>
   </Section>

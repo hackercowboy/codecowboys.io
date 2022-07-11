@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Parallax } from 'react-parallax';
 import { injectIntl } from 'react-intl';
 import LazyLoad from 'react-lazyload';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import Section from './Section';
 
 function Footer({ intl }) {
@@ -16,12 +18,6 @@ function Footer({ intl }) {
         - Fred Brooks
       </div>
       <div className="footer">
-        <div className="footer-copyright">
-          ©
-          {new Date().getFullYear()}
-          {' '}
-          David Übelacker
-        </div>
         <div className="footer-item">
               &nbsp;
           <a id="imprint-link" href={intl.formatMessage({ id: 'footer.imprint_link' })}>{intl.formatMessage({ id: 'footer.imprint' })}</a>
@@ -29,12 +25,24 @@ function Footer({ intl }) {
           |
           &nbsp;
           <a id="privacy-link" href={intl.formatMessage({ id: 'footer.privacy_link' })}>{intl.formatMessage({ id: 'footer.privacy' })}</a>
-        </div>
-        <div className="footer-item">
-          <a id="language-switch-en" href="/en">English</a>
-          {' '}
+          &nbsp;
           |
+          &nbsp;
+          <a id="language-switch-en" href="/en">English</a>
+          &nbsp;
+          |
+          &nbsp;
           <a id="language-switch-de" href="/de">Deutsch</a>
+        </div>
+        <div className="footer-item social-links">
+          <a id="github-link" href="https://github.com/hackercowboy"><FaGithub size="2.5em" /></a>
+          <a id="linkedin-link" href="https://www.linkedin.com/in/daviduebelacker/"><FaLinkedin size="2.5em" /></a>
+        </div>
+        <div className="footer-copyright">
+          ©
+          {new Date().getFullYear()}
+          {' '}
+          David Übelacker
         </div>
       </div>
     </Section>
